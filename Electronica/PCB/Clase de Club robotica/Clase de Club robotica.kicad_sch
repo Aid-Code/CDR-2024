@@ -3300,7 +3300,7 @@
 	)
 	(text "ECHO"
 		(exclude_from_sim no)
-		(at 104.394 55.626 0)
+		(at 105.156 53.594 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3320,7 +3320,7 @@
 	)
 	(text "GND"
 		(exclude_from_sim no)
-		(at 103.886 58.166 0)
+		(at 105.664 51.054 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3370,7 +3370,7 @@
 	)
 	(text "VCC\n"
 		(exclude_from_sim no)
-		(at 103.886 50.546 0)
+		(at 105.664 58.674 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3430,7 +3430,7 @@
 	)
 	(text "TRIG"
 		(exclude_from_sim no)
-		(at 103.886 53.086 0)
+		(at 105.664 56.134 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3501,6 +3501,28 @@
 		(uuid "0cb8ea80-4e65-4315-be09-ccad5b3acd77")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 125.0068 64.262 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "TRIG 3"
+		(shape input)
+		(at 95.504 56.134 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "14f9686a-4537-420c-a3b1-6528bf5f994d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 86.2293 56.134 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3774,9 +3796,9 @@
 			)
 		)
 	)
-	(global_label "TRIG 3"
+	(global_label "ECHO 3"
 		(shape input)
-		(at 95.504 53.34 180)
+		(at 95.504 53.594 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3784,9 +3806,9 @@
 			)
 			(justify right)
 		)
-		(uuid "66264b28-77b5-4c1f-ae96-82a2eafa0905")
+		(uuid "603e87e7-eb80-4e5c-9aec-ca9af83ac87f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 86.2293 53.34 0)
+			(at 85.2617 53.594 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4104,28 +4126,6 @@
 			)
 		)
 	)
-	(global_label "ECHO 3"
-		(shape input)
-		(at 95.504 55.88 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e631ea4f-80e9-4896-8df6-bd288dfad055")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 85.2617 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "BIN 2 MONSTER SHIELD"
 		(shape input)
 		(at 234.95 74.676 180)
@@ -4283,137 +4283,6 @@
 			(project "Clase de Club robotica"
 				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
 					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 95.504 58.42 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "11ed74db-d0ea-4cbc-9be9-f69920ca2d76")
-		(property "Reference" "#PWR012"
-			(at 89.154 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 90.17 58.42 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 95.504 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 95.504 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 95.504 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "79f2da50-1ad3-4c55-b785-57dba466c2d8")
-		)
-		(instances
-			(project "Clase de Club robotica"
-				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
-					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 245.11 41.656 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "11f9b376-555c-416a-b52e-c5c4ef5f5660")
-		(property "Reference" "#PWR06"
-			(at 245.11 45.466 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 245.11 37.338 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 245.11 41.656 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 245.11 41.656 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 245.11 41.656 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7979a5f0-4fe4-48e4-914e-e5b24c837328")
-		)
-		(instances
-			(project "Clase de Club robotica"
-				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
-					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -5591,7 +5460,7 @@
 			)
 		)
 		(property "Value" "Ultrasonico 2"
-			(at 91.948 48.006 0)
+			(at 117.602 61.214 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5642,6 +5511,73 @@
 			(project "Clase de Club robotica"
 				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
 					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 95.504 58.674 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "639b5b6c-4dc6-4026-b514-2e1fffa2eb86")
+		(property "Reference" "#PWR010"
+			(at 99.314 58.674 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 92.456 58.674 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 95.504 58.674 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.504 58.674 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 95.504 58.674 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "52931339-4571-43ed-be9f-f9eb04b982b2")
+		)
+		(instances
+			(project "Clase de Club robotica"
+				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -5707,6 +5643,72 @@
 			(project "Clase de Club robotica"
 				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
 					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 95.504 51.054 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6e63088f-d9a7-42b5-945f-ef307da91067")
+		(property "Reference" "#PWR012"
+			(at 89.154 51.054 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 90.17 51.054 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 95.504 51.054 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.504 51.054 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 95.504 51.054 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ebc0aafb-7dea-4607-aa09-170854476318")
+		)
+		(instances
+			(project "Clase de Club robotica"
+				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -6044,72 +6046,6 @@
 			(project "Clase de Club robotica"
 				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
 					(reference "SW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 95.504 50.8 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "83cc9cf0-6aa4-4093-a7da-ef8dd6e3ee39")
-		(property "Reference" "#PWR010"
-			(at 99.314 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 92.456 50.8 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 95.504 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 95.504 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 95.504 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "cad70cc9-4ed7-43d8-844c-e37f16ab2550")
-		)
-		(instances
-			(project "Clase de Club robotica"
-				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
-					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -6578,7 +6514,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
-		(at 100.584 53.34 0)
+		(at 100.584 53.594 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6586,7 +6522,7 @@
 		(dnp no)
 		(uuid "c129661f-b90e-44ab-a4e9-586f47db2f6b")
 		(property "Reference" "J4"
-			(at 105.41 58.928 0)
+			(at 108.458 58.928 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6595,7 +6531,7 @@
 			)
 		)
 		(property "Value" "Ultrasonico 3"
-			(at 93.98 60.706 0)
+			(at 102.108 60.452 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6604,7 +6540,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 100.584 53.34 0)
+			(at 100.584 53.594 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6613,7 +6549,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 100.584 53.34 0)
+			(at 100.584 53.594 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6622,7 +6558,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 100.584 53.34 0)
+			(at 100.584 53.594 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7166,6 +7102,72 @@
 			(project "Clase de Club robotica"
 				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
 					(reference "Conector_Apb1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 252.73 41.656 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f40d3251-c717-4286-b86a-d941cddfc7ad")
+		(property "Reference" "#PWR06"
+			(at 252.73 45.466 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 252.73 37.338 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 252.73 41.656 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 252.73 41.656 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 252.73 41.656 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5b38c2b8-75c7-4da3-ac2a-7640be88769a")
+		)
+		(instances
+			(project "Clase de Club robotica"
+				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
