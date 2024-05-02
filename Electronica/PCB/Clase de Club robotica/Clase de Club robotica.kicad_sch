@@ -2374,6 +2374,276 @@
 				)
 			)
 		)
+		(symbol "Mt3608:LM2596"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at -6.35 0.254 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -6.35 0.254 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at -6.35 0.254 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at -6.35 0.254 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LM2596_0_1"
+				(rectangle
+					(start -6.096 2.794)
+					(end 6.096 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LM2596_1_1"
+				(pin input line
+					(at 8.636 1.27 180)
+					(length 2.54)
+					(name "VIN+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "VIN+"
+						(effects
+							(font
+								(size 0.635 0.635)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 8.636 -0.508 180)
+					(length 2.54)
+					(name "VIN-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "VIN-"
+						(effects
+							(font
+								(size 0.635 0.635)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.636 1.27 0)
+					(length 2.54)
+					(name "VOUT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "VOUT+"
+						(effects
+							(font
+								(size 0.508 0.508)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.636 -0.508 0)
+					(length 2.54)
+					(name "VOUT-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "VOUT-"
+						(effects
+							(font
+								(size 0.508 0.508)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Mt3608:mt3608"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "mt3608_0_1"
+				(rectangle
+					(start -5.08 -1.016)
+					(end 7.112 -5.08)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "mt3608_1_1"
+				(pin input line
+					(at 9.652 -2.54 180)
+					(length 2.54)
+					(name "VIN+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "VIN+"
+						(effects
+							(font
+								(size 0.635 0.635)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 9.652 -4.318 180)
+					(length 2.54)
+					(name "VIN-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "VIN-"
+						(effects
+							(font
+								(size 0.635 0.635)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "VOUT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "VOUT+"
+						(effects
+							(font
+								(size 0.508 0.508)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -4.318 0)
+					(length 2.54)
+					(name "VOUT-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "VOUT-"
+						(effects
+							(font
+								(size 0.508 0.508)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Switch:SW_Push"
 			(pin_numbers hide)
 			(pin_names
@@ -3017,6 +3287,36 @@
 	)
 	(wire
 		(pts
+			(xy 35.052 137.414) (xy 35.052 138.176)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00d23fe6-de40-4b85-a1be-1a049f135443")
+	)
+	(wire
+		(pts
+			(xy 35.052 138.176) (xy 30.226 138.176)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "579f6a54-e879-4239-8a9a-211dcd7a881a")
+	)
+	(wire
+		(pts
+			(xy 65.532 93.472) (xy 65.532 98.298)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f223763-9dae-42b4-a4cf-0bc6a4c53b88")
+	)
+	(wire
+		(pts
 			(xy 85.344 93.472) (xy 95.504 93.472)
 		)
 		(stroke
@@ -3024,6 +3324,16 @@
 			(type default)
 		)
 		(uuid "9c330780-ebd9-4bb9-aac6-8bd1886140a4")
+	)
+	(wire
+		(pts
+			(xy 30.226 135.636) (xy 35.052 135.636)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1b400e5-ad77-4b8b-9ab7-94a80942a482")
 	)
 	(wire
 		(pts
@@ -3437,6 +3747,50 @@
 			)
 		)
 	)
+	(global_label "STEP DOWN"
+		(shape input)
+		(at 65.532 98.298 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "508018e3-55c2-4fdc-9a73-c1257c2d99c3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 51.6007 98.298 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VIN"
+		(shape input)
+		(at 161.798 41.402 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "52af1451-d759-4693-a2a7-e28c35b90711")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 161.798 35.3929 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SENSOR DE PISO 1"
 		(shape input)
 		(at 49.784 73.66 180)
@@ -3450,6 +3804,28 @@
 		(uuid "5943d214-d4ab-44a0-80c0-55b9e7a09119")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 28.3537 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VIN"
+		(shape input)
+		(at 35.306 146.05 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5a98407e-e4be-45aa-83ef-51c16739d45e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 29.2969 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3613,6 +3989,28 @@
 			)
 		)
 	)
+	(global_label "STEP UP"
+		(shape input)
+		(at 65.532 95.758 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "81f3f943-5e2b-4d2f-af6b-2218323e585f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 54.3826 95.758 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "TRIG 2"
 		(shape input)
 		(at 151.638 74.422 180)
@@ -3745,6 +4143,28 @@
 			)
 		)
 	)
+	(global_label "STEP DOWN"
+		(shape input)
+		(at 52.578 146.05 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bb6a6387-c580-4550-959c-cf01a04d50b8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 66.5093 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "TRIG 1"
 		(shape input)
 		(at 151.638 69.342 180)
@@ -3763,6 +4183,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "STEP UP"
+		(shape input)
+		(at 52.324 135.636 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c3286bbe-4884-4fd7-b271-3b7365bd3548")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 63.4734 135.636 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -4935,6 +5377,80 @@
 		)
 	)
 	(symbol
+		(lib_id "Mt3608:LM2596")
+		(at 43.942 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "58a5c02f-820b-4918-a6cf-7d9f5229c689")
+		(property "Reference" "U?"
+			(at 43.942 141.224 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 43.942 142.494 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 37.592 147.066 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 37.592 147.066 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 37.592 147.066 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "VOUT+"
+			(uuid "3e565a4f-fb9c-4d12-a617-0708c0693251")
+		)
+		(pin "VIN+"
+			(uuid "0f1e84df-746d-4934-9c6d-4367afcb2e4f")
+		)
+		(pin "VIN-"
+			(uuid "1b48bf3e-f650-4554-9414-17d53ee6a3f1")
+		)
+		(pin "VOUT-"
+			(uuid "8ece3792-659f-4f8e-a378-22f00c9df7ec")
+		)
+		(instances
+			(project "Clase de Club robotica"
+				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
+					(reference "U?")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
 		(at 100.076 39.116 0)
 		(unit 1)
@@ -5202,6 +5718,146 @@
 			(project "Clase de Club robotica"
 				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
 					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 35.306 147.828 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7007152a-51d4-4baf-8462-2d64a09ecda4")
+		(property "Reference" "#PWR021"
+			(at 35.306 154.178 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 35.306 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 35.306 147.828 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 35.306 147.828 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 35.306 147.828 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "19d0749e-8e14-4e04-bdf4-36400e5756b6")
+		)
+		(instances
+			(project "Clase de Club robotica"
+				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mt3608:mt3608")
+		(at 42.672 133.096 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7849ef97-1d02-4d07-94b1-8bcf3fa9182a")
+		(property "Reference" "U?"
+			(at 43.688 130.048 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 43.688 132.588 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 42.672 133.096 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 42.672 133.096 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 42.672 133.096 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "VOUT+"
+			(uuid "db8d7602-4f29-4ff0-ab7a-3de8382ea666")
+		)
+		(pin "VIN+"
+			(uuid "122563a7-ccbb-4167-a56d-04bddd07ae9f")
+		)
+		(pin "VIN-"
+			(uuid "9c8a22a5-6667-4443-aa0c-5049f8d09cac")
+		)
+		(pin "VOUT-"
+			(uuid "8ddd5234-f584-466c-816d-d88313838238")
+		)
+		(instances
+			(project "Clase de Club robotica"
+				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
+					(reference "U?")
 					(unit 1)
 				)
 			)
@@ -5762,6 +6418,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Screw_Terminal_01x02")
+		(at 25.146 138.176 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bdbd11cd-ee11-47ae-8109-db54585535c9")
+		(property "Reference" "J?"
+			(at 25.146 129.286 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x02"
+			(at 25.146 131.826 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 25.146 138.176 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 25.146 138.176 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 25.146 138.176 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1c5595fc-ae8d-4975-9241-3a2b25c80c8d")
+		)
+		(pin "2"
+			(uuid "4de9c6b6-feff-4e7f-8301-3a24e287cf3f")
+		)
+		(instances
+			(project "Clase de Club robotica"
+				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
+					(reference "J?")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 250.19 94.996 0)
 		(unit 1)
@@ -5988,7 +6712,7 @@
 		(dnp no)
 		(uuid "cbb343b0-5dde-4985-a84b-f095a7ef65ba")
 		(property "Reference" "A1"
-			(at 159.004 35.052 0)
+			(at 150.114 39.878 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5997,7 +6721,7 @@
 			)
 		)
 		(property "Value" "Arduino_Nano_v3.x"
-			(at 150.114 37.338 0)
+			(at 141.478 42.164 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6437,6 +7161,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:Earth")
+		(at 52.324 137.414 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "de84780b-1e33-4fce-9151-e5e596101dc2")
+		(property "Reference" "#PWR020"
+			(at 52.324 143.764 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "Earth"
+			(at 52.324 141.732 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.324 137.414 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.324 137.414 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
+			(at 52.324 137.414 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ec0671e7-6425-4083-9abd-8e4b4a1308c1")
+		)
+		(instances
+			(project "Clase de Club robotica"
+				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 260.35 69.596 270)
 		(unit 1)
@@ -6498,6 +7288,72 @@
 			(project "Clase de Club robotica"
 				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
 					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:Earth")
+		(at 52.578 147.828 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e5fed8f3-d4d6-426a-813b-88ade508f3f1")
+		(property "Reference" "#PWR022"
+			(at 52.578 154.178 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "Earth"
+			(at 52.578 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.578 147.828 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.578 147.828 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
+			(at 52.578 147.828 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f9d8d9b8-ced2-47b1-9df2-fcba183dfc39")
+		)
+		(instances
+			(project "Clase de Club robotica"
+				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
