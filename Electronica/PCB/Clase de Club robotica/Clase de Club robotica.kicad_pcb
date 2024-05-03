@@ -96,7 +96,7 @@
 	(net 14 "unconnected-(A1-A5-Pad24)")
 	(net 15 "unconnected-(A1-A6-Pad25)")
 	(net 16 "TRIG 2")
-	(net 17 "unconnected-(A1-VIN-Pad30)")
+	(net 17 "VIN")
 	(net 18 "AIN1 MONSTER SHIELD")
 	(net 19 "SENSOR DE PISO 2")
 	(net 20 "TRIG 3")
@@ -124,10 +124,10 @@
 	(net 42 "Net-(U1-K)")
 	(net 43 "unconnected-(A2-IOREF-Pad2)")
 	(net 44 "unconnected-(A2-NC-Pad1)")
-	(net 45 "unconnected-(A2-A0-Pad9)")
+	(net 45 "Net-(D2-A)")
 	(net 46 "unconnected-(A2-D0{slash}RX-Pad15)")
 	(net 47 "unconnected-(A2-SCL{slash}A5-Pad14)")
-	(net 48 "unconnected-(A2-A1-Pad10)")
+	(net 48 "unconnected-(SensoresPISO1-Pin_2-Pad2)")
 	(net 49 "unconnected-(A2-D10-Pad25)")
 	(net 50 "Net-(U2-K)")
 	(net 51 "BOTON ")
@@ -139,6 +139,8 @@
 	(net 57 "unconnected-(A2-D2-Pad17)")
 	(net 58 "unconnected-(A2-SCL{slash}A5-Pad32)")
 	(net 59 "unconnected-(D1-K-Pad1)")
+	(net 60 "unconnected-(SensoresPISO2-Pin_2-Pad2)")
+	(net 61 "STEP DOWN")
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 		(layer "F.Cu")
 		(uuid "03f77527-fc3e-4fb3-89ef-212a2b75ca52")
@@ -711,6 +713,292 @@
 			)
 		)
 	)
+	(footprint "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
+		(layer "F.Cu")
+		(uuid "128c0d6a-73a2-4c52-90ab-bdaec6911f03")
+		(at 210.605 76.115)
+		(descr "Through hole straight socket strip, 1x04, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
+		(tags "Through hole socket strip THT 1x04 2.54mm single row")
+		(property "Reference" "SensoresPISO2"
+			(at 0 -2.77 0)
+			(layer "F.SilkS")
+			(uuid "ab1caa55-7daf-46e6-8bf5-b11d38e69e30")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 0 10.39 0)
+			(layer "F.Fab")
+			(uuid "581a7c71-f136-426e-9e04-d1a04012725a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fbbed293-25c2-4695-a039-5cedc0fc9a9e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b1b8c82b-5734-4c8e-be91-5a8a7d13645b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fe1728ed-ead7-49a4-9ce9-cdbe56fb4def")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property ki_fp_filters "Connector*:*_1x??_*")
+		(path "/ca1630d2-f361-4ae8-bba6-bc5a227e2cfa")
+		(sheetname "Raíz")
+		(sheetfile "Clase de Club robotica.kicad_sch")
+		(attr through_hole)
+		(fp_line
+			(start -1.33 1.27)
+			(end -1.33 8.95)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "65d9f015-4f65-45f2-abb3-e2fb25dd70e6")
+		)
+		(fp_line
+			(start -1.33 1.27)
+			(end 1.33 1.27)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "d2ac35cb-4075-43e6-9b82-9f361a08b389")
+		)
+		(fp_line
+			(start -1.33 8.95)
+			(end 1.33 8.95)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "c84070e6-af78-4e07-ad7b-d806ecc1e440")
+		)
+		(fp_line
+			(start 0 -1.33)
+			(end 1.33 -1.33)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "d8b760d9-7b19-4c10-8b5e-3f398da9414c")
+		)
+		(fp_line
+			(start 1.33 -1.33)
+			(end 1.33 0)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "adcf01fb-5487-423e-97ba-d37dbe32c2f3")
+		)
+		(fp_line
+			(start 1.33 1.27)
+			(end 1.33 8.95)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "1846b88f-62fb-41c0-b400-245201018b5f")
+		)
+		(fp_line
+			(start -1.8 -1.8)
+			(end 1.75 -1.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "4daae71e-0296-4045-9dfa-9c3cac253f9c")
+		)
+		(fp_line
+			(start -1.8 9.4)
+			(end -1.8 -1.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "9ba1427f-e1f1-4ae7-99aa-b5b1a10ba3a4")
+		)
+		(fp_line
+			(start 1.75 -1.8)
+			(end 1.75 9.4)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "b206244b-9a5f-488e-bdce-d8267f85a372")
+		)
+		(fp_line
+			(start 1.75 9.4)
+			(end -1.8 9.4)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "9ad4d4c2-e84f-4339-9fac-10b818276799")
+		)
+		(fp_line
+			(start -1.27 -1.27)
+			(end 0.635 -1.27)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "e7e507c4-7198-4974-9dde-1b6aa769e225")
+		)
+		(fp_line
+			(start -1.27 8.89)
+			(end -1.27 -1.27)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "e3112876-9c92-4bbd-9b75-156fb7b02309")
+		)
+		(fp_line
+			(start 0.635 -1.27)
+			(end 1.27 -0.635)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "3c6397a6-bba6-427b-b241-08868021ac0e")
+		)
+		(fp_line
+			(start 1.27 -0.635)
+			(end 1.27 8.89)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "6d552486-7aab-4340-806b-654c63c09100")
+		)
+		(fp_line
+			(start 1.27 8.89)
+			(end -1.27 8.89)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "86b25930-7160-4aa0-92e7-d7c548791b33")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 3.81 90)
+			(layer "F.Fab")
+			(uuid "33ba0f65-9524-43a9-a2e5-e5f94ec9a669")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole rect
+			(at 0 0)
+			(size 1.7 1.7)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 24 "+5V")
+			(pinfunction "Pin_1")
+			(pintype "passive")
+			(uuid "8b877826-a20e-424c-b70b-fead4ed9857d")
+		)
+		(pad "2" thru_hole oval
+			(at 0 2.54)
+			(size 1.7 1.7)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 60 "unconnected-(SensoresPISO2-Pin_2-Pad2)")
+			(pinfunction "Pin_2")
+			(pintype "passive+no_connect")
+			(uuid "e58c8418-7b4d-4495-aba8-f91a31c685b2")
+		)
+		(pad "3" thru_hole oval
+			(at 0 5.08)
+			(size 1.7 1.7)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 13 "GND")
+			(pinfunction "Pin_3")
+			(pintype "passive")
+			(uuid "5cea472b-bad0-483c-8aaa-fb3999eaff8c")
+		)
+		(pad "4" thru_hole oval
+			(at 0 7.62)
+			(size 1.7 1.7)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 19 "SENSOR DE PISO 2")
+			(pinfunction "Pin_4")
+			(pintype "passive")
+			(uuid "e2f37bca-4ca1-4312-89bf-5869b203ddca")
+		)
+		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x04_P2.54mm_Vertical.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 		(layer "F.Cu")
 		(uuid "13a1d5d6-896b-4ba9-88b5-55b718eae1a8")
@@ -776,7 +1064,6 @@
 			)
 		)
 		(property ki_fp_filters "Vishay*CNY70*")
-		(path "/3d8f3b1e-a194-49a3-90b3-50427a90c32f")
 		(sheetname "Raíz")
 		(sheetfile "Clase de Club robotica.kicad_sch")
 		(attr through_hole)
@@ -1243,7 +1530,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 33 "Net-(Conector_Apb1-Pin_1)")
+			(net 45 "Net-(D2-A)")
 			(pinfunction "B")
 			(pintype "passive")
 			(uuid "bee183fb-20e1-4b62-8857-b81267787d61")
@@ -1325,7 +1612,6 @@
 			)
 		)
 		(property ki_fp_filters "R_*")
-		(path "/3a92d046-b6f2-4984-9611-89a385c9bf2b")
 		(sheetname "Raíz")
 		(sheetfile "Clase de Club robotica.kicad_sch")
 		(attr through_hole)
@@ -1597,7 +1883,6 @@
 			)
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
-		(path "/eec3fdaa-ca81-41d3-a1dc-863589b173e5")
 		(sheetname "Raíz")
 		(sheetfile "Clase de Club robotica.kicad_sch")
 		(attr through_hole)
@@ -2077,7 +2362,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R5"
-			(at 5.08 -2.37 360)
+			(at 5.08 -2.37 0)
 			(layer "F.SilkS")
 			(uuid "95225394-4e9d-470b-924e-ea0ce7dc850c")
 			(effects
@@ -2088,7 +2373,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 5.08 2.37 360)
+			(at 5.08 2.37 0)
 			(layer "F.Fab")
 			(uuid "50b8abbe-fe82-40a3-b6f4-8e8c53623a23")
 			(effects
@@ -2135,7 +2420,6 @@
 			)
 		)
 		(property ki_fp_filters "R_*")
-		(path "/9e6cb162-3a6e-4f43-9a81-49afc3c56e18")
 		(sheetname "Raíz")
 		(sheetfile "Clase de Club robotica.kicad_sch")
 		(attr through_hole)
@@ -2300,7 +2584,7 @@
 			(uuid "8a93d80b-d7fe-4118-85b0-7c3fef39183d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5.04 -0.13 360)
+			(at 5.04 -0.13 0)
 			(layer "F.Fab")
 			(uuid "b69b7bac-b6c3-4bc7-b336-5a6e4addd766")
 			(effects
@@ -2407,7 +2691,6 @@
 			)
 		)
 		(property ki_fp_filters "D*DO?41*")
-		(path "/fee0dd56-1321-4f6e-aa4d-5dc9736bfaca")
 		(sheetname "Raíz")
 		(sheetfile "Clase de Club robotica.kicad_sch")
 		(attr through_hole)
@@ -2698,6 +2981,292 @@
 			)
 		)
 	)
+	(footprint "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
+		(layer "F.Cu")
+		(uuid "54ac0272-e06e-4b05-a5a6-7a8d16c2d0e1")
+		(at 206.005 76.115)
+		(descr "Through hole straight socket strip, 1x04, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
+		(tags "Through hole socket strip THT 1x04 2.54mm single row")
+		(property "Reference" "SensoresPISO1"
+			(at 0 -2.77 0)
+			(layer "F.SilkS")
+			(uuid "7bf0f6eb-ac23-40ca-9de3-ffb92368f7c1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 0 10.39 0)
+			(layer "F.Fab")
+			(uuid "9f8ab6ae-d33d-4467-9fda-f111c263be62")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "53ede7e9-61ac-4684-b0fe-efea5d493b14")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "68c04bfb-3f05-4806-bb2e-c55a942bb414")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "eec1f05c-b473-4d66-bfc1-45193c0db578")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property ki_fp_filters "Connector*:*_1x??_*")
+		(path "/d4512f3d-fd3a-4821-b95b-43dede9014d9")
+		(sheetname "Raíz")
+		(sheetfile "Clase de Club robotica.kicad_sch")
+		(attr through_hole)
+		(fp_line
+			(start -1.33 1.27)
+			(end -1.33 8.95)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "5d64fc3d-81c3-41bf-9b67-a122ec183892")
+		)
+		(fp_line
+			(start -1.33 1.27)
+			(end 1.33 1.27)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "7aaf64ef-b26f-4bbf-affc-ac63d02fcb2c")
+		)
+		(fp_line
+			(start -1.33 8.95)
+			(end 1.33 8.95)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "2dbd9379-96f0-4f99-b784-829fcf1cced6")
+		)
+		(fp_line
+			(start 0 -1.33)
+			(end 1.33 -1.33)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "2c364cc0-cc37-4a9a-b0ae-a13a251371db")
+		)
+		(fp_line
+			(start 1.33 -1.33)
+			(end 1.33 0)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "69d3e052-195f-4113-b289-e7108bf91242")
+		)
+		(fp_line
+			(start 1.33 1.27)
+			(end 1.33 8.95)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "b9d7865f-e02c-4889-adea-8fb7602142a3")
+		)
+		(fp_line
+			(start -1.8 -1.8)
+			(end 1.75 -1.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "1744fd68-c757-4d69-bc1b-196bb347d2dd")
+		)
+		(fp_line
+			(start -1.8 9.4)
+			(end -1.8 -1.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "5412e8dd-e11d-4120-b60a-3e8dad06dd59")
+		)
+		(fp_line
+			(start 1.75 -1.8)
+			(end 1.75 9.4)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "6c328176-37eb-4459-ac2c-35bf5a497d32")
+		)
+		(fp_line
+			(start 1.75 9.4)
+			(end -1.8 9.4)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "6a2a85ff-f8fb-4e73-908f-28c6ac93ef74")
+		)
+		(fp_line
+			(start -1.27 -1.27)
+			(end 0.635 -1.27)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "6a347432-a744-4726-9ae0-c019f034de0d")
+		)
+		(fp_line
+			(start -1.27 8.89)
+			(end -1.27 -1.27)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "4a626dfa-8445-4585-90c0-7a542236ae5a")
+		)
+		(fp_line
+			(start 0.635 -1.27)
+			(end 1.27 -0.635)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "448c057c-34f3-47e1-9a7e-bceb5092b798")
+		)
+		(fp_line
+			(start 1.27 -0.635)
+			(end 1.27 8.89)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "2ec166c6-774f-4f2e-aa0c-6ab003d950f1")
+		)
+		(fp_line
+			(start 1.27 8.89)
+			(end -1.27 8.89)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "cf99d453-f681-4b38-ad2a-96de7dfbf549")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 3.81 90)
+			(layer "F.Fab")
+			(uuid "1b7b4c7d-b11a-4b6a-bba4-e8880828e870")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole rect
+			(at 0 0)
+			(size 1.7 1.7)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 24 "+5V")
+			(pinfunction "Pin_1")
+			(pintype "passive")
+			(uuid "7535ffc8-fb13-49f7-adf5-577059fa5bcb")
+		)
+		(pad "2" thru_hole oval
+			(at 0 2.54)
+			(size 1.7 1.7)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 48 "unconnected-(SensoresPISO1-Pin_2-Pad2)")
+			(pinfunction "Pin_2")
+			(pintype "passive+no_connect")
+			(uuid "7a064e86-24bd-4736-9276-24da3a305c20")
+		)
+		(pad "3" thru_hole oval
+			(at 0 5.08)
+			(size 1.7 1.7)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 13 "GND")
+			(pinfunction "Pin_3")
+			(pintype "passive")
+			(uuid "6a6af6f4-e0f3-4b10-a559-46d663701480")
+		)
+		(pad "4" thru_hole oval
+			(at 0 7.62)
+			(size 1.7 1.7)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 6 "SENSOR DE PISO 1")
+			(pinfunction "Pin_4")
+			(pintype "passive")
+			(uuid "38c34a8a-984f-4be0-949f-6dc607c30ea4")
+		)
+		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x04_P2.54mm_Vertical.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 		(layer "F.Cu")
 		(uuid "5544fb58-5e38-435b-8e48-97ac37a2184d")
@@ -2705,7 +3274,7 @@
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
 		(property "Reference" "J4"
-			(at 0 -2.33 270)
+			(at 0 -2.33 -90)
 			(layer "F.SilkS")
 			(uuid "789f0d0b-06ea-4aca-b15e-5c9fab230961")
 			(effects
@@ -2716,7 +3285,7 @@
 			)
 		)
 		(property "Value" "Ultrasonico 3"
-			(at -22.76 46.84 270)
+			(at -22.76 46.84 -90)
 			(layer "F.Fab")
 			(uuid "5b8dbdfc-c93b-451b-82e8-7cdf10848a6d")
 			(effects
@@ -2918,7 +3487,7 @@
 			(uuid "300b0dfa-0d0c-4ad3-bba0-dfe2405cf2f4")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 3.81 360)
+			(at 0 3.81 0)
 			(layer "F.Fab")
 			(uuid "bfdaed72-e9e8-409c-93b3-6013c247327d")
 			(effects
@@ -3049,7 +3618,6 @@
 			)
 		)
 		(property ki_fp_filters "R_*")
-		(path "/2ecbc825-ea10-497a-9521-5400b1938fd3")
 		(sheetname "Raíz")
 		(sheetfile "Clase de Club robotica.kicad_sch")
 		(attr through_hole)
@@ -3940,7 +4508,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 45 "unconnected-(A2-A0-Pad9)")
+			(net 24 "+5V")
 			(pinfunction "A0")
 			(pintype "bidirectional")
 			(uuid "6c740d51-cf28-4713-b5ba-2bde544ec662")
@@ -3951,7 +4519,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 48 "unconnected-(A2-A1-Pad10)")
+			(net 24 "+5V")
 			(pinfunction "A1")
 			(pintype "bidirectional")
 			(uuid "81bafea8-5226-4600-9f20-d8bf8782d92a")
@@ -4275,7 +4843,6 @@
 			)
 		)
 		(property ki_fp_filters "R_*")
-		(path "/eb2ee926-39d3-4c00-8df8-a94422493bef")
 		(sheetname "Raíz")
 		(sheetfile "Clase de Club robotica.kicad_sch")
 		(attr through_hole)
@@ -4729,7 +5296,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 33 "Net-(Conector_Apb1-Pin_1)")
+			(net 45 "Net-(D2-A)")
 			(pinfunction "A")
 			(pintype "passive")
 			(uuid "a98bf6fb-07ae-4c76-a894-21fe369b612f")
@@ -4753,7 +5320,7 @@
 		(descr "Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf")
 		(tags "Arduino Nano")
 		(property "Reference" "A1"
-			(at 7.62 -5.08 270)
+			(at 7.62 -5.08 -90)
 			(layer "F.SilkS")
 			(uuid "be7420d1-2eb4-419f-8fba-3653c044d17a")
 			(effects
@@ -4764,7 +5331,7 @@
 			)
 		)
 		(property "Value" "Arduino_Nano_v3.x"
-			(at 8.89 19.05 360)
+			(at 8.89 19.05 0)
 			(layer "F.Fab")
 			(uuid "0b9bc4ef-c676-4b76-9324-52a459776b98")
 			(effects
@@ -5138,7 +5705,7 @@
 			)
 		)
 		(fp_text user "${REFERENCE}"
-			(at 6.35 19.05 360)
+			(at 6.35 19.05 0)
 			(layer "F.Fab")
 			(uuid "6eed90c1-365a-482b-8dc8-bdd155092542")
 			(effects
@@ -5473,7 +6040,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 17 "unconnected-(A1-VIN-Pad30)")
+			(net 17 "VIN")
 			(pinfunction "VIN")
 			(pintype "power_in")
 			(uuid "94fa7a9e-30aa-42de-a20f-274c76f3f95e")
@@ -6048,6 +6615,164 @@
 			)
 		)
 	)
+	(footprint "Step Down:Step Down"
+		(layer "F.Cu")
+		(uuid "e633a461-5b00-4cec-854c-d0700b06ca9f")
+		(at 229.28 87.61 90)
+		(property "Reference" "U2"
+			(at 0 -0.5 90)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "563f0bbd-d2d4-4726-b423-37ac88954678")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 0 1 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(uuid "62124320-e956-4ba2-ab2e-9711812de937")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "Step Down:Step Down"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "28faca91-890f-4c8e-84ed-408280346fb1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d7d0f510-10dc-4103-b4e8-71ee5b218671")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ea1debc5-cd88-48fe-8aa8-f9d9c3d1fcdd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/58a5c02f-820b-4918-a6cf-7d9f5229c689")
+		(sheetname "Raíz")
+		(sheetfile "Clase de Club robotica.kicad_sch")
+		(attr through_hole)
+		(fp_rect
+			(start -14.85 -0.3)
+			(end 27.25 20.1)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill none)
+			(layer "F.Adhes")
+			(uuid "59d334f9-b02b-491c-81e0-704138e14772")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 2.5 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(uuid "75600e56-abd3-48d8-97fd-8d03ff4d012f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "VIN+" thru_hole circle
+			(at 26.05 0.82 90)
+			(size 1.524 1.524)
+			(drill 0.762)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 61 "STEP DOWN")
+			(pinfunction "VIN+")
+			(pintype "input")
+			(uuid "0dbcd6b9-e30e-405b-8fbf-c961f8971b40")
+		)
+		(pad "VIN-" thru_hole circle
+			(at 26.02 18.98 90)
+			(size 1.524 1.524)
+			(drill 0.762)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 28 "Earth")
+			(pinfunction "VIN-")
+			(pintype "input")
+			(uuid "1e2e81dd-3b5c-459f-bd75-3a31d053a540")
+		)
+		(pad "VOUT+" thru_hole circle
+			(at -13.62 0.83 90)
+			(size 1.524 1.524)
+			(drill 0.762)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 17 "VIN")
+			(pinfunction "VOUT+")
+			(pintype "input")
+			(uuid "4b9a2284-45aa-407d-a1df-8470ea29a57c")
+		)
+		(pad "VOUT-" thru_hole circle
+			(at -13.64 19.02 90)
+			(size 1.524 1.524)
+			(drill 0.762)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 13 "GND")
+			(pinfunction "VOUT-")
+			(pintype "input")
+			(uuid "389c17b8-46aa-4a6c-a856-1f3c4e235ae7")
+		)
+		(group ""
+			(uuid "fffc9d6f-815f-4ae9-a3f2-be608bbcd310")
+			(members "0dbcd6b9-e30e-405b-8fbf-c961f8971b40" "58af6709-e860-4343-9195-26ca0c40362a"
+				"59d334f9-b02b-491c-81e0-704138e14772"
+			)
+		)
+		(group ""
+			(uuid "58af6709-e860-4343-9195-26ca0c40362a")
+			(members "0a0b8838-769a-4047-832b-041a77fe379a" "28faca91-890f-4c8e-84ed-408280346fb1"
+				"389c17b8-46aa-4a6c-a856-1f3c4e235ae7" "4b9a2284-45aa-407d-a1df-8470ea29a57c"
+				"563f0bbd-d2d4-4726-b423-37ac88954678" "62124320-e956-4ba2-ab2e-9711812de937"
+				"75600e56-abd3-48d8-97fd-8d03ff4d012f" "d7d0f510-10dc-4103-b4e8-71ee5b218671"
+				"ea1debc5-cd88-48fe-8aa8-f9d9c3d1fcdd"
+			)
+		)
+		(group ""
+			(uuid "0a0b8838-769a-4047-832b-041a77fe379a")
+			(members "1e2e81dd-3b5c-459f-bd75-3a31d053a540")
+		)
+	)
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 		(layer "F.Cu")
 		(uuid "ff645e0b-0382-43d3-b712-a0d1b0ebcae0")
@@ -6113,7 +6838,6 @@
 			)
 		)
 		(property ki_fp_filters "Vishay*CNY70*")
-		(path "/17a118ab-02db-40a5-8ee1-cf88efcd5bcb")
 		(sheetname "Raíz")
 		(sheetfile "Clase de Club robotica.kicad_sch")
 		(attr through_hole)

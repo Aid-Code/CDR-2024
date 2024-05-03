@@ -5386,7 +5386,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "58a5c02f-820b-4918-a6cf-7d9f5229c689")
-		(property "Reference" "U?"
+		(property "Reference" "U2"
 			(at 43.942 141.224 0)
 			(effects
 				(font
@@ -5402,7 +5402,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Step Down:Step Down"
 			(at 37.592 147.066 0)
 			(effects
 				(font
@@ -5444,7 +5444,7 @@
 		(instances
 			(project "Clase de Club robotica"
 				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
-					(reference "U?")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -5799,7 +5799,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7849ef97-1d02-4d07-94b1-8bcf3fa9182a")
-		(property "Reference" "U?"
+		(property "Reference" "U1"
 			(at 43.688 130.048 0)
 			(effects
 				(font
@@ -5857,7 +5857,7 @@
 		(instances
 			(project "Clase de Club robotica"
 				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
-					(reference "U?")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -6074,7 +6074,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a1c5f414-c9ef-445b-9d42-738171759536")
-		(property "Reference" "D?"
+		(property "Reference" "D1"
 			(at 69.342 87.122 0)
 			(effects
 				(font
@@ -6144,7 +6144,7 @@
 		(instances
 			(project "Clase de Club robotica"
 				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
-					(reference "D?")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -6160,7 +6160,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aad228f7-4c22-4b87-a817-774eba3a4d53")
-		(property "Reference" "J?"
+		(property "Reference" "J6"
 			(at 102.87 93.4719 0)
 			(effects
 				(font
@@ -6214,7 +6214,7 @@
 		(instances
 			(project "Clase de Club robotica"
 				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
-					(reference "J?")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -6427,7 +6427,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bdbd11cd-ee11-47ae-8109-db54585535c9")
-		(property "Reference" "J?"
+		(property "Reference" "J2"
 			(at 25.146 129.286 0)
 			(effects
 				(font
@@ -6479,7 +6479,7 @@
 		(instances
 			(project "Clase de Club robotica"
 				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
-					(reference "J?")
+					(reference "J2")
 					(unit 1)
 				)
 			)
