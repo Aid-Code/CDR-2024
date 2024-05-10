@@ -3285,6 +3285,10 @@
 		(at 53.594 67.564)
 		(uuid "bc690b74-2d69-44d5-a19e-f942fb6694b1")
 	)
+	(no_connect
+		(at 57.15 40.64)
+		(uuid "ff374398-b19c-4b8d-a275-ddb902f9ea87")
+	)
 	(wire
 		(pts
 			(xy 38.862 136.398) (xy 38.862 137.16)
@@ -3495,28 +3499,6 @@
 		)
 		(uuid "fb74e923-aa88-4818-8b8e-ebec20fe5a3a")
 	)
-	(global_label "PWM B MONSTER SHIELD"
-		(shape input)
-		(at 158.75 55.88 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0cb8ea80-4e65-4315-be09-ccad5b3acd77")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 132.1188 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "TRIG 3"
 		(shape input)
 		(at 99.314 55.118 180)
@@ -3530,6 +3512,28 @@
 		(uuid "14f9686a-4537-420c-a3b1-6528bf5f994d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 90.0393 55.118 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SENSOR DE PISO 3"
+		(shape input)
+		(at 57.15 45.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1c163242-d851-461a-97cc-c60970724426")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 35.7197 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3871,22 +3875,22 @@
 	)
 	(global_label "AIN1 MONSTER SHIELD"
 		(shape input)
-		(at 158.75 73.66 180)
+		(at 184.15 73.66 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
-		(uuid "6bd23eda-1d36-42f3-a788-4f41dfee5d7e")
+		(uuid "7ec581dc-eb72-4e3a-8349-2fd97d6687a5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 134.2958 73.66 0)
+			(at 208.6042 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -4069,7 +4073,7 @@
 	)
 	(global_label "BOTON "
 		(shape input)
-		(at 184.15 63.5 0)
+		(at 184.15 66.04 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4079,7 +4083,29 @@
 		)
 		(uuid "b6b148a0-760e-4876-b363-90c64942dd4d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 194.3319 63.5 0)
+			(at 194.3319 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PWM B MONSTER SHIELD"
+		(shape input)
+		(at 184.15 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b7d73a1b-cc52-4de4-899f-c7fccca5ed89")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 210.7812 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4217,6 +4243,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SENSOR DE PISO 3"
+		(shape input)
+		(at 184.15 76.2 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dd30e017-2a6e-4228-bb2d-ee0634edd42c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 205.5803 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -4885,6 +4933,73 @@
 			(project "Clase de Club robotica"
 				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 57.15 43.18 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "409181a5-93f3-4a96-bef6-feda24b595d1")
+		(property "Reference" "#PWR017"
+			(at 50.8 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 53.086 43.1799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 57.15 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 57.15 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "53a0196e-c9ec-49f8-8b3c-5016eb22221e")
+		)
+		(instances
+			(project "Clase de Club robotica"
+				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -5567,6 +5682,83 @@
 			(project "Clase de Club robotica"
 				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
 					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "Conn_01x04_1")
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 62.23 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "74787dd8-3cd1-4c62-a556-c4564db768c8")
+		(property "Reference" "SensoresPISO3"
+			(at 65.278 40.6399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 65.278 43.1799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
+			(at 62.23 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 62.23 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 62.23 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "23b8cc82-0303-4927-8ec5-548ec230aeb0")
+		)
+		(pin "3"
+			(uuid "f0dd5fe6-393f-4adb-9d6a-e68effeb34a2")
+		)
+		(pin "1"
+			(uuid "6824012c-82cf-46b5-8cf9-ace320b45d80")
+		)
+		(pin "4"
+			(uuid "621a87c8-5e0e-476b-8b7f-d5ddcddbfe12")
+		)
+		(instances
+			(project "Clase de Club robotica"
+				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
+					(reference "SensoresPISO3")
 					(unit 1)
 				)
 			)
@@ -7136,6 +7328,73 @@
 			(project "Clase de Club robotica"
 				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
 					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 57.15 38.1 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ec79e7fe-7455-4bbd-b383-7dcaa6e0b0e3")
+		(property "Reference" "#PWR011"
+			(at 60.96 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 53.086 38.0999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 57.15 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 57.15 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "637787d0-9e78-4c64-904d-e462e2d756b7")
+		)
+		(instances
+			(project "Clase de Club robotica"
+				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
