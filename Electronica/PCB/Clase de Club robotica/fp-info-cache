@@ -1,4 +1,4 @@
-23193167238046918
+23290325041570357
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -52387,6 +52387,349 @@ muRata MEJ1S DCDC-Converter
 0
 4
 4
+CrumpPrints.pretty-master
+1W_RGB_LED_6PIN
+
+
+0
+7
+7
+CrumpPrints.pretty-master
+3x6x3.5mm_side_pushbutton_smd
+
+
+0
+2
+2
+CrumpPrints.pretty-master
+5V_buzzer
+
+5V Piezo Passive Buzzer
+0
+2
+2
+CrumpPrints.pretty-master
+6x6mm_pushbutton
+
+
+0
+4
+2
+CrumpPrints.pretty-master
+6x6mm_pushbutton_smd
+Based on TE Connectivity 2-1437565-8
+
+0
+4
+2
+CrumpPrints.pretty-master
+16_snap
+
+
+0
+1
+1
+CrumpPrints.pretty-master
+18650_Holder
+
+
+0
+2
+2
+CrumpPrints.pretty-master
+0480372200_Molex_USB_A_Plug_SMT
+
+USB
+0
+6
+5
+CrumpPrints.pretty-master
+APA102
+
+
+0
+6
+6
+CrumpPrints.pretty-master
+APA102_hand_solder
+
+
+0
+6
+6
+CrumpPrints.pretty-master
+Arduino_Pro_Mini
+
+
+0
+28
+28
+CrumpPrints.pretty-master
+BatteryHolder_Keystone_2460_1xAA
+1xAAA Battery Holder, Keystone, Plastic Case, http://www.keyelco.com/product-pdf.cfm?p=1031
+AAA battery holder Keystone
+0
+2
+2
+CrumpPrints.pretty-master
+CR2032_HOLDER
+http://www.mouser.com/ds/2/238/bat-hld-001-220194.pdf
+Linx Battery Holder 2032 bat-hld-001
+0
+3
+2
+CrumpPrints.pretty-master
+D1_mini
+
+
+0
+16
+16
+CrumpPrints.pretty-master
+FB-45-4
+
+
+0
+0
+0
+CrumpPrints.pretty-master
+Header_1x12_100
+
+
+0
+12
+12
+CrumpPrints.pretty-master
+Inductor_Bourns-SRN6045
+Bourns SRN6045 series SMD inductor
+Bourns SRN6045 SMD inductor
+0
+2
+2
+CrumpPrints.pretty-master
+L_Cheng_7x7mm
+Choke, SMD, 7.3x7.3mm 3.5mm height
+Choke SMD
+0
+2
+2
+CrumpPrints.pretty-master
+L_Cheng_13x13mm
+Choke, SMD, 7.3x7.3mm 3.5mm height
+Choke SMD
+0
+2
+2
+CrumpPrints.pretty-master
+MPCIe_full_card
+
+
+0
+60
+52
+CrumpPrints.pretty-master
+MPCIe_half_card
+
+
+0
+56
+52
+CrumpPrints.pretty-master
+MPCIe_socket
+
+mpci, pci, pci express
+0
+60
+52
+CrumpPrints.pretty-master
+QFN_44
+
+QFN44
+0
+44
+44
+CrumpPrints.pretty-master
+QRE1113
+
+
+0
+4
+4
+CrumpPrints.pretty-master
+QRE1113GR
+
+
+0
+4
+4
+CrumpPrints.pretty-master
+RF200
+
+
+0
+24
+24
+CrumpPrints.pretty-master
+RF200_nosilk
+
+
+0
+24
+24
+CrumpPrints.pretty-master
+Raspberry_Pi_Zero
+Raspberry Pi Zero Hat Template
+rpi Raspberry Pi hat zero
+0
+40
+40
+CrumpPrints.pretty-master
+SK22D07_DPDT_slide_switch
+
+switch slide toggle SK22D07 dpdt spdt
+0
+8
+6
+CrumpPrints.pretty-master
+SM200
+
+
+0
+64
+64
+CrumpPrints.pretty-master
+SM200_nosilk
+
+
+0
+64
+64
+CrumpPrints.pretty-master
+SMLP34RGB
+
+LED, RGB, SMLP34RGB
+0
+4
+4
+CrumpPrints.pretty-master
+SPDT_slide_switch
+http://www.alps.com/prod/info/E/HTML/Switch/Slide/SSSS8/SSSS810701.html
+SPDT, slide, switch, alps, ssss810701
+0
+3
+3
+CrumpPrints.pretty-master
+SW_Push_1P1T_NO_CK_RKB2
+CK components RKB2 tactile switch https://www.mouser.com/datasheet/2/60/ck_rk_datasheet-2295758.pdf
+tactile switch rkb2
+0
+4
+3
+CrumpPrints.pretty-master
+SnapStack
+
+
+0
+32
+32
+CrumpPrints.pretty-master
+Switch_APEM_ADTSM3_3.5x6mm
+https://www.mouser.com/datasheet/2/26/ADTS3-369939-1158421.pdf
+pushbutton tact tactile switch
+0
+2
+2
+CrumpPrints.pretty-master
+TC200
+
+
+0
+24
+24
+CrumpPrints.pretty-master
+TC200_nosilk
+
+
+0
+24
+24
+CrumpPrints.pretty-master
+TC2030-MCP
+
+tag-connect, tagconnect, icsp
+0
+6
+6
+CrumpPrints.pretty-master
+TerminalBlock_bornier-12_P5.08mm
+simple 12-pin terminal block, pitch 5.08mm, revamped version of bornier2
+terminal block bornier2
+0
+12
+12
+CrumpPrints.pretty-master
+Texas_VSON-10_3.0x3.0mm_P0.5mm_DRC
+
+
+0
+25
+11
+CrumpPrints.pretty-master
+Tiny_RTC_DS1307
+
+
+0
+12
+12
+CrumpPrints.pretty-master
+UCSP-9p-0.4mm
+
+UCSP, Maxim
+0
+9
+9
+CrumpPrints.pretty-master
+USB_Board_Edge
+
+
+0
+4
+4
+CrumpPrints.pretty-master
+USB_C_Receptacle_SMD_THT
+
+USB, type-c, c
+0
+28
+25
+CrumpPrints.pretty-master
+WS2812-2020
+
+
+0
+4
+4
+CrumpPrints.pretty-master
+WS2812B
+
+LED, Neopixel, RGB, WS2811, WS2812
+0
+4
+4
+CrumpPrints.pretty-master
+WS2812B_smallsilk
+
+LED, Neopixel, RGB, WS2811, WS2812
+0
+4
+4
+CrumpPrints.pretty-master
+WSON-6p-2x2mm
+
+WSON
+0
+7
+7
 Crystal
 Crystal_AT310_D3.0mm_L10.0mm_Horizontal
 Crystal THT AT310 10.0mm-10.5mm length 3.0mm diameter http://www.cinetech.com.tw/upload/2011/04/20110401165201.pdf
@@ -53661,27 +54004,6 @@ SMD SMT ceramic resonator filter filter hand-soldering
 0
 3
 3
-DOIT_ESP32
-DOIT_ESP32_Devkit
-
-
-0
-30
-30
-DOIT_ESP32
-DOIT_ESP32_Devkit_mirko
-
-
-0
-30
-30
-DOIT_ESP32
-Touch_Pin_Round
-
-
-0
-1
-1
 Diode_SMD
 D_0201_0603Metric
 Diode SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator
@@ -63503,6 +63825,27 @@ Yellow 5381 Series LED
 0
 2
 2
+MCU_RaspberryPi_and_Boards
+Crystal_SMD_HC49-US
+SMD Crystal HC-49-SD http://cdn-reichelt.de/documents/datenblatt/B400/xxx-HC49-SMD.pdf, 11.4x4.7mm^2 package
+SMD SMT crystal
+0
+2
+2
+MCU_RaspberryPi_and_Boards
+RP2040-QFN-56
+QFN, 56 Pin (http://www.cypress.com/file/416486/download#page=40), generated with kicad-footprint-generator ipc_dfn_qfn_generator.py
+QFN DFN_QFN
+0
+70
+57
+MCU_RaspberryPi_and_Boards
+RPi_Pico_SMD_TH
+Through hole straight pin header, 2x20, 2.54mm pitch, double rows
+Through hole pin header THT 2x20 2.54mm double row
+0
+86
+43
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
@@ -88101,13 +88444,13 @@ https://www.farnell.com/cad/316865.pdf?_ga=2.37208032.177107060.1530611323-24901
 0
 48
 48
-Step Down
-Step Down
+Step Up
+Step Up
 
 
 0
-4
-3
+0
+0
 Symbol
 CE-Logo_8.5x6mm_SilkScreen
 CE marking
@@ -95017,3 +95360,73 @@ Varistor VF
 0
 2
 2
+misc_footprints
+4056E_LiIon_loader
+
+
+0
+6
+6
+misc_footprints
+4056E_LiIon_loader_SMT
+
+
+0
+6
+6
+misc_footprints
+4056E_LiIon_loader_prot
+
+
+0
+6
+6
+misc_footprints
+16850_cell_casket
+
+
+0
+2
+2
+misc_footprints
+MP1584_buck_module
+
+
+0
+8
+4
+misc_footprints
+MT3608_module
+
+
+0
+4
+4
+misc_footprints
+MT3608_module_SMT
+
+
+0
+7
+4
+misc_footprints
+N95_battery_connector
+
+
+0
+3
+3
+misc_footprints
+XL6009_module
+
+
+0
+4
+4
+misc_footprints
+XL6009_module_SMT
+
+
+0
+7
+4
