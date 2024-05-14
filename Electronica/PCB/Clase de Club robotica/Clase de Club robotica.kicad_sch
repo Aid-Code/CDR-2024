@@ -3565,9 +3565,15 @@
 			)
 		)
 	)
+<<<<<<< HEAD
 	(global_label "ECHO 1"
 		(shape input)
 		(at 98.806 26.67 180)
+=======
+	(global_label "TRIG 1"
+		(shape input)
+		(at 158.75 58.42 180)
+>>>>>>> 521897136caba479ef732872ed49f669d74abc40
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3575,9 +3581,15 @@
 			)
 			(justify right)
 		)
+<<<<<<< HEAD
 		(uuid "2609906a-7525-4ec3-9c11-0124a58c5f43")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 88.5637 26.67 0)
+=======
+		(uuid "26f239f3-318a-4548-94c3-33fd32b3bb6a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 149.4753 58.42 0)
+>>>>>>> 521897136caba479ef732872ed49f669d74abc40
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3842,6 +3854,7 @@
 		(uuid "678a660b-53db-413c-aa2d-0864d975978c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 33.1797 56.896 0)
+<<<<<<< HEAD
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3864,6 +3877,8 @@
 		(uuid "6e9e3ca9-6dc4-4245-875a-cb708d10d72a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 89.5313 24.13 0)
+=======
+>>>>>>> 521897136caba479ef732872ed49f669d74abc40
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3875,7 +3890,11 @@
 	)
 	(global_label "ECHO 1"
 		(shape input)
+<<<<<<< HEAD
 		(at 158.75 58.42 180)
+=======
+		(at 158.75 60.96 180)
+>>>>>>> 521897136caba479ef732872ed49f669d74abc40
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3883,9 +3902,15 @@
 			)
 			(justify right)
 		)
+<<<<<<< HEAD
 		(uuid "6fb7f529-6606-4969-b705-ccc08673fabd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 148.5077 58.42 0)
+=======
+		(uuid "6a4c0825-60df-4403-bab8-a0b6c3874743")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 148.5077 60.96 0)
+>>>>>>> 521897136caba479ef732872ed49f669d74abc40
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3942,6 +3967,7 @@
 	(global_label "STEP UP"
 		(shape input)
 		(at 69.342 94.742 180)
+<<<<<<< HEAD
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4184,6 +4210,282 @@
 	(global_label "BIN 1 MONSTER SHIELD"
 		(shape input)
 		(at 158.75 48.26 180)
+=======
+>>>>>>> 521897136caba479ef732872ed49f669d74abc40
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "81f3f943-5e2b-4d2f-af6b-2218323e585f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+<<<<<<< HEAD
+			(at 133.1468 48.26 0)
+=======
+			(at 58.1926 94.742 0)
+>>>>>>> 521897136caba479ef732872ed49f669d74abc40
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "TRIG 2"
+		(shape input)
+<<<<<<< HEAD
+		(at 158.75 50.8 180)
+=======
+		(at 158.75 66.04 180)
+>>>>>>> 521897136caba479ef732872ed49f669d74abc40
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "84629555-a7b7-45ca-8a1b-8ca130876bb5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+<<<<<<< HEAD
+=======
+			(at 149.4753 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "ECHO 1"
+		(shape input)
+		(at 98.806 26.67 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8da1bef5-7d39-4d1f-bee3-44d13cf2ad60")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 88.5637 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PWM B MONSTER SHIELD"
+		(shape input)
+		(at 238.76 66.04 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9132d0f4-3628-4472-b78b-031b9a39c6ff")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 212.1288 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "TRIG 2"
+		(shape input)
+		(at 98.806 38.1 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a95fa727-105a-4b25-815f-fe90dcafcdfe")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 89.5313 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "AIN1 MONSTER SHIELD"
+		(shape input)
+		(at 238.76 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a9c99fd7-0d82-4e6f-a751-89efd6937dfd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 214.3058 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "TRIG 1"
+		(shape input)
+		(at 98.806 24.13 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "aa807d6d-7e72-40c8-92af-c514109b8678")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 89.5313 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BOTON "
+		(shape input)
+		(at 184.15 66.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b6b148a0-760e-4876-b363-90c64942dd4d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 194.3319 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PWM B MONSTER SHIELD"
+		(shape input)
+		(at 184.15 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b7d73a1b-cc52-4de4-899f-c7fccca5ed89")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 210.7812 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "STEP DOWN"
+		(shape input)
+		(at 57.15 145.034 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bb6a6387-c580-4550-959c-cf01a04d50b8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 71.0813 145.034 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "STEP UP"
+		(shape input)
+		(at 56.134 134.62 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c3286bbe-4884-4fd7-b271-3b7365bd3548")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 67.2834 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SENSOR DE PISO 1"
+		(shape input)
+		(at 184.15 58.42 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cbdc614e-789b-4f0a-9223-823b1a6ba0bd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 205.5803 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BIN 1 MONSTER SHIELD"
+		(shape input)
+		(at 158.75 48.26 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4215,6 +4517,7 @@
 		)
 		(uuid "d3d4bd55-8e4a-443d-8686-865db76a1ae6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+>>>>>>> 521897136caba479ef732872ed49f669d74abc40
 			(at 132.3002 50.8 0)
 			(effects
 				(font
@@ -5790,7 +6093,11 @@
 				)
 			)
 		)
+<<<<<<< HEAD
 		(property "Footprint" "misc_footprints:MT3608_module"
+=======
+		(property "Footprint" ""
+>>>>>>> 521897136caba479ef732872ed49f669d74abc40
 			(at 46.482 132.08 0)
 			(effects
 				(font
@@ -6065,7 +6372,11 @@
 				)
 			)
 		)
+<<<<<<< HEAD
 		(property "Footprint" "Diode_THT:D_5W_P10.16mm_Horizontal"
+=======
+		(property "Footprint" ""
+>>>>>>> 521897136caba479ef732872ed49f669d74abc40
 			(at 73.152 92.456 0)
 			(effects
 				(font
@@ -6152,7 +6463,11 @@
 				(justify left)
 			)
 		)
+<<<<<<< HEAD
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
+=======
+		(property "Footprint" ""
+>>>>>>> 521897136caba479ef732872ed49f669d74abc40
 			(at 104.394 92.456 0)
 			(effects
 				(font
@@ -6417,7 +6732,11 @@
 				)
 			)
 		)
+<<<<<<< HEAD
 		(property "Footprint" "TerminalBlock:TerminalBlock_bornier-2_P5.08mm"
+=======
+		(property "Footprint" ""
+>>>>>>> 521897136caba479ef732872ed49f669d74abc40
 			(at 28.956 137.16 0)
 			(effects
 				(font
