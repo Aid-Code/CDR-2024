@@ -588,169 +588,6 @@
 				)
 			)
 		)
-		(symbol "Device:D"
-			(pin_numbers hide)
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "D"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Device" "D"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=K 2=A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "D_0_1"
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy -1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "D_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:LED"
 			(pin_numbers hide)
 			(pin_names
@@ -1074,6 +911,168 @@
 					(at 0 -3.81 90)
 					(length 1.27)
 					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Diode:1N4007"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1N4007"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+				(at 0 -4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D*DO?41*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "1N4007_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "1N4007_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3681,7 +3680,7 @@
 	)
 	(global_label "TRIG 3"
 		(shape input)
-		(at 38.1 44.45 180)
+		(at 38.1 59.69 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3691,7 +3690,7 @@
 		)
 		(uuid "23d280bb-d7b9-47e8-8ddd-e52b02ad3fbd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 28.8253 44.45 0)
+			(at 28.8253 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3719,28 +3718,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "AIN1 MONSTER SHIELD"
-		(shape input)
-		(at 63.5 52.07 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "28e04cef-ee48-420f-b2b8-e5f008f20944")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 87.9542 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -3791,7 +3768,7 @@
 	)
 	(global_label "ECHO 2"
 		(shape input)
-		(at 38.1 49.53 180)
+		(at 38.1 46.99 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3801,7 +3778,7 @@
 		)
 		(uuid "31be9fe8-e04f-4ec4-a96b-30557a869f14")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 27.8577 49.53 0)
+			(at 27.8577 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4033,7 +4010,7 @@
 	)
 	(global_label "ECHO 1"
 		(shape input)
-		(at 38.1 57.15 180)
+		(at 38.1 54.61 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4043,7 +4020,7 @@
 		)
 		(uuid "6fb7f529-6606-4969-b705-ccc08673fabd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 27.8577 57.15 0)
+			(at 27.8577 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4099,7 +4076,7 @@
 	)
 	(global_label "TRIG 2"
 		(shape input)
-		(at 38.1 52.07 180)
+		(at 38.1 49.53 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4109,7 +4086,7 @@
 		)
 		(uuid "84629555-a7b7-45ca-8a1b-8ca130876bb5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 28.8253 52.07 0)
+			(at 28.8253 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4143,7 +4120,7 @@
 	)
 	(global_label "TRIG 1"
 		(shape input)
-		(at 38.1 54.61 180)
+		(at 38.1 52.07 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4153,7 +4130,7 @@
 		)
 		(uuid "94ed520e-f23e-453b-b150-38bee2b93b02")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 28.8253 54.61 0)
+			(at 28.8253 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4361,7 +4338,7 @@
 			)
 		)
 	)
-	(global_label "AIN2 MONSTER SHIELD"
+	(global_label "AIN1 MONSTER SHIELD"
 		(shape input)
 		(at 38.1 62.23 180)
 		(fields_autoplaced yes)
@@ -4371,7 +4348,7 @@
 			)
 			(justify right)
 		)
-		(uuid "da0e4dea-f078-464c-ac9c-1fd6924ea6d0")
+		(uuid "db63f95b-9885-4379-8a2a-d31bb13fb577")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 13.6458 62.23 0)
 			(effects
@@ -4451,7 +4428,7 @@
 	)
 	(global_label "ECHO 3"
 		(shape input)
-		(at 38.1 46.99 180)
+		(at 38.1 57.15 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4461,12 +4438,34 @@
 		)
 		(uuid "f31fc7bb-3ff4-459d-aab6-b2aa0168aecc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 27.8577 46.99 0)
+			(at 27.8577 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "AIN2 MONSTER SHIELD"
+		(shape input)
+		(at 63.5 52.07 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ffe7e2d9-0ff5-46e1-88f2-865fcf965f13")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 87.9542 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -6108,6 +6107,92 @@
 		)
 	)
 	(symbol
+		(lib_id "Diode:1N4007")
+		(at 217.932 20.828 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7dcbe95d-3d05-4200-898e-25ccebdf2050")
+		(property "Reference" "D1"
+			(at 217.932 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4007"
+			(at 217.932 16.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(at 217.932 25.273 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(at 217.932 20.828 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
+			(at 217.932 20.828 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 217.932 20.828 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 217.932 20.828 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bb730b09-e86f-4385-be13-7e4dc2f69da2")
+		)
+		(pin "2"
+			(uuid "56715411-f4ad-4d7e-b74a-0e06c16937ab")
+		)
+		(instances
+			(project "Clase de Club robotica"
+				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 136.144 69.85 0)
 		(unit 1)
@@ -6173,92 +6258,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D")
-		(at 217.932 20.828 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a1c5f414-c9ef-445b-9d42-738171759536")
-		(property "Reference" "D1"
-			(at 217.932 14.478 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 217.932 17.018 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_5W_P10.16mm_Horizontal"
-			(at 217.932 20.828 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 217.932 20.828 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Diode"
-			(at 217.932 20.828 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 217.932 20.828 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 217.932 20.828 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "2adabcf2-d9fc-49b5-aefc-d3e4f083e21d")
-		)
-		(pin "1"
-			(uuid "3df47f26-7ddf-4aa3-82de-2a0718cfc407")
-		)
-		(instances
-			(project "Clase de Club robotica"
-				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:Screw_Terminal_01x02")
 		(at 249.174 20.828 0)
 		(unit 1)
@@ -6285,7 +6284,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_AMASS:AMASS_XT60-F_1x02_P7.20mm_Vertical"
+		(property "Footprint" "Connector_AMASS:AMASS_XT60-M_1x02_P7.20mm_Vertical"
 			(at 249.174 20.828 0)
 			(effects
 				(font
