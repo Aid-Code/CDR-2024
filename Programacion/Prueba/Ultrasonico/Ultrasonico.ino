@@ -1,5 +1,5 @@
-#define TRIG 2
-#define ECHO 3
+#define TRIG 10
+#define ECHO 11
 
 long tiempo;
 long distancia;
