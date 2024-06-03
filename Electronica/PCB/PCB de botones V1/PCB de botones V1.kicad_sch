@@ -1091,1220 +1091,52 @@
 		)
 	)
 	(junction
-		(at 172.72 83.82)
+		(at 71.12 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "747d36b2-4ca2-46a0-b7e5-320e53e17398")
-	)
-	(no_connect
-		(at 172.72 81.28)
-		(uuid "77708597-8597-4e60-bf87-343b8dd0cadf")
+		(uuid "4f365e50-7311-4a47-844f-ad2e5f3554de")
 	)
 	(wire
 		(pts
-			(xy 172.72 78.74) (xy 172.72 83.82)
+			(xy 71.12 54.61) (xy 81.28 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0e2fc81a-cebb-4eec-9a6b-ee62c9a719e3")
+		(uuid "91f1255a-9eeb-432b-9cc9-a6c1291f0bd0")
 	)
 	(wire
 		(pts
-			(xy 181.61 83.82) (xy 180.34 83.82)
+			(xy 69.85 59.69) (xy 71.12 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3687d6b1-97cc-41b4-9dc1-a48b2deae618")
+		(uuid "d1d3535d-c0bf-43b3-a422-e18ef37e5a74")
 	)
 	(wire
 		(pts
-			(xy 149.86 92.71) (xy 149.86 86.36)
+			(xy 71.12 59.69) (xy 71.12 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3c15feb8-4bc5-481f-bde3-503921f8c494")
-	)
-	(wire
-		(pts
-			(xy 194.31 78.74) (xy 194.31 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4188aea8-da4c-40ea-b96f-decb4574ce7c")
-	)
-	(wire
-		(pts
-			(xy 195.58 78.74) (xy 194.31 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5688fa14-427b-4fdd-9f23-9ad9ba71ac72")
-	)
-	(wire
-		(pts
-			(xy 194.31 81.28) (xy 162.56 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "84ed9f5f-e1e0-40a9-9e73-461dd9d18892")
-	)
-	(wire
-		(pts
-			(xy 172.72 78.74) (xy 162.56 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "935aa6af-346e-4614-acb1-233a34349dc0")
-	)
-	(wire
-		(pts
-			(xy 172.72 83.82) (xy 173.99 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9402d232-2675-4ac6-8ace-a195b91777b7")
-	)
-	(wire
-		(pts
-			(xy 129.54 81.28) (xy 149.86 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b3b7f50a-fe5a-4035-a043-22c9f64f283d")
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 167.64 86.36 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0c40a749-a0c7-4a53-a585-e8630c832ec1")
-		(property "Reference" "SW1"
-			(at 167.64 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 167.64 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 167.64 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 167.64 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 167.64 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "aea62f0e-edef-4958-aee7-603e43e71bdc")
-		)
-		(pin "2"
-			(uuid "9bf24ffc-accf-4107-b2f8-89a15dfb1601")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "SW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 138.43 92.71 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "12043da7-7ded-4ecd-a139-b372a39ebd44")
-		(property "Reference" "R3"
-			(at 138.43 86.868 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "R_US"
-			(at 138.43 89.408 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 138.684 91.694 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 138.43 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 138.43 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "b15c2478-95cf-42bb-9d91-9fab0edaef86")
-		)
-		(pin "1"
-			(uuid "3ca00073-17b2-461e-9f48-b7271b8b5ee6")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "R3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 149.86 83.82 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1e30ab53-9710-4786-aafb-a84e5fcc9ba3")
-		(property "Reference" "#PWR02"
-			(at 143.51 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 146.05 83.8199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 149.86 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 149.86 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 149.86 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d9bcd79b-f8a4-41ec-b033-ce5132686186")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 118.11 81.28 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "219d31f3-3007-4909-b4b1-9c1099588de4")
-		(property "Reference" "R1"
-			(at 118.11 75.438 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "R_US"
-			(at 118.11 77.978 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 118.364 80.264 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 118.11 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 118.11 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "0f933e5d-62ec-471f-a13a-f63202e98f80")
-		)
-		(pin "1"
-			(uuid "11eb08ce-5817-4b24-8869-186505f879a4")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 200.66 78.74 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "280d01a2-2bfb-44a6-aac7-583ce832f17b")
-		(property "Reference" "SW2"
-			(at 200.66 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 200.66 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 200.66 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 200.66 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 200.66 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8e69e1c8-a9fb-4454-8926-bd7b35316ea2")
-		)
-		(pin "2"
-			(uuid "0a031081-f721-43d2-817e-0229f4721940")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "SW2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 205.74 78.74 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "35bfa78a-df02-4094-a455-75d383130cfb")
-		(property "Reference" "#PWR03"
-			(at 212.09 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 209.55 78.7399 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 205.74 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 205.74 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 205.74 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "393018ed-ee59-4c51-aa27-7afafc037af2")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 149.86 64.77 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3940ee94-6f7e-411b-9027-49bf1377933c")
-		(property "Reference" "R4"
-			(at 155.702 64.77 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "R_US"
-			(at 153.162 64.77 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 150.876 65.024 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 149.86 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 149.86 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "33348cb0-f96d-485d-a192-18ab2aa2b567")
-		)
-		(pin "1"
-			(uuid "7af818f7-d6d5-4606-a08d-dfb099fec3c3")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_SPST")
-		(at 167.64 83.82 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "45598228-3e32-4ff7-9540-a649c548104a")
-		(property "Reference" "SW3"
-			(at 167.64 76.708 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_SPST"
-			(at 167.64 79.248 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_Slide_SPDT_Straight_CK_OS102011MS2Q"
-			(at 167.64 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 167.64 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Single Pole Single Throw (SPST) switch"
-			(at 167.64 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a53331d9-5d6b-4232-8616-7d1cc8316529")
-		)
-		(pin "1"
-			(uuid "d84a582d-045f-494f-acf9-0259c1c68acb")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "SW3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 114.3 81.28 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "45867e20-371c-4121-a8d8-c82be3a1bcf4")
-		(property "Reference" "#PWR08"
-			(at 107.95 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 110.49 81.2801 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 114.3 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 114.3 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 114.3 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "86c2ed2a-e795-4d1f-b300-df1deb25b659")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "fed4b171-e45f-4440-84bc-aaf24ef5bedd")
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 146.05 78.74 0)
+		(at 66.04 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5009a95f-eb50-4e2e-8ec1-56388d158c23")
-		(property "Reference" "D2"
-			(at 144.4625 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LED"
-			(at 144.4625 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
-			(at 146.05 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 146.05 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 146.05 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "46f2db35-95c8-42da-89eb-a9e1e403985f")
-		)
-		(pin "1"
-			(uuid "d1a39849-7569-4e2e-9935-3851948f6c04")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 187.96 83.82 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5776e3bc-c942-4039-96b5-f4fcb36b77b4")
-		(property "Reference" "#PWR05"
-			(at 194.31 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 191.77 83.8199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 187.96 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 187.96 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 187.96 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a7e48e18-d452-45e1-a0ae-16ada3ea4ef8")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "#PWR05")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 149.86 72.39 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "649350bd-8c65-4100-85ce-1e85f0193e63")
-		(property "Reference" "D4"
-			(at 156.21 70.8025 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LED"
-			(at 153.67 70.8025 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
-			(at 149.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 149.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 149.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "b9791266-5e91-43ca-9df5-12749d661850")
-		)
-		(pin "1"
-			(uuid "6370f081-a356-4b5b-b171-9067fa73160f")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "D4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x05_Counter_Clockwise")
-		(at 154.94 81.28 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "669d7d86-2941-454b-87ce-9bb7622e5775")
-		(property "Reference" "J1"
-			(at 156.21 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x05_Counter_Clockwise"
-			(at 156.21 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"
-			(at 154.94 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 154.94 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, double row, 02x05, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 154.94 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "2b816b26-a89f-4a42-b5eb-1c59e93131e5")
-		)
-		(pin "10"
-			(uuid "6fc499b0-b7f5-4b15-a83c-779ae19704a1")
-		)
-		(pin "4"
-			(uuid "5d539c5e-3b9b-4dbe-b538-c4537e74ea77")
-		)
-		(pin "9"
-			(uuid "add6b8fc-adda-4284-a6ab-060aa4ad671f")
-		)
-		(pin "8"
-			(uuid "26c22242-ae35-4bff-89c2-9976dcd1e6b3")
-		)
-		(pin "3"
-			(uuid "f5119740-5349-4ef1-8df3-a89644ab1c6b")
-		)
-		(pin "5"
-			(uuid "5f795db8-d930-42f1-ac5a-a651e577cbd9")
-		)
-		(pin "1"
-			(uuid "84bb92a6-506f-4022-b269-2d3402e1060d")
-		)
-		(pin "6"
-			(uuid "7e38cae4-727e-421e-a7d0-3dc2a9710078")
-		)
-		(pin "7"
-			(uuid "736b1562-b84c-4e13-9989-9c2bc98408ca")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 134.62 92.71 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "83de8804-ccbe-457c-a3d5-664239800fdf")
-		(property "Reference" "#PWR06"
-			(at 128.27 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 130.81 92.7101 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 134.62 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 134.62 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 134.62 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f1c34ea4-895c-4810-82fd-e9f423d07ff0")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 125.73 81.28 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9138beaa-4aa0-40d4-ae86-77c0deac60a6")
-		(property "Reference" "D1"
-			(at 124.1425 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LED"
-			(at 124.1425 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
-			(at 125.73 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 125.73 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 125.73 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "803f2125-841e-4bfb-8fd0-a9cdce50216f")
-		)
-		(pin "1"
-			(uuid "2ef47573-2f50-4fad-ac32-6be12feedb15")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 134.62 78.74 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9b368501-f2e7-4790-84ca-6e0f85dfcf38")
-		(property "Reference" "#PWR07"
-			(at 128.27 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 130.81 78.7401 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 134.62 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 134.62 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 134.62 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "90f17f67-b978-4de1-9dbf-3b9d986a980a")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 146.05 92.71 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c0427976-8412-4e77-960f-21ac04871c49")
+		(uuid "08e664d1-a516-4497-8271-6541825794d5")
 		(property "Reference" "D3"
-			(at 144.4625 86.36 0)
+			(at 64.4525 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2312,7 +1144,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 144.4625 88.9 0)
+			(at 64.4525 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2320,7 +1152,7 @@
 			)
 		)
 		(property "Footprint" "LED_THT:LED_D5.0mm"
-			(at 146.05 92.71 0)
+			(at 66.04 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2329,7 +1161,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 146.05 92.71 0)
+			(at 66.04 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2338,7 +1170,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 146.05 92.71 0)
+			(at 66.04 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2347,10 +1179,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "57b2752d-e41a-4c09-a7ff-9192396110c5")
+			(uuid "0374587f-8bb7-4fe4-a6d1-9c57b21918e4")
 		)
 		(pin "1"
-			(uuid "7c4942a9-8adb-4974-abf3-e64acb62e8a5")
+			(uuid "4d53ad6f-0aba-4826-b52b-a3acec99bfb9")
 		)
 		(instances
 			(project "PCB de botones V1"
@@ -2362,16 +1194,151 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 177.8 83.82 180)
+		(lib_id "power:GND")
+		(at 109.22 62.23 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c8b9c4c9-1989-44bd-9f5c-e4f503c9d27d")
-		(property "Reference" "D5"
-			(at 179.3875 90.17 0)
+		(fields_autoplaced yes)
+		(uuid "1f9b8633-ac33-46e8-8f59-e53d590f91e9")
+		(property "Reference" "#PWR014"
+			(at 115.57 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 113.03 62.2299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 109.22 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a2ae9263-f24a-427e-bfb7-19a4085f5834")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 66.04 64.77 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "26c42c21-bfe3-44d4-8e31-4260c064922b")
+		(property "Reference" "#PWR016"
+			(at 59.69 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 62.23 64.7701 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 66.04 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 66.04 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "faa12045-e13f-4970-93a5-16610955cf35")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 97.79 57.15 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2be9d904-96e8-4d7e-bb87-cded5081a479")
+		(property "Reference" "D9"
+			(at 99.3775 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2379,7 +1346,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 179.3875 87.63 0)
+			(at 99.3775 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2387,7 +1354,7 @@
 			)
 		)
 		(property "Footprint" "LED_THT:LED_D5.0mm"
-			(at 177.8 83.82 0)
+			(at 97.79 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2396,7 +1363,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 177.8 83.82 0)
+			(at 97.79 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2405,7 +1372,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 177.8 83.82 0)
+			(at 97.79 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2414,47 +1381,48 @@
 			)
 		)
 		(pin "2"
-			(uuid "8a3d6ad6-8fe4-4d54-9288-87733a066216")
+			(uuid "3160f841-1aa8-443c-b0f4-c524029ce388")
 		)
 		(pin "1"
-			(uuid "fe2b4f93-bb78-4bc3-be91-91f1fc175e9d")
+			(uuid "389e10fa-302f-4f1a-b7c9-10375733c34e")
 		)
 		(instances
 			(project "PCB de botones V1"
 				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "D5")
+					(reference "D9")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 184.15 83.82 270)
+		(lib_id "Switch:SW_Push")
+		(at 99.06 64.77 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "cd9787e3-dc47-4800-a5cb-44adcd73cafd")
-		(property "Reference" "R5"
-			(at 184.15 89.662 90)
+		(uuid "301a7f69-e9cd-4b0b-bed2-407c0220b944")
+		(property "Reference" "SW4"
+			(at 99.06 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "R_US"
-			(at 184.15 87.122 90)
+		(property "Value" "SW_Push"
+			(at 99.06 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 183.896 84.836 90)
+		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
+			(at 99.06 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2463,7 +1431,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 184.15 83.82 0)
+			(at 99.06 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2471,124 +1439,58 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
-			(at 184.15 83.82 0)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 99.06 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(pin "1"
+			(uuid "1508efc8-2f09-4a05-a69d-07f242423ec3")
 		)
 		(pin "2"
-			(uuid "925dad70-f7cc-410c-a521-8159c090b294")
-		)
-		(pin "1"
-			(uuid "28e93476-4926-4204-a24a-fd951a54fa7b")
+			(uuid "d1b0bd08-c1a2-49d8-82fd-11956e5f797e")
 		)
 		(instances
 			(project "PCB de botones V1"
 				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "R5")
+					(reference "SW4")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 149.86 60.96 180)
+		(lib_id "Connector_Generic:Conn_02x05_Counter_Clockwise")
+		(at 88.9 59.69 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d04c3f50-6aa2-429a-87dd-5a0d76c96b8f")
-		(property "Reference" "#PWR09"
-			(at 149.86 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 149.8599 57.15 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 149.86 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 149.86 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 149.86 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "aed03613-9d0d-4c8d-a40a-49fea07154a5")
-		)
-		(instances
-			(project "PCB de botones V1"
-				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 138.43 78.74 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f6897e6e-86e6-46cf-9576-60ee92afc9c6")
-		(property "Reference" "R2"
-			(at 138.43 72.898 90)
+		(uuid "42b90e32-bbd1-4b2f-8cb4-70e16be9e161")
+		(property "Reference" "J2"
+			(at 87.63 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "R_US"
-			(at 138.43 75.438 90)
+		(property "Value" "Conn_02x05_Counter_Clockwise"
+			(at 87.63 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 138.684 77.724 90)
+		(property "Footprint" "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"
+			(at 88.9 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2597,7 +1499,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 138.43 78.74 0)
+			(at 88.9 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2605,8 +1507,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
-			(at 138.43 78.74 0)
+		(property "Description" "Generic connector, double row, 02x05, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 88.9 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2615,15 +1517,175 @@
 			)
 		)
 		(pin "2"
-			(uuid "eacd09a5-ef05-4ca4-93fe-cf50f0a82a59")
+			(uuid "68e563a9-f2fb-42a8-9872-fe30f83b319d")
+		)
+		(pin "10"
+			(uuid "8994f73a-bea7-45b9-96a3-a87eeb226a00")
+		)
+		(pin "4"
+			(uuid "52e23585-f8ab-48bd-972e-7c5ae52e69c7")
+		)
+		(pin "9"
+			(uuid "d5b01a10-3bef-491f-86e9-a875d5fa3be8")
+		)
+		(pin "8"
+			(uuid "0dc95322-d27d-4d5e-843c-02f0b8fcbd40")
+		)
+		(pin "3"
+			(uuid "6cb90f6c-cc16-4c6d-9e49-b891950086b4")
+		)
+		(pin "5"
+			(uuid "bc2a820d-a3c8-4b27-865f-4eaed2557277")
 		)
 		(pin "1"
-			(uuid "844a36fc-ad55-4f96-a5e6-b95035a5cb98")
+			(uuid "07531664-e4bb-4958-b067-2bdda1bf3432")
+		)
+		(pin "6"
+			(uuid "8773a7bd-69fd-4cba-8ab1-72d44d3271d7")
+		)
+		(pin "7"
+			(uuid "65725ed1-394c-49f4-811b-d0795677fdb2")
 		)
 		(instances
 			(project "PCB de botones V1"
 				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "R2")
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 76.2 62.23 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4518e7c3-bba0-42c4-8f9b-3c61a24000f1")
+		(property "Reference" "SW2"
+			(at 76.2 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 76.2 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
+			(at 76.2 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 76.2 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 76.2 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "916790cb-b6ff-4fa8-be12-333ddfbfc28e")
+		)
+		(pin "2"
+			(uuid "ed332c63-48a3-4338-80d0-b00c1a9288fc")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "SW2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 97.79 62.23 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "615585b2-6092-4778-9736-a6d4ca159e1d")
+		(property "Reference" "D10"
+			(at 99.3775 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 99.3775 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 97.79 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 97.79 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 97.79 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "16ee2f52-310e-4dee-9e47-faa91910e4b5")
+		)
+		(pin "1"
+			(uuid "f4a05042-0226-41a2-acea-630d54410d97")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -2631,16 +1693,16 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 172.72 86.36 90)
+		(at 109.22 57.15 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "fbb3065b-4069-48ad-bd92-e16366688b5a")
-		(property "Reference" "#PWR01"
-			(at 179.07 86.36 0)
+		(uuid "6f865d24-b2c4-4eaf-b8f3-9e58adf96f5f")
+		(property "Reference" "#PWR08"
+			(at 115.57 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2649,7 +1711,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 176.53 86.3599 90)
+			(at 113.03 57.1499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2658,7 +1720,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 172.72 86.36 0)
+			(at 109.22 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2667,7 +1729,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 172.72 86.36 0)
+			(at 109.22 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2676,7 +1738,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 172.72 86.36 0)
+			(at 109.22 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2685,12 +1747,888 @@
 			)
 		)
 		(pin "1"
-			(uuid "962ef609-b5ac-4001-8344-bfa8b531154b")
+			(uuid "73558002-bf01-4433-aba6-a7abec7694de")
 		)
 		(instances
 			(project "PCB de botones V1"
 				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
-					(reference "#PWR01")
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 71.12 62.23 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7e49b709-df75-449e-a083-b0e8a1030a03")
+		(property "Reference" "#PWR05"
+			(at 64.77 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 67.31 62.2299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 71.12 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 71.12 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "30b0226a-3340-4b84-8aba-49b562653d8d")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 93.98 59.69 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9f8432c0-9de5-431d-91dc-582497cf374c")
+		(property "Reference" "#PWR013"
+			(at 100.33 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 97.79 59.6899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 93.98 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "62433c78-f321-4058-9e3a-2577360b52f9")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 104.14 64.77 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a91a42b9-6a73-40eb-a5b8-c66f2a8b66d1")
+		(property "Reference" "#PWR06"
+			(at 110.49 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 107.95 64.7701 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.14 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 104.14 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3d96b61b-2ed4-4730-80b2-f16eb20e3268")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 54.61 59.69 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ac2dc3ef-e3f2-41b0-9ae6-d0d9e76b8022")
+		(property "Reference" "#PWR04"
+			(at 48.26 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 50.8 59.6901 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 54.61 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.61 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 54.61 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8934ac44-2a27-415d-84c3-fe6cacc748a9")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 58.42 59.69 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cc4937f1-0b6c-48dc-8b50-54e252a4dd3c")
+		(property "Reference" "R3"
+			(at 58.42 53.848 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R_US"
+			(at 58.42 56.388 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 58.674 58.674 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 58.42 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 58.42 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d75955ef-1954-4742-8f15-b4cfe01d3bca")
+		)
+		(pin "1"
+			(uuid "d1d53eac-59f9-4979-8e30-b31102361b85")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 77.47 64.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cf3f1959-dd75-45d0-a7ee-e0063da6868c")
+		(property "Reference" "D7"
+			(at 75.8825 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 75.8825 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 77.47 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 77.47 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 77.47 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7f03db64-7377-4ca3-81bd-98a54fb256db")
+		)
+		(pin "1"
+			(uuid "e2faa59e-c8ec-479c-8ad3-a1c7b5c86552")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_SPST")
+		(at 76.2 59.69 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d045fdf5-06b9-4819-801a-b690cbb05d66")
+		(property "Reference" "SW9"
+			(at 76.2 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_SPST"
+			(at 76.2 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_THT:SW_Slide_SPDT_Straight_CK_OS102011MS2Q"
+			(at 76.2 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 76.2 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Single Pole Single Throw (SPST) switch"
+			(at 76.2 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ec56e526-07cf-4fa5-8d0d-5e7a95be1f68")
+		)
+		(pin "1"
+			(uuid "5dbb6829-b663-4878-a41a-0d1efdc002f9")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "SW9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 93.98 50.8 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d3af873f-71aa-447a-b3ad-4f25c120d0d1")
+		(property "Reference" "D8"
+			(at 100.33 49.2125 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 97.79 49.2125 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 93.98 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 93.98 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 93.98 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1f653600-4c75-423a-b10b-b49486af2afc")
+		)
+		(pin "1"
+			(uuid "25e4b2fc-78eb-4ea3-941d-1d0765379635")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 105.41 62.23 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d50a7e84-1839-40d1-9d3c-ceb76f823cb8")
+		(property "Reference" "R10"
+			(at 105.41 68.072 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R_US"
+			(at 105.41 65.532 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 105.156 63.246 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 105.41 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 105.41 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "3d6bc3f8-80fa-4d29-a126-3cfb40126293")
+		)
+		(pin "1"
+			(uuid "68766afe-1c23-4646-b941-9a62bddc8827")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 93.98 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d600f00c-4db7-4952-8041-33d7d6a9a9fa")
+		(property "Reference" "R8"
+			(at 99.822 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R_US"
+			(at 97.282 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 94.996 43.434 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 93.98 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 93.98 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a8d3d254-49d1-43bd-b39e-9e35a8c96017")
+		)
+		(pin "1"
+			(uuid "3d4cb15b-9cd1-47e6-ad6c-cd8553be558b")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 105.41 57.15 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f2c67ac2-7816-4e81-ab18-e501b3f1239e")
+		(property "Reference" "R9"
+			(at 105.41 62.992 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R_US"
+			(at 105.41 60.452 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 105.156 58.166 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 105.41 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 105.41 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7412daed-c7f0-4d7a-9ea1-18df028c9c87")
+		)
+		(pin "1"
+			(uuid "1cc6b1c7-04df-441a-a0f5-04088d91f07e")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 93.98 39.37 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f933ed72-8c3d-42b3-bc46-5e9acbb5920b")
+		(property "Reference" "#PWR07"
+			(at 93.98 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 93.9799 35.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 93.98 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "25bc5384-7037-49ef-8fd7-984c5d521bef")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 69.85 64.77 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fbb9408c-879c-42a3-8017-298518cae914")
+		(property "Reference" "R7"
+			(at 69.85 58.928 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R_US"
+			(at 69.85 61.468 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 70.104 63.754 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 69.85 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 69.85 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d3d1d3e7-0982-4b6c-ae9f-f0474ca79759")
+		)
+		(pin "1"
+			(uuid "5839fd56-e719-4b87-89da-78bbe54c6858")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "R7")
 					(unit 1)
 				)
 			)
