@@ -141,7 +141,7 @@
 		(descr "Through hole IDC box header, 2x05, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0")
 		(tags "Through hole vertical IDC box header THT 2x05 2.54mm double row")
 		(property "Reference" "J2"
-			(at 1.27 -6.1 360)
+			(at 1.27 -6.1 0)
 			(layer "F.SilkS")
 			(uuid "be3fb433-0947-44a4-a5b8-b69aea8d84fd")
 			(effects
@@ -152,7 +152,7 @@
 			)
 		)
 		(property "Value" "Conn_02x05_Counter_Clockwise"
-			(at 1.27 16.26 360)
+			(at 1.27 16.26 0)
 			(layer "F.Fab")
 			(uuid "52bd30ce-253b-4654-a4b8-e441bde6f794")
 			(effects
@@ -664,7 +664,7 @@
 		(descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
 		(tags "LED diameter 5.0mm 2 pins")
 		(property "Reference" "D9"
-			(at 1.27 3.96 360)
+			(at 1.27 3.96 0)
 			(layer "B.SilkS")
 			(uuid "a445a834-7bf8-48e4-b844-b12151d367cf")
 			(effects
@@ -676,7 +676,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 1.27 -3.96 360)
+			(at 1.27 -3.96 0)
 			(layer "B.Fab")
 			(uuid "b3e5eb69-14b1-4b67-876c-74fd1a032805")
 			(effects
@@ -847,7 +847,7 @@
 			(uuid "394bd978-8c40-44ff-bb3f-79351cd4e953")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 1.25 0 360)
+			(at 1.25 0 0)
 			(layer "B.Fab")
 			(uuid "87507d99-4dba-4a83-aa17-11d371aae5ea")
 			(effects
@@ -899,7 +899,7 @@
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW4"
-			(at 3.25 2 360)
+			(at 3.25 2 0)
 			(layer "B.SilkS")
 			(uuid "f03ebb9e-8f82-4bfb-9d16-5aea5f43725f")
 			(effects
@@ -911,7 +911,7 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 3.75 -6.7 360)
+			(at 3.75 -6.7 0)
 			(layer "B.Fab")
 			(uuid "3847541e-444b-41b9-8817-8b1f4b92330e")
 			(effects
@@ -1187,7 +1187,7 @@
 			(uuid "79e3439b-6318-4fd3-a8ce-c7763db67856")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 3.25 -2.25 360)
+			(at 3.25 -2.25 0)
 			(layer "B.Fab")
 			(uuid "934dccd5-133a-45b2-a387-f2ebc07dcecc")
 			(effects
@@ -1674,7 +1674,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R7"
-			(at 5.08 2.37 360)
+			(at 5.08 2.37 0)
 			(layer "B.SilkS")
 			(uuid "37633a16-ad95-4358-9844-49d268a48507")
 			(effects
@@ -1686,7 +1686,7 @@
 			)
 		)
 		(property "Value" "R_US"
-			(at 5.08 -2.37 360)
+			(at 5.08 -2.37 0)
 			(layer "B.Fab")
 			(uuid "d8cb4dec-ef2a-4a6a-9b1f-c85524802996")
 			(effects
@@ -1902,7 +1902,7 @@
 			(uuid "3694509c-9553-4d16-b5b3-92e9bfa9177c")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5.08 0 360)
+			(at 5.08 0 0)
 			(layer "B.Fab")
 			(uuid "d4f3ec3b-ec5e-400d-b56d-aa88784e2a2f")
 			(effects
@@ -1952,7 +1952,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R9"
-			(at 5.08 2.37 360)
+			(at 5.08 2.37 0)
 			(layer "B.SilkS")
 			(uuid "e2b4ba51-30f1-4be6-8052-5b6e79c7ce5f")
 			(effects
@@ -1964,7 +1964,7 @@
 			)
 		)
 		(property "Value" "R_US"
-			(at 5.08 -2.37 360)
+			(at 5.08 -2.37 0)
 			(layer "B.Fab")
 			(uuid "cc6af8ea-e605-4896-b604-236fae9d91fb")
 			(effects
@@ -2180,7 +2180,7 @@
 			(uuid "61ee5b6c-71db-4f7f-9f31-4032fc3dca06")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5.08 0 360)
+			(at 5.08 0 0)
 			(layer "B.Fab")
 			(uuid "2388dfd8-71c0-4f7e-9a1d-b8659d37c3f7")
 			(effects
@@ -2230,7 +2230,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R3"
-			(at 5.08 2.37 360)
+			(at 5.08 2.37 0)
 			(layer "B.SilkS")
 			(uuid "d2aa7569-83b5-45ec-a3fc-4ece3210a368")
 			(effects
@@ -2242,7 +2242,7 @@
 			)
 		)
 		(property "Value" "R_US"
-			(at 5.08 -2.37 360)
+			(at 5.08 -2.37 0)
 			(layer "B.Fab")
 			(uuid "37f5efd1-26c6-49f9-ad4b-4612221c1660")
 			(effects
@@ -2458,7 +2458,7 @@
 			(uuid "d10b6268-04ec-4dcf-bd06-622a29c15a09")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5.08 0 360)
+			(at 5.08 0 0)
 			(layer "B.Fab")
 			(uuid "189be621-017d-41c6-9829-e648c08bd7cc")
 			(effects
@@ -2508,7 +2508,7 @@
 		(descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
 		(tags "LED diameter 5.0mm 2 pins")
 		(property "Reference" "D8"
-			(at 1.27 3.96 360)
+			(at 1.27 3.96 0)
 			(layer "B.SilkS")
 			(uuid "ec4a377f-489d-4e86-b367-9baa1b56ee30")
 			(effects
@@ -2520,7 +2520,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 1.27 -3.96 360)
+			(at 1.27 -3.96 0)
 			(layer "B.Fab")
 			(uuid "f14afdcf-5ce6-4619-ab4b-a5892d2e2d11")
 			(effects
@@ -2691,7 +2691,7 @@
 			(uuid "31a0f231-7f14-4162-b082-7473554fa871")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 1.25 0 360)
+			(at 1.25 0 0)
 			(layer "B.Fab")
 			(uuid "bd4ed407-c7bc-452e-9821-6705483aef19")
 			(effects
@@ -2743,7 +2743,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R10"
-			(at 5.08 2.37 360)
+			(at 5.08 2.37 0)
 			(layer "B.SilkS")
 			(uuid "6d628b2b-7016-44eb-b616-a567bc06e816")
 			(effects
@@ -2755,7 +2755,7 @@
 			)
 		)
 		(property "Value" "R_US"
-			(at 5.08 -2.37 360)
+			(at 5.08 -2.37 0)
 			(layer "B.Fab")
 			(uuid "07c253dd-63cd-4957-81f9-f3d9f4c57684")
 			(effects
@@ -2971,7 +2971,7 @@
 			(uuid "08c5d24a-8f30-48b7-849c-dd38913d7a5d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5.08 0 360)
+			(at 5.08 0 0)
 			(layer "B.Fab")
 			(uuid "09cf9dac-88f0-4b51-b7d7-78b69720eb26")
 			(effects
@@ -3021,7 +3021,7 @@
 		(descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
 		(tags "LED diameter 5.0mm 2 pins")
 		(property "Reference" "D10"
-			(at 1.27 3.96 360)
+			(at 1.27 3.96 0)
 			(layer "B.SilkS")
 			(uuid "8e347707-b3b3-4866-b259-1f9a92ba7461")
 			(effects
@@ -3033,7 +3033,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 1.27 -3.96 360)
+			(at 1.27 -3.96 0)
 			(layer "B.Fab")
 			(uuid "073d9365-a4ba-4f83-aa09-a0c4192c4755")
 			(effects
@@ -3204,7 +3204,7 @@
 			(uuid "2159e072-8957-46b5-8549-1caa79fd77a8")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 1.25 0 360)
+			(at 1.25 0 0)
 			(layer "B.Fab")
 			(uuid "16cb13e8-2a6b-49df-b9bf-8f65c6f363fe")
 			(effects
@@ -3256,7 +3256,7 @@
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW2"
-			(at 3.25 2 360)
+			(at 3.25 2 0)
 			(layer "B.SilkS")
 			(uuid "47f82cd3-5ab1-46be-872b-c599ab34e634")
 			(effects
@@ -3268,7 +3268,7 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 3.75 -6.7 360)
+			(at 3.75 -6.7 0)
 			(layer "B.Fab")
 			(uuid "5b48fa52-8022-47b2-9c44-ee5e63b1b835")
 			(effects
@@ -3544,7 +3544,7 @@
 			(uuid "ae99cf60-d2d7-4546-a780-a9ab2cda43be")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 3.25 -2.25 360)
+			(at 3.25 -2.25 0)
 			(layer "B.Fab")
 			(uuid "75442bc0-0e08-494b-9258-379c0db2d84e")
 			(effects
@@ -3618,7 +3618,7 @@
 		(descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
 		(tags "LED diameter 5.0mm 2 pins")
 		(property "Reference" "D7"
-			(at 1.27 3.96 360)
+			(at 1.27 3.96 0)
 			(layer "B.SilkS")
 			(uuid "ac8491be-8a76-4b17-8ec4-b103ddfd87c8")
 			(effects
@@ -3630,7 +3630,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 1.27 -3.96 360)
+			(at 1.27 -3.96 0)
 			(layer "B.Fab")
 			(uuid "9419c4df-c451-48b1-a635-891293b1e0ad")
 			(effects
@@ -3801,7 +3801,7 @@
 			(uuid "1a264d46-01ca-4994-a44d-940bb3c292d2")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 1.25 0 360)
+			(at 1.25 0 0)
 			(layer "B.Fab")
 			(uuid "64a14f50-6c30-4406-abbe-4e4f908cec5f")
 			(effects
@@ -3853,7 +3853,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R8"
-			(at 5.08 2.37 360)
+			(at 5.08 2.37 0)
 			(layer "B.SilkS")
 			(uuid "f8dc0333-4ff1-4dd4-83a2-f4b3c0b2945a")
 			(effects
@@ -3865,7 +3865,7 @@
 			)
 		)
 		(property "Value" "R_US"
-			(at 5.08 -2.37 360)
+			(at 5.08 -2.37 0)
 			(layer "B.Fab")
 			(uuid "6e01628b-728c-46b0-a9ee-0a22532278ad")
 			(effects
@@ -4081,7 +4081,7 @@
 			(uuid "bccf263a-5acc-4ac2-abaa-4fd07a5e4968")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5.08 0 360)
+			(at 5.08 0 0)
 			(layer "B.Fab")
 			(uuid "3ad25bb8-5a4c-4cf4-9498-0432ebe03033")
 			(effects
@@ -4131,7 +4131,7 @@
 		(descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
 		(tags "LED diameter 5.0mm 2 pins")
 		(property "Reference" "D3"
-			(at 1.27 3.96 360)
+			(at 1.27 3.96 0)
 			(layer "B.SilkS")
 			(uuid "b9e0482d-8d30-4229-aa1c-28b59f2367d6")
 			(effects
@@ -4143,7 +4143,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 1.27 -3.96 360)
+			(at 1.27 -3.96 0)
 			(layer "B.Fab")
 			(uuid "c464d485-a0c0-4a34-8487-6e2ea0259f9a")
 			(effects
@@ -4314,7 +4314,7 @@
 			(uuid "7c5a5d93-e681-467b-8cdf-d4987a4603df")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 1.25 0 360)
+			(at 1.25 0 0)
 			(layer "B.Fab")
 			(uuid "6d5a7d27-628f-446b-96bf-e23b3c79d964")
 			(effects
