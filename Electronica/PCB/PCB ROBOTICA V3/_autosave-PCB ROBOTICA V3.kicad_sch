@@ -4820,7 +4820,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2ab28eb4-6d9f-4e2b-b6c6-bf79b11b6565")
-		(property "Reference" "D?"
+		(property "Reference" "D1"
 			(at 240.03 15.24 0)
 			(effects
 				(font
@@ -4890,7 +4890,7 @@
 		(instances
 			(project "PCB ROBOTICA V3"
 				(path "/feeeb2cb-e374-40f4-b9c7-40ed321ecf02"
-					(reference "D?")
+					(reference "D1")
 					(unit 1)
 				)
 			)
