@@ -24,5 +24,5 @@ void loop()
   izquierdo = analogRead(CNY_IZQ);
   derecho = analogRead(CNY_DER);
 
-  Serial.println(izqPromedio);
+  Serial.println(analogRead(CNY_IZQ));
 }

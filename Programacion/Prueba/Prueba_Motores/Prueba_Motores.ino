@@ -1,11 +1,11 @@
-#define M1_AD A2
-#define M1_AT A1
-#define PWM_A A4
+#define M1_AD 10
+#define M1_AT 12
+#define PWM_A 3
 
 // Motor Derecho
-#define M2_AD A5
-#define M2_AT A0
-#define PWM_B A3
+#define M2_AD 4
+#define M2_AT 2
+#define PWM_B 11
 
 void setup() 
 {
@@ -24,10 +24,17 @@ void setup()
 
 void loop() 
 {
-  digitalWrite(M1_AD, LOW);
-  digitalWrite(M1_AT, LOW);
-  digitalWrite(M2_AD, HIGH);
-  digitalWrite(M2_AT, HIGH);
+  Adelante();
+  delay(2000);
+
+  Atras();
+  delay(2000);
+
+  Derecha();
+  delay(2000);
+
+  Izquierda();
+  delay(2000);
 }
 
 void Adelante()
