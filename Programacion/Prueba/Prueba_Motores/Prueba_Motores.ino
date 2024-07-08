@@ -1,82 +1,73 @@
-#define M1_AD 10
-#define M1_AT 12
-#define PWM_A 3
+// Prueba de Motores 
+
+// Motor Izquierdo
+#define M1_B A5
+#define M1_A 2
+#define PWM_A 5
 
 // Motor Derecho
-#define M2_AD 4
-#define M2_AT 2
-#define PWM_B 11
+#define M2_B 4
+#define M2_A 6
+#define PWM_B 3
 
 void setup() 
 {
   Serial.begin(9600);
   
-  pinMode(M1_AD, OUTPUT);
-  pinMode(M1_AT, OUTPUT);
-  pinMode(M2_AD, OUTPUT); 
-  pinMode(M2_AT, OUTPUT);
+  pinMode(M1_B, OUTPUT);
+  pinMode(M1_A, OUTPUT);
+  pinMode(M1_B, OUTPUT); 
+  pinMode(M1_A, OUTPUT);
   pinMode(PWM_A, OUTPUT);
   pinMode(PWM_B, OUTPUT);
 
-  digitalWrite(PWM_A, HIGH);
-  digitalWrite(PWM_B, HIGH);
+  analogWrite(PWM_A, 240);
+  analogWrite(PWM_B, 240);
 }
 
 void loop() 
 {
   Adelante();
-  delay(2000);
+  delay(1000);
 
   Atras();
-  delay(2000);
-
-  Derecha();
-  delay(2000);
+  delay(1000);
 
   Izquierda();
-  delay(2000);
+  delay(1000);
+
+  Derecha();
+  delay(1000);
 }
 
 void Adelante()
 {
-  digitalWrite(PWM_A, HIGH);
-  digitalWrite(PWM_B, HIGH);
-
-  digitalWrite(M1_AD, HIGH);
-  digitalWrite(M1_AT, LOW);
-  digitalWrite(M2_AD, HIGH);
-  digitalWrite(M2_AT, LOW);
+  digitalWrite(M1_B, HIGH);
+  digitalWrite(M1_A, LOW);
+  digitalWrite(M2_B, HIGH);
+  digitalWrite(M2_A, LOW);
 }
 
 void Atras()
 {
-  digitalWrite(PWM_A, HIGH);
-  digitalWrite(PWM_B, HIGH);
-
-  digitalWrite(M1_AD, LOW);
-  digitalWrite(M1_AT, HIGH);
-  digitalWrite(M2_AD, LOW);
-  digitalWrite(M2_AT, HIGH);
+  digitalWrite(M1_B, LOW);
+  digitalWrite(M1_A, HIGH);
+  digitalWrite(M2_B, LOW);
+  digitalWrite(M2_A, HIGH);
 }
 
 void Derecha()
 {
-  digitalWrite(PWM_A, HIGH);
-  digitalWrite(PWM_B, HIGH);
-
-  digitalWrite(M1_AD, LOW);
-  digitalWrite(M1_AT, HIGH);
-  digitalWrite(M2_AD, HIGH);
-  digitalWrite(M2_AT, LOW);
+  digitalWrite(M1_B, LOW);
+  digitalWrite(M1_A, HIGH);
+  digitalWrite(M2_B, HIGH);
+  digitalWrite(M2_A, LOW);
 }
 
 void Izquierda()
 {
-  digitalWrite(PWM_A, HIGH);
-  digitalWrite(PWM_B, HIGH);
-
-  digitalWrite(M1_AD, HIGH);
-  digitalWrite(M1_AT, LOW);
-  digitalWrite(M2_AD, LOW);
-  digitalWrite(M2_AT, HIGH);
+  digitalWrite(M1_B, HIGH);
+  digitalWrite(M1_A, LOW);
+  digitalWrite(M2_B, LOW);
+  digitalWrite(M2_A, HIGH);
 }

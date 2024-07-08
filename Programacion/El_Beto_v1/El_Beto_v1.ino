@@ -11,13 +11,15 @@
 #define ECHO_MED 10
 #define TRIG_MED 11
 
-//Motores
-#define M1_PWM 3
-#define M2_PWM 5
-#define M1_AD 12
-#define M2_AD 13
-#define M1_AT 2
-#define M2_AT 4
+// Motor Izquierdo
+#define M1_B A5
+#define M1_A 2
+#define PWM_A 5
+
+// Motor Derecho
+#define M2_B 4
+#define M2_A 6
+#define PWM_B 3
 
 int tiempoUltDer = 0;
 int tiempoUltMed = 0;
