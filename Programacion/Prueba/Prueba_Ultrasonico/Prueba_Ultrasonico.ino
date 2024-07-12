@@ -1,5 +1,5 @@
-#define TRIG 9
-#define ECHO 10
+#define TRIG 8
+#define ECHO 7
 
 long tiempo;
 long distancia;
@@ -17,7 +17,7 @@ void setup()
 
 void loop()
 {
-  Existencia();
+  Distancia();
 }
 
 void Existencia()

@@ -3,10 +3,10 @@
 #define CNY_DER A2
 #define ECHO_DER 7
 #define TRIG_DER 8
-#define ECHO_IZQ 10
-#define TRIG_IZQ 9
-#define ECHO_MED 11
-#define TRIG_MED 12
+#define ECHO_IZQ 11
+#define TRIG_IZQ 12
+#define ECHO_MED 10
+#define TRIG_MED 9
 
 // Botones y Leds
 #define BTN_1 A6
@@ -47,7 +47,7 @@ uint8_t lectura_cny_izq = 0;
 
 uint8_t izquierdo;
 uint8_t izq_blanco = 30;
-uint8_t izq_negro = 1005;
+uint8_t izq_negro = 800;
 uint8_t izq_promedio = (izq_blanco + izq_negro) /2;
 
 uint8_t derecho;
@@ -82,8 +82,8 @@ void setup()
   pinMode(CNY_IZQ, INPUT);
   pinMode(CNY_DER, INPUT);
 
-  analogWrite(PWM_A, 240);
-  analogWrite(PWM_B, 240);
+  analogWrite(PWM_A, 200);
+  analogWrite(PWM_B, 200);
 }
 
 void loop() 
@@ -91,9 +91,7 @@ void loop()
   ExistenciaUltrasonicos();
   LecturaCNY();
 
-  Adelante();
-
-  if (flag_cny_both)
+  /*if (flag_cny_both)
   {
     Atras();
     delay(500);
@@ -116,18 +114,30 @@ void loop()
 
     Izquierda();
     delay(500);
+  }*/
+
+  if (flag_cny_izq == true)
+  {
+    Atras();
+  }
+  else if (flag_cny_izq == false)
+  {
+    Adelante();
   }
 
   if (flag_ult_med)
   {
+    Serial.println("Medio");
     Adelante();
   }
   else if (flag_ult_der)
   {
+    Serial.println("Derecha");
     Derecha();
   }
   else if (flag_ult_izq)
   {
+    Serial.println("Izquierda");
     Izquierda();
   }
 }
@@ -137,7 +147,17 @@ void LecturaCNY()
   lectura_cny_der = analogRead(CNY_DER);
   lectura_cny_izq = analogRead(CNY_IZQ);
 
-  if (lectura_cny_der < der_promedio && lectura_cny_izq > izq_promedio)
+  if (lectura_cny_izq > izq_promedio)
+  {
+    Serial.println("Negro");
+    flag_cny_izq = false;
+  }
+  else if (lectura_cny_izq < izq_promedio)
+  {
+    Serial.println("Blanco");
+    flag_cny_der = true;
+  }
+  /*if (lectura_cny_der < der_promedio && lectura_cny_izq > izq_promedio)
   {
     flag_cny_der = true;
     flag_cny_izq = false;
@@ -152,7 +172,7 @@ void LecturaCNY()
   else if (lectura_cny_der < der_promedio && lectura_cny_izq < izq_promedio)
   {
     flag_cny_both = true;
-  }
+  }*/
 }
 
 void ExistenciaUltrasonicos()
@@ -181,31 +201,31 @@ void ExistenciaUltrasonicos()
   
   distancia_ult_izq = tiempo_ult_izq / 59;
 
-  if(distancia_ult_med < 20)
+  if(distancia_ult_med < 30)
   {
     //Serial.println("Hay algo");
     flag_ult_med = true;
   }
-  else if(distancia_ult_med > 20)
+  else if(distancia_ult_med > 30)
   {
     //Serial.println("No hay moros en la costa");
     flag_ult_med = false;
   }
 
-  if(distancia_ult_der < 20)
+  if(distancia_ult_der < 30)
   {
     flag_ult_der = true;
   }
-  else if(distancia_ult_der > 20)
+  else if(distancia_ult_der > 30)
   {
     flag_ult_der = false;
   }
 
-  if(distancia_ult_izq < 20)
+  if(distancia_ult_izq < 30)
   {
     flag_ult_izq = true;
   }
-  else if(distancia_ult_izq > 20)
+  else if(distancia_ult_izq > 30)
   {
     flag_ult_izq = false;
   }
