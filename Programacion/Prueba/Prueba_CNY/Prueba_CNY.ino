@@ -1,9 +1,9 @@
-#define CNY_IZQ A6
-#define CNY_DER A7
+#define CNY_IZQ A1
+#define CNY_DER A2
 
 int izquierdo;
 int izqBlanco = 30;
-int izqNegro = 1005;
+int izqNegro = 800;
 int izqPromedio = (izqBlanco + izqNegro) /2;
 
 int derecho;
@@ -24,5 +24,14 @@ void loop()
   izquierdo = analogRead(CNY_IZQ);
   derecho = analogRead(CNY_DER);
 
-  Serial.println(analogRead(CNY_IZQ));
+  //Serial.println(analogRead(CNY_IZQ));
+
+  if (izquierdo > izqPromedio)
+  {
+    Serial.println("Negro");
+  }
+  else if (izquierdo < izqPromedio)
+  {
+    Serial.println("Blanco");
+  }
 }
