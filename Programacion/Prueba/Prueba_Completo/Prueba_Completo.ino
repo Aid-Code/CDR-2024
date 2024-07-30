@@ -42,13 +42,15 @@ bool flag_ult_izq = false;
 
 // CNY
 
-uint8_t lectura_cny_der = 0;
-uint8_t lectura_cny_izq = 0;
+uint16_t lectura_cny_der = 0;
+uint32_t lectura_cny_izq = 0;
 
-uint8_t izquierdo;
-uint8_t izq_blanco = 30;
-uint8_t izq_negro = 800;
-uint8_t izq_promedio = (izq_blanco + izq_negro) /2;
+uint32_t izquierdo = 0;
+uint32_t izq = 0;
+uint32_t izq_blanco = 430;
+uint32_t izq_negro = 980;
+uint32_t izq_promedio = (izq_blanco + izq_negro) /2;
+uint32_t izq_promedio_lectura = 0;
 
 uint8_t derecho;
 uint8_t der_blanco = 24;
@@ -79,49 +81,40 @@ void setup()
   pinMode(TRIG_IZQ, OUTPUT);
   pinMode(ECHO_IZQ, INPUT);
 
-  pinMode(CNY_IZQ, INPUT);
-  pinMode(CNY_DER, INPUT);
-
-  analogWrite(PWM_A, 200);
-  analogWrite(PWM_B, 200);
+  analogWrite(PWM_A, 100);
+  analogWrite(PWM_B, 100);
 }
 
 void loop() 
 {
+  lectura_cny_der = analogRead(CNY_DER);
+
+  for (int i = 0; i <10; i++)
+  {
+    lectura_cny_izq = analogRead(CNY_IZQ);
+    izq = izq + lectura_cny_izq;
+  }
+
+  izquierdo = izq /10;
+  izq = 0;
+
   ExistenciaUltrasonicos();
   LecturaCNY();
+  
+  Serial.print(lectura_cny_izq);
+  Serial.print(izq_promedio);
 
-  /*if (flag_cny_both)
+  if (flag_cny_izq)
   {
+    Serial.println("  Atras");
     Atras();
-    delay(500);
-
-    Izquierda();
-    delay(700);
-  }
-  else if (flag_cny_izq && !flag_cny_der)
-  {
-    Atras();
-    delay(300);
-
+    delay(100);
     Derecha();
     delay(500);
-  }
-  else if (flag_cny_der && !flag_cny_izq)
+  } 
+  else
   {
-    Atras();
-    delay(300);
-
-    Izquierda();
-    delay(500);
-  }*/
-
-  if (flag_cny_izq == true)
-  {
-    Atras();
-  }
-  else if (flag_cny_izq == false)
-  {
+    Serial.println("  Adelante");
     Adelante();
   }
 
@@ -144,18 +137,15 @@ void loop()
 
 void LecturaCNY()
 {
-  lectura_cny_der = analogRead(CNY_DER);
-  lectura_cny_izq = analogRead(CNY_IZQ);
-
-  if (lectura_cny_izq > izq_promedio)
+  if (izquierdo < izq_promedio)
   {
-    Serial.println("Negro");
-    flag_cny_izq = false;
+    //Serial.println("Blanco");
+    flag_cny_izq = true;
   }
-  else if (lectura_cny_izq < izq_promedio)
+  else 
   {
-    Serial.println("Blanco");
-    flag_cny_der = true;
+    //Serial.println("Negro");
+    flag_cny_izq = false;
   }
   /*if (lectura_cny_der < der_promedio && lectura_cny_izq > izq_promedio)
   {
@@ -181,7 +171,7 @@ void ExistenciaUltrasonicos()
   delay(10);
   digitalWrite(TRIG_MED, LOW);
   
-  tiempo_ult_med = pulseIn(ECHO_MED, HIGH);
+  tiempo_ult_med = pulseIn(ECHO_MED, HIGH, 10000);
   
   distancia_ult_med = tiempo_ult_med / 59;
 
@@ -189,7 +179,7 @@ void ExistenciaUltrasonicos()
   delay(10);
   digitalWrite(TRIG_DER, LOW);
   
-  tiempo_ult_der = pulseIn(ECHO_DER, HIGH);
+  tiempo_ult_der = pulseIn(ECHO_DER, HIGH, 10000);
   
   distancia_ult_der = tiempo_ult_der / 59;
 
@@ -197,7 +187,7 @@ void ExistenciaUltrasonicos()
   delay(10);
   digitalWrite(TRIG_IZQ, LOW);
   
-  tiempo_ult_izq = pulseIn(ECHO_IZQ, HIGH);
+  tiempo_ult_izq = pulseIn(ECHO_IZQ, HIGH, 10000);
   
   distancia_ult_izq = tiempo_ult_izq / 59;
 
@@ -249,16 +239,16 @@ void Atras()
 
 void Derecha()
 {
-  digitalWrite(M1_B, LOW);
-  digitalWrite(M1_A, HIGH);
-  digitalWrite(M2_B, HIGH);
-  digitalWrite(M2_A, LOW);
-}
-
-void Izquierda()
-{
   digitalWrite(M1_B, HIGH);
   digitalWrite(M1_A, LOW);
   digitalWrite(M2_B, LOW);
   digitalWrite(M2_A, HIGH);
+}
+
+void Izquierda()
+{
+  digitalWrite(M1_B, LOW);
+  digitalWrite(M1_A, HIGH);
+  digitalWrite(M2_B, HIGH);
+  digitalWrite(M2_A, LOW);
 }
