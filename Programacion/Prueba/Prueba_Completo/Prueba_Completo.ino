@@ -40,22 +40,27 @@ bool flag_ult_der = false;
 bool flag_ult_med = false;
 bool flag_ult_izq = false;
 
-// CNY
+// CNY Izquierdo
 
-uint16_t lectura_cny_der = 0;
 uint32_t lectura_cny_izq = 0;
+uint32_t cny_izquierdo = 0;
+uint32_t suma_cny_izq = 0;
 
-uint32_t izquierdo = 0;
-uint32_t izq = 0;
-uint32_t izq_blanco = 430;
-uint32_t izq_negro = 980;
+uint32_t izq_blanco = 30;
+uint32_t izq_negro = 810;
+
 uint32_t izq_promedio = (izq_blanco + izq_negro) /2;
-uint32_t izq_promedio_lectura = 0;
 
-uint8_t derecho;
-uint8_t der_blanco = 24;
-uint8_t der_negro = 990;
-uint8_t der_promedio = (der_blanco + der_negro) /2;
+//CNY Derecho
+
+uint32_t lectura_cny_der = 0;
+uint32_t cny_derecho = 0;
+uint32_t suma_cny_der = 0;
+
+uint32_t der_blanco = 350;
+uint32_t der_negro = 1000;
+
+uint32_t der_promedio = (der_blanco + der_negro) /2;
 
 bool flag_cny_der = false;
 bool flag_cny_izq = false;
@@ -87,22 +92,27 @@ void setup()
 
 void loop() 
 {
-  lectura_cny_der = analogRead(CNY_DER);
 
   for (int i = 0; i <10; i++)
   {
     lectura_cny_izq = analogRead(CNY_IZQ);
-    izq = izq + lectura_cny_izq;
+    suma_cny_izq = suma_cny_izq + lectura_cny_izq;
   }
 
-  izquierdo = izq /10;
-  izq = 0;
+  for (int i = 0; i <10; i++)
+  {
+    lectura_cny_der = analogRead(CNY_DER);
+    suma_cny_der = suma_cny_der + lectura_cny_der;
+  }
+
+  cny_izquierdo = suma_cny_izq /10;
+  cny_izquierdo = 0;
+
+  cny_derecho = suma_cny_izq /10;
+  cny_derechoo = 0;
 
   ExistenciaUltrasonicos();
   LecturaCNY();
-  
-  Serial.print(lectura_cny_izq);
-  Serial.print(izq_promedio);
 
   if (flag_cny_izq)
   {
@@ -114,7 +124,7 @@ void loop()
   } 
   else
   {
-    Serial.println("  Adelante");
+    Serial.println("Adelante");
     Adelante();
   }
 
@@ -137,7 +147,7 @@ void loop()
 
 void LecturaCNY()
 {
-  if (izquierdo < izq_promedio)
+  if (cny_izquierdo < izq_promedio)
   {
     //Serial.println("Blanco");
     flag_cny_izq = true;
@@ -147,22 +157,22 @@ void LecturaCNY()
     //Serial.println("Negro");
     flag_cny_izq = false;
   }
-  /*if (lectura_cny_der < der_promedio && lectura_cny_izq > izq_promedio)
+  else if (cny_der < der_promedio)
   {
     flag_cny_der = true;
-    flag_cny_izq = false;
-    flag_cny_both = false;
   }
-  else if (lectura_cny_izq < izq_promedio && lectura_cny_der > der_promedio)
+  else 
   {
-    flag_cny_izq = true;
     flag_cny_der = false;
-    flag_cny_both = false;
   }
-  else if (lectura_cny_der < der_promedio && lectura_cny_izq < izq_promedio)
+  else if (cny_izquierdo < izq_promedio && cny_der < der_promedio)
   {
     flag_cny_both = true;
-  }*/
+  }
+  else
+  {
+    flag_cny_both = false;
+  }
 }
 
 void ExistenciaUltrasonicos()
