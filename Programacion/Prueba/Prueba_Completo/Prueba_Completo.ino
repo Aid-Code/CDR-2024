@@ -53,14 +53,14 @@ uint32_t izq_promedio = (izq_blanco + izq_negro) /2;
 
 //CNY Derecho
 
-uint32_t lectura_cny_der = 0;
-uint32_t cny_derecho = 0;
-uint32_t suma_cny_der = 0;
+int lectura_cny_der = 0;
+int cny_derecho = 0;
+int suma_cny_der = 0;
 
-uint32_t der_blanco = 350;
-uint32_t der_negro = 1000;
+int der_blanco = 350;
+int der_negro = 1000;
 
-uint32_t der_promedio = (der_blanco + der_negro) /2;
+int der_promedio = (der_blanco + der_negro) /2;
 
 bool flag_cny_der = false;
 bool flag_cny_izq = false;
@@ -92,7 +92,7 @@ void setup()
 
 void loop() 
 {
-
+  
   for (int i = 0; i <10; i++)
   {
     lectura_cny_izq = analogRead(CNY_IZQ);
@@ -106,12 +106,14 @@ void loop()
   }
 
   cny_izquierdo = suma_cny_izq /10;
-  cny_izquierdo = 0;
+  cny_derecho = suma_cny_der /10;
 
-  cny_derecho = suma_cny_izq /10;
-  cny_derechoo = 0;
+  Serial.println(cny_derecho);
 
-  ExistenciaUltrasonicos();
+  suma_cny_izq = 0;
+  suma_cny_der = 0;
+
+  /*ExistenciaUltrasonicos();
   LecturaCNY();
 
   if (flag_cny_izq)
@@ -142,7 +144,7 @@ void loop()
   {
     Serial.println("Izquierda");
     Izquierda();
-  }
+  }*/
 }
 
 void LecturaCNY()
@@ -157,7 +159,8 @@ void LecturaCNY()
     //Serial.println("Negro");
     flag_cny_izq = false;
   }
-  else if (cny_der < der_promedio)
+
+  if (cny_derecho < der_promedio)
   {
     flag_cny_der = true;
   }
@@ -165,7 +168,8 @@ void LecturaCNY()
   {
     flag_cny_der = false;
   }
-  else if (cny_izquierdo < izq_promedio && cny_der < der_promedio)
+
+  if (cny_izquierdo < izq_promedio && cny_derecho < der_promedio)
   {
     flag_cny_both = true;
   }
