@@ -1,15 +1,27 @@
 #define CNY_IZQ A1
 #define CNY_DER A2
 
-int izquierdo;
-int izqBlanco = 30;
-int izqNegro = 810;
-int izqPromedio = (izqBlanco + izqNegro) /2;
+// CNY Izquierdo
 
-int derecho;
-int derBlanco = 350;
-int derNegro = 1000;
-int derPromedio = (derBlanco + derNegro) /2;
+uint32_t lectura_cny_izq = 0;
+uint32_t cny_izquierdo = 0;
+uint32_t suma_cny_izq = 0;
+
+uint32_t izq_blanco = 25;
+uint32_t izq_negro = 650;
+
+uint32_t izq_promedio = (izq_blanco + izq_negro) /2;
+
+//CNY Derecho
+
+uint32_t lectura_cny_der = 0;
+uint32_t cny_derecho = 0;
+uint32_t suma_cny_der = 0;
+
+uint32_t der_blanco = 120;
+uint32_t der_negro = 820;
+
+uint32_t der_promedio = (der_blanco + der_negro) /2;
 
 void setup() 
 {
@@ -18,26 +30,44 @@ void setup()
 
 void loop() 
 {
-  izquierdo = analogRead(CNY_IZQ);
-  derecho = analogRead(CNY_DER);
+  lectura_cny_izq = analogRead(CNY_IZQ);
+  lectura_cny_der = analogRead(CNY_DER);
 
-  //Serial.println(izquierdo);
+  for (int i = 0; i <10; i++)
+  {
+    lectura_cny_izq = analogRead(CNY_IZQ);
+    suma_cny_izq = suma_cny_izq + lectura_cny_izq;
+  }
 
-  if (izquierdo > izqPromedio)
+  for (int i = 0; i <10; i++)
+  {
+    lectura_cny_der = analogRead(CNY_DER);
+    suma_cny_der = suma_cny_der + lectura_cny_der;
+  }
+
+  cny_izquierdo = suma_cny_izq /10;
+  cny_derecho = suma_cny_der /10;
+
+  suma_cny_izq = 0;
+  suma_cny_der = 0;
+
+  //Serial.println(cny_derecho);
+
+  /*if (cny_izquierdo > izq_promedio)
   {
     Serial.println("Negro");
   }
-  else if (izquierdo < izqPromedio)
-  {
-    Serial.println("Blanco");
-  }
-
-  /*if (derecho > derPromedio)
-  {
-    Serial.println("Negro");
-  }
-  else if (derecho < derPromedio)
+  else if (cny_izquierdo < izq_promedio)
   {
     Serial.println("Blanco");
   }*/
+
+  if (cny_derecho > der_promedio)
+  {
+    Serial.println("Negro");
+  }
+  else if (cny_derecho < der_promedio)
+  {
+    Serial.println("Blanco");
+  }
 }

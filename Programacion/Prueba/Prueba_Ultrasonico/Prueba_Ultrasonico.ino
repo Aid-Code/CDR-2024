@@ -17,7 +17,7 @@ void setup()
 
 void loop()
 {
-  Distancia();
+  Existencia();
 }
 
 void Existencia()
@@ -30,11 +30,11 @@ void Existencia()
   
   distancia = tiempo / 59;
 
-  if(distancia < 20)
+  if(distancia < 10)
   {
     Serial.println("Hay algo");
   }
-  else if(distancia > 20)
+  else if (distancia > 10)
   {
     Serial.println("No hay moros en la costa");
   }
