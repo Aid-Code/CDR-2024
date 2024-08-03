@@ -9,12 +9,13 @@
 #define TRIG_MED 9
 
 // Botones y Leds
-#define BTN_1 A6
+#define BTN A4
+/*#define BTN_1 A6
 #define BTN_2 A7
 #define LED_1 A4
 #define LED_2 A3
 #define LED_3 13
-#define LED_4 A0
+#define LED_4 A0*/
 
 // Motor Izquierdo
 #define M1_B A5
@@ -46,8 +47,8 @@ uint32_t lectura_cny_izq = 0;
 uint32_t cny_izquierdo = 0;
 uint32_t suma_cny_izq = 0;
 
-uint32_t izq_blanco = 25;
-uint32_t izq_negro = 650;
+uint32_t izq_blanco = 28;
+uint32_t izq_negro = 735;
 
 uint32_t izq_promedio = (izq_blanco + izq_negro) /2;
 
@@ -57,8 +58,8 @@ uint32_t lectura_cny_der = 0;
 uint32_t cny_derecho = 0;
 uint32_t suma_cny_der = 0;
 
-uint32_t der_blanco = 120;
-uint32_t der_negro = 820;
+uint32_t der_blanco = 285;
+uint32_t der_negro = 805;
 
 uint32_t der_promedio = (der_blanco + der_negro) /2;
 
@@ -86,8 +87,15 @@ void setup()
   pinMode(TRIG_IZQ, OUTPUT);
   pinMode(ECHO_IZQ, INPUT);
 
-  analogWrite(PWM_A, 75); //Motor Izquierdo
-  analogWrite(PWM_B, 50); //Motor Derecho
+  //Boton
+  pinMode(BTN, INPUT_PULLUP);
+
+  analogWrite(PWM_A, 105); //Motor Izquierdo
+  analogWrite(PWM_B, 80); //Motor Derecho
+
+  while(digitalRead(BTN) == HIGH){}
+  delay(5100);
+  Serial.println("Prendido");
 }
 
 void loop() 
@@ -97,29 +105,29 @@ void loop()
   LecturaCNY();
   DetectarLinea();
 
-  /*if (flag_cny_izq)
+  if (flag_cny_izq)
   {
     Serial.println("Atras");
     Atras();
-    delay(1000);
+    delay(800);
     Derecha();
     Serial.println("Derecha");
-    delay(500);
+    delay(200);
   } 
   else if (flag_cny_der)
   {
     Serial.println("Atras");
     Atras();
-    delay(1000);
+    delay(800);
     Izquierda();
     Serial.println("Izquierda");
-    delay(500);
+    delay(200);
   }
   else
   {
     Serial.println("Adelante");
     Adelante();
-  }*/
+  }
 
   if (flag_ult_med)
   {
@@ -136,6 +144,7 @@ void loop()
     Serial.println("Izquierda");
     Izquierda();
   }
+  
 }
 
 void LecturaCNY()
@@ -197,7 +206,7 @@ void LecturaUltrasonicos()
   delay(10);
   digitalWrite(TRIG_MED, LOW);
   
-  tiempo_ult_med = pulseIn(ECHO_MED, HIGH);
+  tiempo_ult_med = pulseIn(ECHO_MED, HIGH, 10000);
   
   distancia_ult_med = tiempo_ult_med / 59;
 
@@ -205,7 +214,7 @@ void LecturaUltrasonicos()
   delay(10);
   digitalWrite(TRIG_DER, LOW);
   
-  tiempo_ult_der = pulseIn(ECHO_DER, HIGH);
+  tiempo_ult_der = pulseIn(ECHO_DER, HIGH, 10000);
   
   distancia_ult_der = tiempo_ult_der / 59;
 
@@ -213,7 +222,7 @@ void LecturaUltrasonicos()
   delay(10);
   digitalWrite(TRIG_IZQ, LOW);
   
-  tiempo_ult_izq = pulseIn(ECHO_IZQ, HIGH);
+  tiempo_ult_izq = pulseIn(ECHO_IZQ, HIGH, 10000);
   
   distancia_ult_izq = tiempo_ult_izq / 59;
 }
@@ -231,20 +240,20 @@ void ExistenciaUlt()
     flag_ult_med = false;
   }
 
-  if(distancia_ult_der < 30)
+  if(distancia_ult_der < 15)
   {
     flag_ult_der = true;
   }
-  else if(distancia_ult_der > 30)
+  else if(distancia_ult_der > 15)
   {
     flag_ult_der = false;
   }
 
-  if(distancia_ult_izq < 30)
+  if(distancia_ult_izq < 15)
   {
     flag_ult_izq = true;
   }
-  else if(distancia_ult_izq > 30)
+  else if(distancia_ult_izq > 15)
   {
     flag_ult_izq = false;
   }
