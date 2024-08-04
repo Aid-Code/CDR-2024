@@ -1096,6 +1096,18 @@
 		(color 0 0 0 0)
 		(uuid "4f365e50-7311-4a47-844f-ad2e5f3554de")
 	)
+	(no_connect
+		(at 81.28 86.36)
+		(uuid "c0842c5b-6440-4d63-b60f-ef7136574634")
+	)
+	(no_connect
+		(at 81.28 91.44)
+		(uuid "c0ff654a-38a3-4200-8079-c87d2cf1f86c")
+	)
+	(no_connect
+		(at 81.28 88.9)
+		(uuid "ffeca370-c746-41cc-acb2-5650084ee143")
+	)
 	(wire
 		(pts
 			(xy 71.12 54.61) (xy 81.28 54.61)
@@ -1125,6 +1137,148 @@
 			(type default)
 		)
 		(uuid "fed4b171-e45f-4440-84bc-aaf24ef5bedd")
+	)
+	(text "Hola cherniak como estas tanto tiempo\nTe dejo las conexiones corregidas al IDC\nPor favor esta vez hace un esquematico un poquito mas lindo..."
+		(exclude_from_sim no)
+		(at 55.626 74.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "2fb2ad20-2d34-4b25-9a10-0abcf621c805")
+	)
+	(global_label "LED1"
+		(shape input)
+		(at 81.28 93.98 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1942e7c1-c065-4032-a78a-87175dbd01be")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 73.6382 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BTN1"
+		(shape input)
+		(at 93.98 96.52 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "323d274b-c422-4ada-bf58-27509dab7918")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 101.7428 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "LED3"
+		(shape input)
+		(at 93.98 93.98 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "70b00ad9-d14d-4f10-bced-c72477655431")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 101.6218 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BTN2"
+		(shape input)
+		(at 93.98 91.44 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "74ea8c47-b3f5-401b-ae20-465f189ce538")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 101.7428 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "LED2"
+		(shape input)
+		(at 93.98 88.9 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "945625bd-7f64-4750-940e-8968ae5effc9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 101.6218 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "LED4"
+		(shape input)
+		(at 81.28 96.52 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e1098594-244d-4da3-9e5e-8d2e10790219")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 73.6382 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:LED")
@@ -1963,6 +2117,73 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 93.98 86.36 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aad43263-6172-4578-b627-5e5d5f4af7a0")
+		(property "Reference" "#PWR01"
+			(at 100.33 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 97.79 86.3599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 93.98 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "60c8bf1f-10ce-442c-8046-7e6ff5109bee")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 54.61 59.69 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2562,6 +2783,98 @@
 			(project "PCB de botones V1"
 				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x05_Counter_Clockwise")
+		(at 88.9 91.44 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fa5e2a03-1ad6-4bd8-91ca-d9ea5275beaa")
+		(property "Reference" "J1"
+			(at 87.63 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "IDC Placa Botones"
+			(at 87.63 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_IDC:IDC-Header_2x05_P2.54mm_Horizontal"
+			(at 88.9 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 88.9 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x05, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 88.9 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "af0f328d-9b78-4610-8ac4-161fa59c87a6")
+		)
+		(pin "10"
+			(uuid "f816f2ed-0a75-4a37-ae46-116cf7d78b51")
+		)
+		(pin "4"
+			(uuid "55a64863-890d-43db-997d-b3f8411d4c2e")
+		)
+		(pin "9"
+			(uuid "dd51e607-31c3-4bde-b393-347940659080")
+		)
+		(pin "8"
+			(uuid "ee811799-d216-4cc7-82af-a929a3351918")
+		)
+		(pin "3"
+			(uuid "6fe96dac-adbf-4830-a23f-a02998a1a3be")
+		)
+		(pin "5"
+			(uuid "c309f773-98d7-438d-835b-dc48cc188b09")
+		)
+		(pin "1"
+			(uuid "7f6742ad-02aa-4cfb-b0b0-2ea72b81a40c")
+		)
+		(pin "6"
+			(uuid "ced43fdc-ad2e-484b-8f66-066f583126dc")
+		)
+		(pin "7"
+			(uuid "78d0ecf8-8b51-4cec-88a1-3f34c836ba4d")
+		)
+		(instances
+			(project "PCB de botones V1"
+				(path "/83e621f7-046b-4df3-a825-7f5b54a0265f"
+					(reference "J1")
 					(unit 1)
 				)
 			)
