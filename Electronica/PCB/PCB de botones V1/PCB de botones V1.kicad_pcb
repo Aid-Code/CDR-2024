@@ -4359,6 +4359,86 @@
 			)
 		)
 	)
+	(gr_line
+		(start 152.7 71.5)
+		(end 156.15 71.5)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(layer "F.Cu")
+		(uuid "0c2a2f51-ec7e-4245-b85a-10159e04c336")
+	)
+	(gr_line
+		(start 223.95 103.75)
+		(end 221.75 102.1)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(layer "F.Cu")
+		(uuid "351daae0-6d87-46b3-86f0-0a0bf87b6087")
+	)
+	(gr_line
+		(start 154.7 66.85)
+		(end 154.75 73.1)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(layer "F.Cu")
+		(uuid "624f31f3-94b3-45d0-9b75-738438eb45ef")
+	)
+	(gr_line
+		(start 219.7 103.85)
+		(end 223.95 103.75)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(layer "F.Cu")
+		(uuid "9ccc0e68-a75c-44e7-9fbd-1d89ba0344b3")
+	)
+	(gr_line
+		(start 221.7 108.6)
+		(end 221.75 102.1)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(layer "F.Cu")
+		(uuid "a3697df6-b9a3-437d-9f88-386fb748bf92")
+	)
+	(gr_line
+		(start 221.75 102.1)
+		(end 219.7 103.85)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(layer "F.Cu")
+		(uuid "c550ccc7-c857-4bf9-8cf6-e73941c37fd9")
+	)
+	(gr_line
+		(start 154.75 73.1)
+		(end 152.7 71.5)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(layer "F.Cu")
+		(uuid "d32e03b6-e0a9-477b-8fdc-d5df78f1cc8b")
+	)
+	(gr_line
+		(start 156.15 71.5)
+		(end 154.75 73.1)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(layer "F.Cu")
+		(uuid "fc86cb77-2a8b-4a94-a898-6fb4024c6f95")
+	)
 	(gr_rect
 		(start 149.315 74.55)
 		(end 229.615 102.91)
@@ -4369,6 +4449,32 @@
 		(fill none)
 		(layer "Edge.Cuts")
 		(uuid "407f69f0-dbc3-4946-94ac-e69e7d177759")
+	)
+	(gr_text "Acordate de separar los pines del switch"
+		(at 208.65 111.45 0)
+		(layer "F.Cu")
+		(uuid "9652b245-86d3-46cf-96fb-1fa3342eb0cc")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "AH y otra cosa, creo que quedaria mejor si\neste agujero de sujecion queda por afuera como el otro"
+		(at 150.25 65.7 0)
+		(layer "F.Cu")
+		(uuid "b2fa0a77-a57f-4d4b-906c-d28a19eab692")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
 	)
 	(gr_text "BETO BTN V1\n"
 		(at 166.235 101.98 -0)
