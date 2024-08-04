@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Step Up")(type "KiCad")(uri "${KIPRJMOD}/Step Up.pretty")(options "")(descr ""))
+)
