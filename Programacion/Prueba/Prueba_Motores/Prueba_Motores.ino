@@ -28,7 +28,7 @@ void setup()
 void loop() 
 {
   Adelante();
-  delay(1000);
+  /*delay(1000);
 
   Atras();
   delay(1000);
@@ -37,7 +37,7 @@ void loop()
   delay(1000);
 
   Derecha();
-  delay(1000);
+  delay(1000);*/
 }
 
 void Adelante()
