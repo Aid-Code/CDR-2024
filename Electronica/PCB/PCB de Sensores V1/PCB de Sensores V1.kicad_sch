@@ -1033,6 +1033,16 @@
 		)
 		(uuid "b55f7aa1-2103-4703-b412-fe844a751ac0")
 	)
+	(text "AHI LO HICE, TERMINA LA PLACA"
+		(exclude_from_sim no)
+		(at 178.054 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "93cbd000-90fd-4c36-83fd-fae9512516fb")
+	)
 	(text "Te dejo las conexiones que quedaron en la \nplaca principal para que las corrijas"
 		(exclude_from_sim no)
 		(at 182.88 18.542 0)
@@ -1111,7 +1121,7 @@
 	)
 	(global_label "CNY 2"
 		(shape input)
-		(at 172.72 41.91 180)
+		(at 172.72 34.29 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1121,7 +1131,7 @@
 		)
 		(uuid "21e0145c-6013-4b22-aed3-b1ca7ecc12b9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 163.8686 41.91 0)
+			(at 163.8686 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1243,7 +1253,7 @@
 	)
 	(global_label "TRIG 3"
 		(shape input)
-		(at 185.42 31.75 0)
+		(at 185.42 44.45 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1253,7 +1263,7 @@
 		)
 		(uuid "499372ba-30f3-4bb2-8e04-661888c86bcb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 194.6947 31.75 0)
+			(at 194.6947 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1265,22 +1275,22 @@
 	)
 	(global_label "ECHO 5"
 		(shape input)
-		(at 185.42 41.91 0)
+		(at 172.72 36.83 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "4a5a0cdb-020f-4c76-b322-6f530265a42f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 195.6623 41.91 0)
+			(at 162.4777 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -1353,29 +1363,7 @@
 	)
 	(global_label "CNY 3"
 		(shape input)
-		(at 172.72 44.45 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "5caeb1c4-588f-478c-b5e8-8f41160fe10e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 163.8686 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "TRIG 5"
-		(shape input)
-		(at 185.42 44.45 0)
+		(at 185.42 29.21 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1383,9 +1371,9 @@
 			)
 			(justify left)
 		)
-		(uuid "68d4bf40-53e1-427f-8d2b-99bc2307a0be")
+		(uuid "5caeb1c4-588f-478c-b5e8-8f41160fe10e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 194.6947 44.45 0)
+			(at 194.2714 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1395,9 +1383,31 @@
 			)
 		)
 	)
+	(global_label "TRIG 5"
+		(shape input)
+		(at 172.72 39.37 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "68d4bf40-53e1-427f-8d2b-99bc2307a0be")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 163.4453 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "ECHO 3"
 		(shape input)
-		(at 185.42 29.21 0)
+		(at 185.42 41.91 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1407,7 +1417,7 @@
 		)
 		(uuid "7042010f-2774-465d-b690-a7888f037a4c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 195.6623 29.21 0)
+			(at 195.6623 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1485,7 +1495,7 @@
 	)
 	(global_label "TRIG 4"
 		(shape input)
-		(at 185.42 39.37 0)
+		(at 185.42 36.83 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1495,7 +1505,7 @@
 		)
 		(uuid "80a8fcd0-645f-4025-a350-6beab19cde22")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 194.6947 39.37 0)
+			(at 194.6947 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1507,22 +1517,22 @@
 	)
 	(global_label "CNY 1"
 		(shape input)
-		(at 172.72 39.37 180)
+		(at 185.42 46.99 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "8d17f72e-cb6b-4e57-aea7-e7ff4eee1329")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 163.8686 39.37 0)
+			(at 194.2714 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -1551,7 +1561,7 @@
 	)
 	(global_label "ECHO 1"
 		(shape input)
-		(at 172.72 36.83 180)
+		(at 172.72 46.99 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1561,7 +1571,7 @@
 		)
 		(uuid "9fc5e387-c69c-4b11-b815-c922eca42d0d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 162.4777 36.83 0)
+			(at 162.4777 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1793,7 +1803,7 @@
 	)
 	(global_label "TRIG 1"
 		(shape input)
-		(at 172.72 34.29 180)
+		(at 172.72 44.45 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1803,7 +1813,7 @@
 		)
 		(uuid "cf38c4ea-d653-4db3-b04c-06058c17d312")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 163.4453 34.29 0)
+			(at 163.4453 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1859,7 +1869,7 @@
 	)
 	(global_label "ECHO 4"
 		(shape input)
-		(at 185.42 36.83 0)
+		(at 185.42 34.29 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1869,7 +1879,7 @@
 		)
 		(uuid "f50f4419-3d02-4189-9fac-855b3b8f2e5e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 195.6623 36.83 0)
+			(at 195.6623 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1960,7 +1970,7 @@
 			(uuid "23cc3ef0-d7b6-404c-8ab6-144e54cef59f")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR014")
 					(unit 1)
@@ -2027,7 +2037,7 @@
 			(uuid "44fb5b10-7e90-480a-bf03-444392f34267")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR01")
 					(unit 1)
@@ -2102,7 +2112,7 @@
 			(uuid "63ae009b-538c-4de7-ba7e-64d77468284f")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "C2")
 					(unit 1)
@@ -2212,7 +2222,7 @@
 			(uuid "e3a7d496-d238-4503-85ca-22736bd5ca50")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "J2")
 					(unit 1)
@@ -2287,7 +2297,7 @@
 			(uuid "6faa396c-5f81-487d-9bf3-b843dfebd06e")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "U1")
 					(unit 1)
@@ -2354,7 +2364,7 @@
 			(uuid "d959d2c2-2699-4dc3-b99b-938b0d3b897b")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR012")
 					(unit 1)
@@ -2429,7 +2439,7 @@
 			(uuid "af7f0a1b-211e-406f-8254-5f0eb72a21a5")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "U2")
 					(unit 1)
@@ -2539,7 +2549,7 @@
 			(uuid "4d3fd7da-0275-442b-bfd7-66a3f690ec27")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "J1")
 					(unit 1)
@@ -2549,7 +2559,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 185.42 46.99 90)
+		(at 172.72 41.91 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2557,7 +2567,7 @@
 		(dnp no)
 		(uuid "674a276f-3e06-443d-a50a-0d02094b532c")
 		(property "Reference" "#PWR018"
-			(at 191.77 46.99 0)
+			(at 166.37 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2566,7 +2576,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 190.754 46.99 90)
+			(at 167.386 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2574,7 +2584,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 185.42 46.99 0)
+			(at 172.72 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2583,7 +2593,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 185.42 46.99 0)
+			(at 172.72 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2592,7 +2602,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 185.42 46.99 0)
+			(at 172.72 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2604,7 +2614,7 @@
 			(uuid "e4f6f246-f442-43b4-8d07-a43de2685ed7")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR018")
 					(unit 1)
@@ -2671,7 +2681,7 @@
 			(uuid "f97c1381-110a-48f9-a3e8-f80ca3a5d050")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR010")
 					(unit 1)
@@ -2738,7 +2748,7 @@
 			(uuid "d7d9b7c0-5c43-419a-aad9-68609b63a3b2")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR07")
 					(unit 1)
@@ -2805,7 +2815,7 @@
 			(uuid "18021704-84a7-4616-a9c0-d68aa72b5911")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR04")
 					(unit 1)
@@ -2872,7 +2882,7 @@
 			(uuid "f7d294b2-8216-42b6-b5ab-759b4e136956")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR015")
 					(unit 1)
@@ -2939,7 +2949,7 @@
 			(uuid "88174374-be58-42f7-8a1d-9deabdca58dd")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR020")
 					(unit 1)
@@ -2949,7 +2959,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 172.72 46.99 90)
+		(at 185.42 39.37 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2957,7 +2967,7 @@
 		(dnp no)
 		(uuid "812ffc99-bfc0-4cac-9d5b-0de18ca294da")
 		(property "Reference" "#PWR017"
-			(at 176.53 46.99 0)
+			(at 181.61 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2966,7 +2976,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 169.164 46.9899 90)
+			(at 189.23 39.3701 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2975,7 +2985,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 172.72 46.99 0)
+			(at 185.42 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2984,7 +2994,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 172.72 46.99 0)
+			(at 185.42 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2993,7 +3003,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 172.72 46.99 0)
+			(at 185.42 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3005,7 +3015,7 @@
 			(uuid "230fca18-a3be-4e99-b708-a2a88e3a6771")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR017")
 					(unit 1)
@@ -3072,7 +3082,7 @@
 			(uuid "b15d2167-7386-4101-b8e4-b96cc862879b")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR013")
 					(unit 1)
@@ -3147,7 +3157,7 @@
 			(uuid "c300de82-f1e2-4958-95df-04af49c3308e")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "C1")
 					(unit 1)
@@ -3214,7 +3224,7 @@
 			(uuid "55377533-befb-4669-ada8-75381fdd9438")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR019")
 					(unit 1)
@@ -3281,7 +3291,7 @@
 			(uuid "9b05f25a-1285-4ada-9048-e80586abfae9")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR011")
 					(unit 1)
@@ -3348,7 +3358,7 @@
 			(uuid "322b60b1-bab6-4e47-97c7-e64033cf9aeb")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR05")
 					(unit 1)
@@ -3415,7 +3425,7 @@
 			(uuid "0fff94d2-6e59-42b0-b445-ed3d899822dd")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR08")
 					(unit 1)
@@ -3482,7 +3492,7 @@
 			(uuid "9a5b5776-decf-41ad-ad16-e9595a336776")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR02")
 					(unit 1)
@@ -3549,7 +3559,7 @@
 			(uuid "bc3a91cc-7eb6-44dc-ae50-94240d714a79")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR03")
 					(unit 1)
@@ -3624,7 +3634,7 @@
 			(uuid "f7b57853-df41-4246-b96d-f9c5a1270aa0")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "U4")
 					(unit 1)
@@ -3699,7 +3709,7 @@
 			(uuid "718e7ad8-c35a-4d86-841c-1fdefa2d0b84")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "U3")
 					(unit 1)
@@ -3766,7 +3776,7 @@
 			(uuid "83f0a249-3229-4203-8e97-8ee6c7985ff4")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR016")
 					(unit 1)
@@ -3833,7 +3843,7 @@
 			(uuid "9baad1d5-1ce1-444e-af27-c2e2ca72a3c7")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR06")
 					(unit 1)
@@ -3908,7 +3918,7 @@
 			(uuid "b5889457-7f28-4bca-8bb0-6579d1a16b29")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "C3")
 					(unit 1)
@@ -3975,7 +3985,7 @@
 			(uuid "3f39470d-6e91-4a58-b94f-2dccbf630aaf")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR09")
 					(unit 1)
@@ -4050,7 +4060,7 @@
 			(uuid "1804e531-7e37-425a-b488-ee54e0d377ad")
 		)
 		(instances
-			(project "Pcb de molex"
+			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "U5")
 					(unit 1)
