@@ -1773,7 +1773,7 @@
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Horizontal"
 		(layer "F.Cu")
 		(uuid "111d94fe-62e2-4f8f-99ad-a8c73c2dd63a")
-		(at 212.905 75.1 -90)
+		(at 214.42 62.05 -90)
 		(descr "Through hole angled pin header, 2x08, 2.54mm pitch, 6mm pin length, double rows")
 		(tags "Through hole angled pin header THT 2x08 2.54mm double row")
 		(property "Reference" "J1"
@@ -4993,7 +4993,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "5971197d-13d0-46b7-ac62-002fc3ed992c")
-		(at 176.2 81.1)
+		(at 176.1 71.9)
 		(property "Reference" ""
 			(at 0 0 0)
 			(unlocked yes)
@@ -5060,13 +5060,13 @@
 			(remove_unused_layers no)
 			(pinfunction "Pin_4")
 			(pintype "passive")
-			(uuid "772e309b-3c59-4edd-8b8b-1f876786f083")
+			(uuid "5f6383cf-c3db-4ebc-85ff-a8abafa7b1ca")
 		)
 	)
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 		(layer "F.Cu")
 		(uuid "7f0d12b1-45f5-4ce1-835c-65f9a719db66")
-		(at 209.37 59.965 -90)
+		(at 209.25 57.85 -90)
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
 		(property "Reference" "U5"
@@ -6984,7 +6984,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "bacde481-7960-47b5-891d-375c37f91088")
-		(at 236.3 81.1)
+		(at 236.4 71.9)
 		(property "Reference" ""
 			(at 0 0 0)
 			(unlocked yes)
@@ -7051,7 +7051,7 @@
 			(remove_unused_layers no)
 			(pinfunction "Pin_4")
 			(pintype "passive")
-			(uuid "772e309b-3c59-4edd-8b8b-1f876786f083")
+			(uuid "cd0312f3-e599-4c1a-af7b-f9146032e862")
 		)
 	)
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal"
@@ -7872,7 +7872,7 @@
 	)
 	(gr_rect
 		(start 172.78 41.99)
-		(end 239.69 84.48)
+		(end 239.69 75.18)
 		(stroke
 			(width 0.05)
 			(type default)
