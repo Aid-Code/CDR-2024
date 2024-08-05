@@ -115,7 +115,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.5,
+        "min_clearance": 0.8,
         "min_connection": 0.5,
         "min_copper_edge_clearance": 0.5,
         "min_hole_clearance": 0.25,
@@ -600,7 +600,7 @@
   "sheets": [
     [
       "83e621f7-046b-4df3-a825-7f5b54a0265f",
-      "Raíz"
+      "Root"
     ]
   ],
   "text_variables": {}
