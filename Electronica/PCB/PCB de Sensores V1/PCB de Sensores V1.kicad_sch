@@ -1033,26 +1033,6 @@
 		)
 		(uuid "b55f7aa1-2103-4703-b412-fe844a751ac0")
 	)
-	(text "AHI LO HICE, TERMINA LA PLACA"
-		(exclude_from_sim no)
-		(at 178.054 54.61 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "93cbd000-90fd-4c36-83fd-fae9512516fb")
-	)
-	(text "Te dejo las conexiones que quedaron en la \nplaca principal para que las corrijas"
-		(exclude_from_sim no)
-		(at 182.88 18.542 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "b3b2592c-67cc-403a-9218-1ba8fe8366a7")
-	)
 	(global_label "ECHO1"
 		(shape input)
 		(at 50.8 20.32 180)
@@ -1115,28 +1095,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "CNY 2"
-		(shape input)
-		(at 172.72 34.29 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "21e0145c-6013-4b22-aed3-b1ca7ecc12b9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 163.8686 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
@@ -1207,28 +1165,6 @@
 			)
 		)
 	)
-	(global_label "TRIG 2"
-		(shape input)
-		(at 172.72 29.21 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "444bdf48-9b56-44be-b064-438652b2ceee")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 163.4453 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "CNY2"
 		(shape input)
 		(at 86.36 46.99 180)
@@ -1242,50 +1178,6 @@
 		(uuid "46285f99-59ce-4445-bcbf-b892efacb8ab")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 78.4762 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "TRIG 3"
-		(shape input)
-		(at 185.42 44.45 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "499372ba-30f3-4bb2-8e04-661888c86bcb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 194.6947 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ECHO 5"
-		(shape input)
-		(at 172.72 36.83 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "4a5a0cdb-020f-4c76-b322-6f530265a42f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 162.4777 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1330,94 +1222,6 @@
 		(uuid "5765e94b-a306-4df8-a29e-67d738a9a120")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 153.0871 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ECHO 2"
-		(shape input)
-		(at 172.72 31.75 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "5c4bffd5-3e8b-4756-9a56-5345e24ef17f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 162.4777 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "CNY 3"
-		(shape input)
-		(at 185.42 29.21 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "5caeb1c4-588f-478c-b5e8-8f41160fe10e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 194.2714 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "TRIG 5"
-		(shape input)
-		(at 172.72 39.37 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "68d4bf40-53e1-427f-8d2b-99bc2307a0be")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 163.4453 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ECHO 3"
-		(shape input)
-		(at 185.42 41.91 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7042010f-2774-465d-b690-a7888f037a4c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 195.6623 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1493,50 +1297,6 @@
 			)
 		)
 	)
-	(global_label "TRIG 4"
-		(shape input)
-		(at 185.42 36.83 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "80a8fcd0-645f-4025-a350-6beab19cde22")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 194.6947 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "CNY 1"
-		(shape input)
-		(at 185.42 46.99 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8d17f72e-cb6b-4e57-aea7-e7ff4eee1329")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 194.2714 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "ECHO4"
 		(shape input)
 		(at 25.4 26.67 180)
@@ -1550,28 +1310,6 @@
 		(uuid "9064a6c4-d66a-49c9-abfb-a54e9a386537")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 16.1253 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ECHO 1"
-		(shape input)
-		(at 172.72 46.99 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "9fc5e387-c69c-4b11-b815-c922eca42d0d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 162.4777 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1801,28 +1539,6 @@
 			)
 		)
 	)
-	(global_label "TRIG 1"
-		(shape input)
-		(at 172.72 44.45 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "cf38c4ea-d653-4db3-b04c-06058c17d312")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 163.4453 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "ECHO5"
 		(shape input)
 		(at 132.08 34.29 180)
@@ -1863,28 +1579,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ECHO 4"
-		(shape input)
-		(at 185.42 34.29 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f50f4419-3d02-4189-9fac-855b3b8f2e5e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 195.6623 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -2115,116 +1809,6 @@
 			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x08_Odd_Even")
-		(at 177.8 36.83 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "40a30742-cbb8-4fde-8fd8-21dbdf095b11")
-		(property "Reference" "J2"
-			(at 179.07 22.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conexion Sensores"
-			(at 179.07 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Horizontal"
-			(at 177.8 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 177.8 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 177.8 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "13"
-			(uuid "c42fe69b-63ca-45d8-bbba-f0d833eed7d2")
-		)
-		(pin "9"
-			(uuid "46bbc96f-d0d8-45f0-93ea-e20c70328850")
-		)
-		(pin "2"
-			(uuid "24d35554-8e39-45d9-99e9-20c1e79e6eb3")
-		)
-		(pin "8"
-			(uuid "a5ff64b8-f200-43fd-b0b4-592f1b900335")
-		)
-		(pin "6"
-			(uuid "2c0f3dc6-afd9-4214-9102-2b2044df1fcc")
-		)
-		(pin "7"
-			(uuid "7ca1fa74-562e-4fd9-baff-83c1f5218f1f")
-		)
-		(pin "16"
-			(uuid "ed021895-1f8d-411c-a513-67986784f153")
-		)
-		(pin "4"
-			(uuid "97fdeb40-e07b-4266-8d26-2712ff827b6f")
-		)
-		(pin "1"
-			(uuid "13e9df92-e957-44db-b6c5-4b2a3927ada6")
-		)
-		(pin "10"
-			(uuid "2472ab09-682c-4746-afda-a3010f610a56")
-		)
-		(pin "14"
-			(uuid "82c13079-fcd2-4870-9ad9-2e9ecfcfc11a")
-		)
-		(pin "15"
-			(uuid "3799dafd-9833-4c4a-ab63-118eaadd51eb")
-		)
-		(pin "5"
-			(uuid "72fee517-2185-47ec-847a-2ec5f1873eb7")
-		)
-		(pin "11"
-			(uuid "d01a7a14-363d-4b85-87d0-3557a12c6a92")
-		)
-		(pin "3"
-			(uuid "17df7152-ecdc-4b2b-b2f9-bac90dabf507")
-		)
-		(pin "12"
-			(uuid "e3a7d496-d238-4503-85ca-22736bd5ca50")
-		)
-		(instances
-			(project "PCB de Sensores V1"
-				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
-					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -2552,71 +2136,6 @@
 			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 172.72 41.91 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "674a276f-3e06-443d-a50a-0d02094b532c")
-		(property "Reference" "#PWR018"
-			(at 166.37 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 167.386 41.91 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 172.72 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 172.72 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 172.72 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e4f6f246-f442-43b4-8d07-a43de2685ed7")
-		)
-		(instances
-			(project "PCB de Sensores V1"
-				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
-					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -2952,72 +2471,6 @@
 			(project "PCB de Sensores V1"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR020")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 185.42 39.37 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "812ffc99-bfc0-4cac-9d5b-0de18ca294da")
-		(property "Reference" "#PWR017"
-			(at 181.61 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 189.23 39.3701 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 185.42 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 185.42 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 185.42 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "230fca18-a3be-4e99-b708-a2a88e3a6771")
-		)
-		(instances
-			(project "PCB de Sensores V1"
-				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
-					(reference "#PWR017")
 					(unit 1)
 				)
 			)
