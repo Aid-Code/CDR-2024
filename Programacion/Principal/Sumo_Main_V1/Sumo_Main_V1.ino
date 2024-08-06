@@ -3,20 +3,21 @@
 // Sensores
 #define CNY_IZQ A1
 #define CNY_DER A2
-#define ECHO_DER 7
-#define TRIG_DER 8
-#define ECHO_IZQ 10
-#define TRIG_IZQ 9
-#define ECHO_MED 11
-#define TRIG_MED 12
+#define ECHO_DER 11
+#define TRIG_DER 12
+#define ECHO_IZQ 7
+#define TRIG_IZQ 8
+#define ECHO_MED 10
+#define TRIG_MED 9
 
 // Botones y Leds
-#define BTN_1 A6
+#define BTN A4
+/*#define BTN_1 A6
 #define BTN_2 A7
 #define LED_1 A4
 #define LED_2 A3
 #define LED_3 13
-#define LED_4 A0
+#define LED_4 A0*/
 
 // Motor Izquierdo
 #define M1_B A5
@@ -28,8 +29,11 @@
 #define M2_A 6
 #define PWM_B 3
 
-enum estados_main
+int estado_main = 0;
+
+enum estados
 {
+  INIT,
 
 }
 
@@ -53,18 +57,23 @@ void setup()
   pinMode(TRIG_IZQ, OUTPUT);
   pinMode(ECHO_IZQ, INPUT);
 
-  pinMode(CNY_IZQ, INPUT);
-  pinMode(CNY_DER, INPUT);
+  //Boton
+  pinMode(BTN, INPUT_PULLUP);
 
-  analogWrite(PWM_A, 240);
-  analogWrite(PWM_B, 240);
+  analogWrite(PWM_A, 105); //Motor Izquierdo
+  analogWrite(PWM_B, 80); //Motor Derecho
+
+  while(digitalRead(BTN) == HIGH){}
+  delay(5100);
+  Serial.println("Prendido");
 }
 
 void loop() 
 {
-  ExistenciaUltMed();
-  ExistenciaUltDer();
-  ExistenciaUltDer();
+  LecturaUltrasonicos();
+  ExistenciaUlt();
+  LecturaCNY();
+  DetectarLinea();
 }
 
 void MaquinaMain()
