@@ -30,11 +30,13 @@
 #define PWM_B 3
 
 int estado_main = 0;
+int estado_strat = 0;
 
-enum estados
+enum estrategias
 {
-  INIT,
-
+  NORMIE,
+  PASITOS,
+  FIUM
 }
 
 void setup() 
@@ -76,10 +78,11 @@ void loop()
   DetectarLinea();
 }
 
-void MaquinaMain()
+void MaquinaEstrategias()
 {
-  switch(estado_main)
+  switch(estado_strat)
   {
-    
+    case NORMIE:
+      
   }
 }
