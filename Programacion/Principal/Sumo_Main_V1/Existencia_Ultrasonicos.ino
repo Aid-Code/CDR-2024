@@ -1,6 +1,6 @@
 // Existencia Ultrasonicos
 
-void ExistenciaUlt()
+void ExistenciaUltrasonicos()
 {
   if(distancia_ult_med < 10)
   {

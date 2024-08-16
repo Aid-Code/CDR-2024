@@ -1,36 +1,37 @@
 // Sumo Main V1
 
 // Sensores
-#define CNY_IZQ A1
-#define CNY_DER A2
-#define ECHO_DER 11
-#define TRIG_DER 12
-#define ECHO_IZQ 7
-#define TRIG_IZQ 8
-#define ECHO_MED 10
-#define TRIG_MED 9
+#define CNY_IZQ A0
+#define CNY_DER A1
+#define ECHO_DER 12
+#define TRIG_DER 13
+#define ECHO_IZQ 11
+#define TRIG_IZQ 10
+#define ECHO_MED 9
+#define TRIG_MED 8
 
 // Botones y Leds
-#define BTN A4
-/*#define BTN_1 A6
+#define BTN_1 A6
 #define BTN_2 A7
-#define LED_1 A4
-#define LED_2 A3
-#define LED_3 13
-#define LED_4 A0*/
+#define LED_1 A5
+#define LED_2 A2
+#define LED_3 A3
+#define LED_4 A4
 
 // Motor Izquierdo
-#define M1_B A5
-#define M1_A 2
-#define PWM_A 5
+#define M1_B 7
+#define M1_A 4
+#define PWM_A 6
 
 // Motor Derecho
-#define M2_B 4
-#define M2_A 6
-#define PWM_B 3
+#define M2_B 2
+#define M2_A 3
+#define PWM_B 5
 
-int estado_main = 0;
 int estado_strat = 0;
+
+int boton_1 = 0;
+int boton_2 = 0;
 
 enum estrategias
 {
@@ -59,23 +60,41 @@ void setup()
   pinMode(TRIG_IZQ, OUTPUT);
   pinMode(ECHO_IZQ, INPUT);
 
-  //Boton
-  pinMode(BTN, INPUT_PULLUP);
+  //Botones
+  pinMode(BTN_1, INPUT_PULLUP);
+  pinMode(BTN_2, INPUT_PULLUP);
+
+  //Leds
+  pinMode(LED_1, OUTPUT);
+  pinMode(LED_2, OUTPUT);
+  pinMode(LED_3, OUTPUT);
+  pinMode(LED_4, OUTPUT);
 
   analogWrite(PWM_A, 105); //Motor Izquierdo
   analogWrite(PWM_B, 80); //Motor Derecho
-
-  while(digitalRead(BTN) == HIGH){}
-  delay(5100);
-  Serial.println("Prendido");
 }
 
 void loop() 
 {
   LecturaUltrasonicos();
-  ExistenciaUlt();
+  ExistenciaUltrasonicos();
   LecturaCNY();
   DetectarLinea();
+
+  while(boton_1 == HIGH && boton_2 == HIGH)
+  {
+    boton_1 = digitalRead(BTN_1);
+    boton_2 = digitalRead(BTN_2);
+
+    if(boton_1 == HIGH)
+    {
+      estado_strat = NORMIE;
+    }
+    else if (boton_2 == HIGH)
+    {
+      estado_strat = FIUM;
+    }
+  }
 }
 
 void MaquinaEstrategias()
@@ -83,6 +102,6 @@ void MaquinaEstrategias()
   switch(estado_strat)
   {
     case NORMIE:
-      
+      if ()
   }
 }
