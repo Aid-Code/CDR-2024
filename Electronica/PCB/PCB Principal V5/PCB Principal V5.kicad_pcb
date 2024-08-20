@@ -2977,8 +2977,6 @@
 			)
 		)
 		(path "/5f31dcc9-185b-4c04-8903-3891b0fec15a")
-		(sheetname "Raíz")
-		(sheetfile "PCB Principal V5.kicad_sch")
 		(attr through_hole)
 		(fp_rect
 			(start -11 -22.5)
@@ -5301,7 +5299,7 @@
 		(descr "LED, diameter 5.0mm z-position of LED center 3.0mm, 2 pins")
 		(tags "LED diameter 5.0mm z-position of LED center 3.0mm 2 pins")
 		(property "Reference" "D3"
-			(at 1.27 -1.96 360)
+			(at 1.27 -1.96 0)
 			(layer "F.SilkS")
 			(uuid "e2881c44-1c23-4e84-a111-ff0924714d98")
 			(effects
@@ -5312,7 +5310,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 1.27 10.93 360)
+			(at 1.27 10.93 0)
 			(layer "F.Fab")
 			(uuid "0e2d49a0-56b4-4433-a134-72ebddbdcfea")
 			(effects
@@ -6068,7 +6066,7 @@
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.SilkS")
-			(uuid "1f2a971b-9c95-4a40-95a2-55868b8ddc5b")
+			(uuid "0becd10b-c874-401b-bf0b-cdf20d54e822")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6079,7 +6077,7 @@
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
-			(uuid "7d715f62-a4ad-48e4-a54d-d7eb518375cd")
+			(uuid "ab146087-1369-46ce-b7a3-d92540d35daf")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6130,7 +6128,7 @@
 			(remove_unused_layers no)
 			(pinfunction "IOREF")
 			(pintype "output")
-			(uuid "a6babb3d-e070-45b6-a149-75255d9bfc74")
+			(uuid "473fea8a-bb7c-4abe-b9c9-75ed06df3053")
 		)
 	)
 	(footprint "Module:Arduino_Nano"
@@ -8499,7 +8497,7 @@
 			(net 34 "unconnected-(A2-IOREF-Pad2)")
 			(pinfunction "IOREF")
 			(pintype "output")
-			(uuid "a6babb3d-e070-45b6-a149-75255d9bfc74")
+			(uuid "ecc3de14-c484-457b-8d17-fcb7341b717a")
 		)
 		(pad "3" thru_hole oval
 			(at 5.08 0)
