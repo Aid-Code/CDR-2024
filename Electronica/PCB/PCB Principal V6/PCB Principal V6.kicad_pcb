@@ -4369,7 +4369,7 @@
 		(descr "AMASS female XT60, through hole, vertical, https://www.tme.eu/Document/2d152ced3b7a446066e6c419d84bb460/XT60%20SPEC.pdf")
 		(tags "XT60 female vertical")
 		(property "Reference" "J6"
-			(at 3.6 -5.3 360)
+			(at 3.6 -5.3 0)
 			(layer "F.SilkS")
 			(uuid "a498ec40-4269-40e1-9638-44a2cdf42e8d")
 			(effects
@@ -4380,7 +4380,7 @@
 			)
 		)
 		(property "Value" "Power Input 1"
-			(at 3.6 5.4 360)
+			(at 3.6 5.4 0)
 			(layer "F.Fab")
 			(uuid "844ac3bd-15c3-481e-9596-9e15ca46f2b7")
 			(effects
@@ -4612,7 +4612,7 @@
 			(uuid "2c9acc3e-6f5f-4f7c-820f-5f8fc70636f3")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 3.6 0.05 360)
+			(at 3.6 0.05 0)
 			(layer "F.Fab")
 			(uuid "ad9023d6-4195-49dc-a95d-35451a4a75cf")
 			(effects
@@ -4664,7 +4664,7 @@
 		(descr "simple 2-pin terminal block, pitch 5.08mm, revamped version of bornier2")
 		(tags "terminal block bornier2")
 		(property "Reference" "J3"
-			(at 2.54 -5.08 360)
+			(at 2.54 -5.08 0)
 			(layer "F.SilkS")
 			(uuid "110b7ee7-658d-4e72-9da4-a51758d928e2")
 			(effects
@@ -4675,7 +4675,7 @@
 			)
 		)
 		(property "Value" "On/Off General"
-			(at 2.54 5.08 360)
+			(at 2.54 5.08 0)
 			(layer "F.Fab")
 			(uuid "35d12a7f-c594-4091-aa73-a27e23816dc0")
 			(effects
@@ -4866,7 +4866,7 @@
 			(uuid "ae59b738-606b-45d5-bb4c-91c123948412")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2.54 0 360)
+			(at 2.54 0 0)
 			(layer "F.Fab")
 			(uuid "df93e85d-25b3-4bc1-b278-645ba874b49d")
 			(effects
@@ -5170,7 +5170,7 @@
 		(descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=7.62mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 7.62mm 0.167W length 3.6mm diameter 1.6mm")
 		(property "Reference" "R2"
-			(at 3.81 -1.92 360)
+			(at 3.81 -1.92 0)
 			(layer "F.SilkS")
 			(uuid "f0cf1352-e6ba-469b-be87-ed4b053164f0")
 			(effects
@@ -5181,7 +5181,7 @@
 			)
 		)
 		(property "Value" "220"
-			(at 3.81 1.92 360)
+			(at 3.81 1.92 0)
 			(layer "F.Fab")
 			(uuid "0f3d0c85-417d-4106-bfd5-1fdffd09040f")
 			(effects
@@ -5393,7 +5393,7 @@
 			(uuid "711e9eab-7010-47ab-ba97-928f17ca92da")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 3.81 0 360)
+			(at 3.81 0 0)
 			(layer "F.Fab")
 			(uuid "bc6315b4-b345-420a-b767-2ca530cdc063")
 			(effects
@@ -5433,6 +5433,79 @@
 			(rotate
 				(xyz 0 0 0)
 			)
+		)
+	)
+	(footprint ""
+		(layer "F.Cu")
+		(uuid "a76a8bca-96cd-44a0-8ffa-213682035543")
+		(at 127.508 28.448)
+		(property "Reference" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "7e716ae3-d460-440b-ba7f-0c68d53c247a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(uuid "dc364a18-4235-4638-ab38-cf9236b5a4fc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c2a47475-e930-42ea-bf5a-f12206aef876")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bdf37df2-ad3b-4399-b975-0d00c4d5c3d9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c998c9e5-c56a-4161-bfe0-1eaa98abe739")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pad "2" thru_hole circle
+			(at 0 0 180)
+			(size 5 5)
+			(drill 3)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(pinfunction "IOREF")
+			(pintype "output")
+			(uuid "26f603b9-1da9-4cb9-9d71-1c5d55f7d035")
 		)
 	)
 	(footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
@@ -6449,6 +6522,79 @@
 			(rotate
 				(xyz 0 0 0)
 			)
+		)
+	)
+	(footprint ""
+		(layer "F.Cu")
+		(uuid "b5b89afe-85ab-4582-8ea7-3bc2fba1f38b")
+		(at 260.096 91.694)
+		(property "Reference" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "7e716ae3-d460-440b-ba7f-0c68d53c247a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(uuid "dc364a18-4235-4638-ab38-cf9236b5a4fc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c2a47475-e930-42ea-bf5a-f12206aef876")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bdf37df2-ad3b-4399-b975-0d00c4d5c3d9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c998c9e5-c56a-4161-bfe0-1eaa98abe739")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pad "2" thru_hole circle
+			(at 0 0 180)
+			(size 5 5)
+			(drill 3)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(pinfunction "IOREF")
+			(pintype "output")
+			(uuid "26f603b9-1da9-4cb9-9d71-1c5d55f7d035")
 		)
 	)
 	(footprint "LED_THT:LED_D5.0mm_Horizontal_O1.27mm_Z3.0mm"
@@ -9376,22 +9522,6 @@
 		(fill none)
 		(layer "Edge.Cuts")
 		(uuid "a3494537-7e82-4ddd-bc27-1bb8f0aae15c")
-	)
-	(via
-		(at 127.7 28.4)
-		(size 5)
-		(drill 3)
-		(layers "F.Cu" "B.Cu")
-		(net 0)
-		(uuid "38235a64-43bf-4c0c-9692-851cd5afb65e")
-	)
-	(via
-		(at 260.09 91.28)
-		(size 5)
-		(drill 3)
-		(layers "F.Cu" "B.Cu")
-		(net 0)
-		(uuid "7018d0af-edad-4a9d-8726-7d00bc315190")
 	)
 	(segment
 		(start 214.505 67)
