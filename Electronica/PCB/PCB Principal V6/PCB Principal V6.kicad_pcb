@@ -152,7 +152,7 @@
 		(descr "CuK miniature slide switch, OS series, SPDT, right angle, http://www.ckswitches.com/media/1428/os.pdf")
 		(tags "switch SPDT")
 		(property "Reference" "SW1"
-			(at 9.34 -0.18 0)
+			(at -0.3 -3.452312 0)
 			(layer "F.SilkS")
 			(uuid "cea4fdd2-0fb6-4e2c-af3a-948132ee7cfb")
 			(effects
@@ -413,7 +413,7 @@
 		(descr "Through hole angled pin header, 2x05, 2.54mm pitch, 6mm pin length, double rows")
 		(tags "Through hole angled pin header THT 2x05 2.54mm double row")
 		(property "Reference" "J5"
-			(at 5.655 -2.27 360)
+			(at 5.586 -3.013872 0)
 			(layer "F.SilkS")
 			(uuid "f75f117e-3508-4f1e-a5df-10e8115c4046")
 			(effects
@@ -424,7 +424,7 @@
 			)
 		)
 		(property "Value" "IDC Placa Botones"
-			(at 5.655 12.43 360)
+			(at 5.655 12.43 0)
 			(layer "F.Fab")
 			(uuid "d5240b03-18d6-472f-aa33-0fcfb11a172b")
 			(effects
@@ -1515,7 +1515,7 @@
 		(descr "LED, diameter 5.0mm z-position of LED center 3.0mm, 2 pins")
 		(tags "LED diameter 5.0mm z-position of LED center 3.0mm 2 pins")
 		(property "Reference" "D4"
-			(at 1.27 -1.96 0)
+			(at -3.453 2.912688 0)
 			(layer "F.SilkS")
 			(uuid "6adc9322-f57b-40e1-a54c-b038ed29cb55")
 			(effects
@@ -1980,7 +1980,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "J10"
-			(at 0 -2.33 180)
+			(at 4.04 0.06 180)
 			(layer "F.SilkS")
 			(uuid "1dd56515-a511-4735-b88d-a15b41edcfa6")
 			(effects
@@ -2193,7 +2193,7 @@
 			(uuid "a1b870fc-c709-4d15-8aa9-ff63ba44e271")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(uuid "913263de-fa8d-4a24-8dda-c731bebb59e8")
 			(effects
@@ -2233,7 +2233,7 @@
 		(descr "AMASS female XT60, through hole, vertical, https://www.tme.eu/Document/2d152ced3b7a446066e6c419d84bb460/XT60%20SPEC.pdf")
 		(tags "XT60 female vertical")
 		(property "Reference" "J4"
-			(at 3.6 -5.3 90)
+			(at 3.581688 -5.88 180)
 			(layer "F.SilkS")
 			(uuid "5c9d89e1-bced-4664-8183-1eabb603d4c9")
 			(effects
@@ -2528,7 +2528,7 @@
 		(descr "AMASS female XT60, through hole, vertical, https://www.tme.eu/Document/2d152ced3b7a446066e6c419d84bb460/XT60%20SPEC.pdf")
 		(tags "XT60 female vertical")
 		(property "Reference" "J6"
-			(at 3.6 -5.3 90)
+			(at 3.483688 -6.51 180)
 			(layer "F.SilkS")
 			(uuid "a498ec40-4269-40e1-9638-44a2cdf42e8d")
 			(effects
@@ -3076,7 +3076,7 @@
 		(descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=7.62mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 7.62mm 0.167W length 3.6mm diameter 1.6mm")
 		(property "Reference" "R2"
-			(at 3.81 -1.92 90)
+			(at 4.223688 2.108 180)
 			(layer "F.SilkS")
 			(uuid "f0cf1352-e6ba-469b-be87-ed4b053164f0")
 			(effects
@@ -3421,7 +3421,7 @@
 		(descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=7.62mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 7.62mm 0.167W length 3.6mm diameter 1.6mm")
 		(property "Reference" "R1"
-			(at 3.81 0 180)
+			(at 3.79 2.042312 180)
 			(layer "F.SilkS")
 			(uuid "8c390196-ae40-463d-96f8-058bab98020e")
 			(effects
@@ -3693,7 +3693,7 @@
 		(descr "Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf")
 		(tags "Arduino Nano")
 		(property "Reference" "A1"
-			(at 7.62 -5.08 0)
+			(at 7.55 -4.752312 0)
 			(layer "F.SilkS")
 			(uuid "b57012e8-2cb5-4bf3-a006-2af798c77243")
 			(effects
@@ -4437,7 +4437,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "J9"
-			(at 0 -2.33 180)
+			(at 3.96 -0.09 180)
 			(layer "F.SilkS")
 			(uuid "290cd712-5e5c-416c-9ba0-95bd2548c2f4")
 			(effects
@@ -4650,7 +4650,7 @@
 			(uuid "6c4c67e4-81e3-45f3-8327-038cfe754560")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(uuid "c70d7058-3f9c-467c-a96d-79b3c826431c")
 			(effects
@@ -5610,7 +5610,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "J7"
-			(at 0 -2.33 0)
+			(at -3.01 0 0)
 			(layer "F.SilkS")
 			(uuid "d917a508-3301-4986-ba4c-3483c4660371")
 			(effects
@@ -5863,7 +5863,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "J8"
-			(at 0 -2.33 0)
+			(at -0.01 -2.72 0)
 			(layer "F.SilkS")
 			(uuid "ad909449-3304-497f-a3f7-f97e17aa4074")
 			(effects
@@ -6116,7 +6116,7 @@
 		(descr "simple 2-pin terminal block, pitch 5.08mm, revamped version of bornier2")
 		(tags "terminal block bornier2")
 		(property "Reference" "J2"
-			(at 2.54 -5.08 90)
+			(at 1.917688 5.6 180)
 			(layer "F.SilkS")
 			(uuid "bab505f8-2b80-4597-9887-f9c83d73a9f0")
 			(effects
@@ -6368,7 +6368,7 @@
 		(uuid "de69b8bd-c685-436d-a2b9-71c54a919ebb")
 		(at 57.37 136.492312)
 		(property "Reference" "LM1"
-			(at 0 2.5 0)
+			(at -5.62 -23.492312 0)
 			(layer "F.SilkS")
 			(uuid "cd45330e-7c62-430d-b1cd-3cac7b79d38f")
 			(effects
@@ -6971,15 +6971,14 @@
 		(descr "Through hole angled pin header, 2x08, 2.54mm pitch, 6mm pin length, double rows")
 		(tags "Through hole angled pin header THT 2x08 2.54mm double row")
 		(property "Reference" "J1"
-			(at 5.655 2.27 90)
-			(layer "B.SilkS")
+			(at -3.322312 -8.832 0)
+			(layer "F.SilkS")
 			(uuid "24599335-abca-478f-8b34-1d5fa40d76e7")
 			(effects
 				(font
 					(size 1 1)
 					(thickness 0.15)
 				)
-				(justify mirror)
 			)
 		)
 		(property "Value" "Conexion Sensores"
@@ -8565,15 +8564,14 @@
 		(descr "Arduino UNO R3, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf")
 		(tags "Arduino UNO R3")
 		(property "Reference" "A2"
-			(at 1.27 3.81 90)
-			(layer "B.SilkS")
+			(at -29.627312 -18.62 0)
+			(layer "F.SilkS")
 			(uuid "73a6971e-ed1f-4cbe-a86b-68a602fa6468")
 			(effects
 				(font
 					(size 1 1)
 					(thickness 0.15)
 				)
-				(justify mirror)
 			)
 		)
 		(property "Value" "MONSTER SHIELD"
