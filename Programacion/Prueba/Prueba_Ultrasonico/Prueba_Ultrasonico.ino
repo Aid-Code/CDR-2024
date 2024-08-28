@@ -1,5 +1,6 @@
-#define TRIG 8
-#define ECHO 7
+
+#define TRIG_DER 10
+#define ECHO_DER 11
 
 long tiempo;
 long distancia;
@@ -11,22 +12,25 @@ void setup()
 {
   Serial.begin(9600);
   
-  pinMode(TRIG, OUTPUT);
-  pinMode(ECHO, INPUT);
+
+  pinMode(TRIG_DER, OUTPUT);
+  pinMode(ECHO_DER, INPUT);
 }
 
 void loop()
 {
-  Existencia();
+ Distancia();
+
 }
 
 void Existencia()
 {
-  digitalWrite(TRIG, HIGH);
-  delay(10);
-  digitalWrite(TRIG, LOW);
   
-  tiempo = pulseIn(ECHO, HIGH);
+  digitalWrite(TRIG_DER, HIGH);
+  delay(10);
+  digitalWrite(TRIG_DER, LOW);
+  
+  tiempo = pulseIn(ECHO_DER, HIGH);
   
   distancia = tiempo / 59;
 
@@ -38,17 +42,49 @@ void Existencia()
   {
     Serial.println("No hay moros en la costa");
   }
+
+
+  /*
+  digitalWrite(TRIG_IZQ, HIGH);
+  delay(10);
+  digitalWrite(TRIG_IZQ, LOW);
+  
+  tiempo = pulseIn(ECHO_IZQ, HIGH);
+  
+  distancia = tiempo / 59;
+
+  if(distancia < 10)
+  {
+    Serial.println("Hay algo");
+  }
+  else if (distancia > 10)
+  {
+    Serial.println("No hay moros en la costa");
+  }
+  */
 }
 
 void Distancia()
 {
-  digitalWrite(TRIG, HIGH);
+  digitalWrite(TRIG_DER, HIGH);
   delay(10);
-  digitalWrite(TRIG, LOW);
+  digitalWrite(TRIG_DER, LOW);
   
-  tiempo = pulseIn(ECHO, HIGH);
+  tiempo = pulseIn(ECHO_DER, HIGH);
   
   distancia = tiempo / 59;
   
   Serial.println(distancia);
+  
+  /*
+  digitalWrite(TRIG_IZQ, HIGH);
+  delay(10);
+  digitalWrite(TRIG_IZQ, LOW);
+  
+  tiempo = pulseIn(ECHO_IZQ, HIGH);
+  
+  distancia = tiempo / 59;
+  
+  Serial.println(distancia);
+  */
 }

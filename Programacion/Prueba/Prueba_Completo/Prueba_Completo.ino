@@ -1,12 +1,12 @@
 // Sensores
 #define CNY_IZQ A1
-#define CNY_DER A2
-#define ECHO_DER 11
-#define TRIG_DER 12
-#define ECHO_IZQ 7
-#define TRIG_IZQ 8
-#define ECHO_MED 10
-#define TRIG_MED 9
+#define CNY_DER A0
+#define ECHO_DER 12  //3
+#define TRIG_DER 13  //3
+#define ECHO_IZQ 11  //1
+#define TRIG_IZQ 10  //1
+#define ECHO_MED 9   //2
+#define TRIG_MED 8   //
 
 // Botones y Leds
 #define BTN A4
@@ -18,14 +18,14 @@
 #define LED_4 A0*/
 
 // Motor Izquierdo
-#define M1_B A5
-#define M1_A 2
-#define PWM_A 5
+#define M1_B 7
+#define M1_A 4
+#define PWM_A 6
 
 // Motor Derecho
-#define M2_B 4
-#define M2_A 6
-#define PWM_B 3
+#define M2_B 2
+#define M2_A 3
+#define PWM_B 5
 
 // Ultrasonicos
 
@@ -50,7 +50,7 @@ uint32_t suma_cny_izq = 0;
 uint32_t izq_blanco = 28;
 uint32_t izq_negro = 735;
 
-uint32_t izq_promedio = (izq_blanco + izq_negro) /2;
+uint32_t izq_promedio = (izq_blanco + izq_negro) / 2;
 
 //CNY Derecho
 
@@ -61,14 +61,13 @@ uint32_t suma_cny_der = 0;
 uint32_t der_blanco = 285;
 uint32_t der_negro = 805;
 
-uint32_t der_promedio = (der_blanco + der_negro) /2;
+uint32_t der_promedio = (der_blanco + der_negro) / 2;
 
 bool flag_cny_der = false;
 bool flag_cny_izq = false;
 bool flag_cny_both = false;
 
-void setup() 
-{
+void setup() {
   Serial.begin(9600);
 
   //Motores
@@ -81,70 +80,63 @@ void setup()
 
   //Sensores
   pinMode(TRIG_DER, OUTPUT);
-  pinMode(ECHO_DER, INPUT);
+  pinMode(ECHO_DER, INPUT_PULLUP);
   pinMode(TRIG_MED, OUTPUT);
-  pinMode(ECHO_MED, INPUT);
+  pinMode(ECHO_MED, INPUT_PULLUP);
   pinMode(TRIG_IZQ, OUTPUT);
-  pinMode(ECHO_IZQ, INPUT);
+  pinMode(ECHO_IZQ, INPUT_PULLUP);
 
   //Boton
   pinMode(BTN, INPUT_PULLUP);
 
-  analogWrite(PWM_A, 105); //Motor Izquierdo
-  analogWrite(PWM_B, 80); //Motor Derecho
-
-  while(digitalRead(BTN) == HIGH){}
-  delay(5100);
-  Serial.println("Prendido");
+  analogWrite(PWM_A, 200);  //Motor Izquierdo
+  analogWrite(PWM_B, 185);  //Motor Derecho
 }
 
-void loop() 
-{
+void loop() {
   LecturaUltrasonicos();
   ExistenciaUlt();
   LecturaCNY();
   DetectarLinea();
-
+  
   if (flag_cny_izq)
   {
-    Serial.println("Atras");
+    // Serial.println("Atras");
     Atras();
-    delay(800);
-    Derecha();
-    Serial.println("Derecha");
-    delay(200);
+    delay (500);
+    Izquierda();
+     delay (450);
+    // Serial.println("Derecha");
+    
   } 
   else if (flag_cny_der)
   {
-    Serial.println("Atras");
+    // Serial.println("Atras");
     Atras();
-    delay(800);
-    Izquierda();
-    Serial.println("Izquierda");
-    delay(200);
+     delay (500);
+     Derecha();
+     delay (450);
+    // Serial.println("Izquierda");
   }
   else
   {
-    Serial.println("Adelante");
+    // Serial.println("Adelante");
     Adelante();
   }
 
-  if (flag_ult_med)
-  {
-    Serial.println("Medio");
+  if (flag_ult_med) {
+    // Serial.println("Medio");
     Adelante();
-  }
-  else if (flag_ult_der)
-  {
-    Serial.println("Derecha");
+    
+  } else if (flag_ult_der) {
+    // Serial.println("Derecha");
     Derecha();
-  }
-  else if (flag_ult_izq)
-  {
-    Serial.println("Izquierda");
+    
+  } else if (flag_ult_izq) {
+    // Serial.println("Izquierda");
     Izquierda();
+    
   }
-  
 }
 
 void LecturaCNY()
@@ -172,12 +164,12 @@ void DetectarLinea()
 {
   if (cny_izquierdo < izq_promedio)
   {
-    //Serial.println("Blanco");
+    // Serial.println("Blanco");
     flag_cny_izq = true;
   }
   else 
   {
-    //Serial.println("Negro");
+    // Serial.println("Negro");
     flag_cny_izq = false;
   }
 
@@ -190,103 +182,97 @@ void DetectarLinea()
     flag_cny_der = false;
   }
 
-  /*if (cny_izquierdo < izq_promedio && cny_derecho < der_promedio)
+  if (cny_izquierdo < izq_promedio && cny_derecho < der_promedio)
   {
     flag_cny_both = true;
   }
   else
   {
     flag_cny_both = false;
-  }*/
+  }
 }
 
-void LecturaUltrasonicos()
-{
+void LecturaUltrasonicos() {
+
+
   digitalWrite(TRIG_MED, HIGH);
-  delay(10);
+  delayMicroseconds(10);
   digitalWrite(TRIG_MED, LOW);
-  
-  tiempo_ult_med = pulseIn(ECHO_MED, HIGH, 10000);
-  
+
+  tiempo_ult_med = pulseIn(ECHO_MED, HIGH, 5000);
+
   distancia_ult_med = tiempo_ult_med / 59;
 
   digitalWrite(TRIG_DER, HIGH);
-  delay(10);
+  delayMicroseconds(10);
   digitalWrite(TRIG_DER, LOW);
-  
+
   tiempo_ult_der = pulseIn(ECHO_DER, HIGH, 10000);
-  
+
   distancia_ult_der = tiempo_ult_der / 59;
 
   digitalWrite(TRIG_IZQ, HIGH);
-  delay(10);
+  delayMicroseconds(10);
   digitalWrite(TRIG_IZQ, LOW);
-  
-  tiempo_ult_izq = pulseIn(ECHO_IZQ, HIGH, 10000);
-  
+
+  tiempo_ult_izq = pulseIn(ECHO_IZQ, HIGH);
+
   distancia_ult_izq = tiempo_ult_izq / 59;
 }
 
-void ExistenciaUlt()
-{
-  if(distancia_ult_med < 10)
-  {
-    //Serial.println("Hay algo");
+void ExistenciaUlt() {
+  Serial.print(distancia_ult_der);
+  Serial.print('\t');
+  Serial.print(distancia_ult_med);
+  Serial.print('\t');
+  Serial.print(distancia_ult_izq);
+  Serial.println();
+  if (distancia_ult_med < 10 && distancia_ult_med != 0) {
+    // Serial.println("Hay algo");
     flag_ult_med = true;
-  }
-  else if(distancia_ult_med > 10)
-  {
-    //Serial.println("No hay moros en la costa");
+  } else {
+    // Serial.println("No hay moros en la costa");
     flag_ult_med = false;
   }
 
-  if(distancia_ult_der < 15)
-  {
+  if (distancia_ult_der < 15 && distancia_ult_der != 0) {
     flag_ult_der = true;
-  }
-  else if(distancia_ult_der > 15)
-  {
+  } else {
     flag_ult_der = false;
   }
 
-  if(distancia_ult_izq < 15)
-  {
+  if (distancia_ult_izq < 15 && distancia_ult_izq != 0) {
     flag_ult_izq = true;
-  }
-  else if(distancia_ult_izq > 15)
-  {
+  } else {
     flag_ult_izq = false;
   }
 }
 
-void Adelante()
-{
+void Adelante() {
+
   digitalWrite(M1_B, HIGH);
+  digitalWrite(M2_B, LOW);
   digitalWrite(M1_A, LOW);
+  digitalWrite(M2_A, HIGH);
+}
+
+void Atras() {
+  digitalWrite(M1_B, LOW);
   digitalWrite(M2_B, HIGH);
+  digitalWrite(M1_A, HIGH);
   digitalWrite(M2_A, LOW);
 }
 
-void Atras()
-{
+void Derecha() {
   digitalWrite(M1_B, LOW);
-  digitalWrite(M1_A, HIGH);
-  digitalWrite(M2_B, LOW);
-  digitalWrite(M2_A, HIGH);
-}
-
-void Derecha()
-{
-  digitalWrite(M1_B, HIGH);
-  digitalWrite(M1_A, LOW);
-  digitalWrite(M2_B, LOW);
-  digitalWrite(M2_A, HIGH);
-}
-
-void Izquierda()
-{
-  digitalWrite(M1_B, LOW);
-  digitalWrite(M1_A, HIGH);
   digitalWrite(M2_B, HIGH);
+  digitalWrite(M1_A, LOW);
+  digitalWrite(M2_A, HIGH);
+}
+
+void Izquierda() {
+  digitalWrite(M1_B, HIGH);
+  digitalWrite(M2_B, LOW);
+  digitalWrite(M1_A, HIGH);
   digitalWrite(M2_A, LOW);
 }
