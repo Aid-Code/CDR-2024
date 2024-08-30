@@ -1,6 +1,8 @@
 #ifndef BOTONES_H
 #define BOTONES_H
+
 #include "Arduino.h"
+
 #define BTN A4
 #define BTN_1 A6
 #define BTN_2 A7
