@@ -1249,7 +1249,7 @@
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
 		(property "Reference" "U4"
-			(at 0 -2.33 270)
+			(at 0 -2.33 -90)
 			(layer "F.SilkS")
 			(uuid "aec9fa4c-017b-48a4-ac15-ed54586f23b0")
 			(effects
@@ -1260,7 +1260,7 @@
 			)
 		)
 		(property "Value" "ULTRASONICO4"
-			(at 0 9.95 270)
+			(at 0 9.95 -90)
 			(layer "F.Fab")
 			(uuid "3d4267aa-4708-4f08-b654-4e0052e66b33")
 			(effects
@@ -1462,7 +1462,7 @@
 			(uuid "9255a3ff-f0fd-4a0d-b026-b61cf384dd9a")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 3.81 360)
+			(at 0 3.81 0)
 			(layer "F.Fab")
 			(uuid "d9c03c30-b2bb-457e-b976-e996c606906f")
 			(effects
@@ -1613,7 +1613,7 @@
 		(descr "Through hole angled pin header, 1x04, 2.54mm pitch, 6mm pin length, single row")
 		(tags "Through hole angled pin header THT 1x04 2.54mm single row")
 		(property "Reference" "U5"
-			(at -3.225 3.5 360)
+			(at -3.225 3.5 0)
 			(layer "F.SilkS")
 			(uuid "1413b5ae-39d9-4404-bb74-38926e429cb7")
 			(effects
@@ -1624,7 +1624,7 @@
 			)
 		)
 		(property "Value" "ULTRASONICO5"
-			(at 4.385 9.89 360)
+			(at 4.385 9.89 0)
 			(layer "F.Fab")
 			(uuid "2e28ac59-ca1b-4194-bfb4-77ccf2f16436")
 			(effects
@@ -3329,7 +3329,7 @@
 		(descr "Through hole angled pin header, 1x04, 2.54mm pitch, 6mm pin length, single row")
 		(tags "Through hole angled pin header THT 1x04 2.54mm single row")
 		(property "Reference" "U3"
-			(at 4.385 -2.27 270)
+			(at 4.385 -2.27 -90)
 			(layer "F.SilkS")
 			(uuid "a09f892c-306f-4254-88d3-66c60341bbd5")
 			(effects
@@ -3340,7 +3340,7 @@
 			)
 		)
 		(property "Value" "ULTRASONICO3"
-			(at 4.385 9.89 270)
+			(at 4.385 9.89 -90)
 			(layer "F.Fab")
 			(uuid "a39f5b07-1604-4540-9237-84ae0f056c77")
 			(effects
@@ -4072,7 +4072,7 @@
 			(uuid "7187b3af-39a0-426d-a8ee-c0b489577646")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2.77 3.81 360)
+			(at 2.77 3.81 0)
 			(layer "F.Fab")
 			(uuid "b1436105-9b4b-42cb-b003-3fe95e5d1a6c")
 			(effects
@@ -5625,6 +5625,39 @@
 	(dimension
 		(type aligned)
 		(layer "B.Cu")
+		(uuid "2ab18c79-f7fc-4692-876e-71f7c90310b5")
+		(pts
+			(xy 233.6 72.15) (xy 176.15 72.2)
+		)
+		(height -19.927842)
+		(gr_text "57,4500 mm"
+			(at 204.890777 90.302835 0.04986576592)
+			(layer "B.Cu")
+			(uuid "2ab18c79-f7fc-4692-876e-71f7c90310b5")
+			(effects
+				(font
+					(size 1.5 1.5)
+					(thickness 0.3)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.2)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type aligned)
+		(layer "B.Cu")
 		(uuid "6261e59f-0920-44b4-8bfd-6d6e3e2a9ba5")
 		(pts
 			(xy 239.85 78.65) (xy 239.85 35.4)
@@ -5667,6 +5700,72 @@
 			(at 205.25 30.750001 0)
 			(layer "B.Cu")
 			(uuid "c498ec0c-a2c9-41a3-a1bc-a95bb954de12")
+			(effects
+				(font
+					(size 1.5 1.5)
+					(thickness 0.3)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.2)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type aligned)
+		(layer "B.Cu")
+		(uuid "c87b690d-4fbd-4e1e-9864-c3bac245d451")
+		(pts
+			(xy 176.15 72.2) (xy 176.13 78.66)
+		)
+		(height 12.216859)
+		(gr_text "6,4600 mm"
+			(at 162.123209 75.386604 89.82261425)
+			(layer "B.Cu")
+			(uuid "c87b690d-4fbd-4e1e-9864-c3bac245d451")
+			(effects
+				(font
+					(size 1.5 1.5)
+					(thickness 0.3)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.2)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type aligned)
+		(layer "B.Cu")
+		(uuid "d3c4dc56-c6e2-4571-abbf-e7e16477f2f8")
+		(pts
+			(xy 176.15 72.2) (xy 170.64 72.2)
+		)
+		(height -15.29)
+		(gr_text "5,5100 mm"
+			(at 173.395 85.69 0)
+			(layer "B.Cu")
+			(uuid "d3c4dc56-c6e2-4571-abbf-e7e16477f2f8")
 			(effects
 				(font
 					(size 1.5 1.5)
