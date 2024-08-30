@@ -965,8 +965,8 @@
 		)
 	)
 	(no_connect
-		(at 105.41 26.67)
-		(uuid "4d622b44-ec38-44c4-9624-7c22c5afad3e")
+		(at 143.51 41.91)
+		(uuid "b0e5cc1c-9d9a-4694-9a5b-28f139be6275")
 	)
 	(no_connect
 		(at 86.36 41.91)
@@ -975,6 +975,10 @@
 	(no_connect
 		(at 86.36 26.67)
 		(uuid "c4154ad1-a8a9-4599-8448-affa21e927a4")
+	)
+	(no_connect
+		(at 143.51 39.37)
+		(uuid "fc6f9165-c3ed-42dc-a353-167df803114d")
 	)
 	(text_box "CONECTOR AL PCB"
 		(exclude_from_sim no)
@@ -1055,24 +1059,24 @@
 			)
 		)
 	)
-	(global_label "TRIG 2"
+	(global_label "TRIG 1"
 		(shape input)
-		(at 130.81 25.4 180)
+		(at 143.51 36.83 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
-		(uuid "1084e8a9-65b6-4171-a873-2a3c19fe04e8")
+		(uuid "17bc67ae-e021-4bba-862a-2a53ffa98c2c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 121.5353 25.4 0)
+			(at 152.7847 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -1090,6 +1094,28 @@
 		(uuid "19df8354-88e1-4804-ab22-5ae117a5a10c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 41.5253 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "ECHO 3"
+		(shape input)
+		(at 130.81 31.75 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1f882a15-9f82-4b7c-9093-ebe250814a87")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 120.5677 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1165,9 +1191,9 @@
 			)
 		)
 	)
-	(global_label "ECHO 3"
+	(global_label "TRIG 3"
 		(shape input)
-		(at 143.51 25.4 0)
+		(at 143.51 29.21 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1175,14 +1201,36 @@
 			)
 			(justify left)
 		)
-		(uuid "357fab65-5fc3-4ce0-a27d-eeb95fadf545")
+		(uuid "3268daf5-20f4-4c99-a0d1-11bcadab39dc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.7523 25.4 0)
+			(at 152.7847 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "ECHO 5"
+		(shape input)
+		(at 130.81 36.83 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "41417834-3bae-4e47-b128-5546d562d5b4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 120.5677 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -1209,31 +1257,9 @@
 			)
 		)
 	)
-	(global_label "TRIG 1"
+	(global_label "ECHO 4"
 		(shape input)
-		(at 143.51 40.64 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "502ddbc2-f29e-4bfb-82eb-3bc56683abd1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.7847 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "CNY 3"
-		(shape input)
-		(at 105.41 31.75 180)
+		(at 130.81 34.29 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1241,9 +1267,9 @@
 			)
 			(justify right)
 		)
-		(uuid "56654bbf-9ff2-4f2a-a2cf-2739a27e1e72")
+		(uuid "4958a11b-fb70-4c1c-9acd-af6ba522ac8a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.5586 31.75 0)
+			(at 120.5677 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1255,73 +1281,7 @@
 	)
 	(global_label "ECHO 1"
 		(shape input)
-		(at 143.51 38.1 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7b05061b-0045-4714-bdc5-d2006f9de9bb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.7523 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "TRIG 4"
-		(shape input)
-		(at 143.51 35.56 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "804c2fae-ce02-4162-86b2-8ccccd71d844")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.7847 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ECHO 4"
-		(shape input)
-		(at 143.51 33.02 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8c46c7d9-6385-4956-ba06-cfb3d2678ac9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.7523 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ECHO 2"
-		(shape input)
-		(at 130.81 27.94 180)
+		(at 130.81 26.67 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1329,14 +1289,36 @@
 			)
 			(justify right)
 		)
-		(uuid "8ed14263-9425-4c8f-b9d6-9b3c84addc1f")
+		(uuid "54f22b88-626f-459f-973e-7c6b99bc4357")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.5677 27.94 0)
+			(at 120.5677 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "TRIG 4"
+		(shape input)
+		(at 143.51 34.29 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5ea5b32e-b74b-4284-b2ee-bd2f46cbc5f7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 152.7847 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -1363,46 +1345,24 @@
 			)
 		)
 	)
-	(global_label "CNY 2"
+	(global_label "TRIG 2"
 		(shape input)
-		(at 130.81 38.1 180)
+		(at 143.51 26.67 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
-		(uuid "a40fa1c0-9f4c-4148-98a3-24154d52e773")
+		(uuid "9f325c27-dd25-4e6c-adcc-d105efc9b244")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 121.9586 38.1 0)
+			(at 152.7847 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "TRIG 5"
-		(shape input)
-		(at 130.81 30.48 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b26f18df-cf8b-4a77-851e-0725951f13a2")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 121.5353 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -1442,6 +1402,28 @@
 		(uuid "bad29b44-0191-468d-9bab-d2309382289c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 15.1577 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "CNY 1"
+		(shape input)
+		(at 130.81 41.91 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c030404c-f85a-4192-948d-0bb67e6e8a4a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 121.9586 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1495,28 +1477,6 @@
 			)
 		)
 	)
-	(global_label "ECHO 5"
-		(shape input)
-		(at 130.81 33.02 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "c8e34e32-6e5d-4050-9a05-4af03a726718")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.5677 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "CNY 1"
 		(shape input)
 		(at 86.36 31.75 180)
@@ -1539,9 +1499,9 @@
 			)
 		)
 	)
-	(global_label "CNY 1"
+	(global_label "ECHO 2"
 		(shape input)
-		(at 130.81 35.56 180)
+		(at 130.81 29.21 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1549,9 +1509,9 @@
 			)
 			(justify right)
 		)
-		(uuid "e2f4a041-6e9b-407b-93c4-7ac4dbdcedca")
+		(uuid "dba5a28c-31be-41b0-b076-7c6288119164")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 121.9586 35.56 0)
+			(at 120.5677 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1561,9 +1521,9 @@
 			)
 		)
 	)
-	(global_label "TRIG 3"
+	(global_label "TRIG 5"
 		(shape input)
-		(at 143.51 27.94 0)
+		(at 143.51 31.75 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1571,9 +1531,9 @@
 			)
 			(justify left)
 		)
-		(uuid "e7d121bd-a448-497a-957a-db314c90e35a")
+		(uuid "f4487615-ec7b-44ea-8b45-601df6ba8513")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.7847 27.94 0)
+			(at 152.7847 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1583,9 +1543,9 @@
 			)
 		)
 	)
-	(global_label "CNY 3"
+	(global_label "CNY 2"
 		(shape input)
-		(at 130.81 40.64 180)
+		(at 130.81 39.37 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1593,9 +1553,9 @@
 			)
 			(justify right)
 		)
-		(uuid "f872aa1a-3792-4ccc-99aa-4fe541e6ca86")
+		(uuid "f8f8384f-2cfd-4b84-8224-a46259955e95")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 121.9586 40.64 0)
+			(at 121.9586 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1983,7 +1943,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 			(at 55.88 33.02 0)
 			(effects
 				(font
@@ -2026,6 +1986,71 @@
 			(project "PCB de Sensores V2"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 143.51 44.45 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6e6d632f-23dd-42c0-b562-e00c680217f1")
+		(property "Reference" "#PWR020"
+			(at 149.86 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 148.844 44.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 143.51 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 143.51 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 143.51 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f0087a56-f8dc-4550-9380-70508a87a6a2")
+		)
+		(instances
+			(project "PCB de Sensores V2"
+				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -2093,6 +2118,115 @@
 			(project "PCB de Sensores V2"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x08_Odd_Even")
+		(at 135.89 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7091ae80-8618-410d-8988-84bf63626cf7")
+		(property "Reference" "J2"
+			(at 137.16 22.098 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conexion Sensores"
+			(at 137.414 23.622 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical"
+			(at 135.89 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 135.89 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 135.89 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "13"
+			(uuid "61f9254b-a36c-4c79-a5d7-3301f7abb162")
+		)
+		(pin "9"
+			(uuid "4c41c0c8-cc3d-487f-b370-84b7978fa000")
+		)
+		(pin "2"
+			(uuid "71d9a9b0-3dac-483c-9203-c70ffb668183")
+		)
+		(pin "8"
+			(uuid "00a603e5-7a9c-454c-83e0-5dbac6754c68")
+		)
+		(pin "6"
+			(uuid "a43d6111-b064-4bc1-ab49-2d08f3e4b68e")
+		)
+		(pin "7"
+			(uuid "aeb67eac-377e-4dd3-8dc4-daf86705654c")
+		)
+		(pin "16"
+			(uuid "b3c8b46f-54b1-4690-9d77-c6c9cec28701")
+		)
+		(pin "4"
+			(uuid "ed1671c3-1919-4e87-975d-ba368c9aebe9")
+		)
+		(pin "1"
+			(uuid "fb0eedc8-b8a5-407f-a0ff-f40143d281e1")
+		)
+		(pin "10"
+			(uuid "ba757e78-fdc8-4e5e-9867-16c99305b32e")
+		)
+		(pin "14"
+			(uuid "370751c0-24f2-486e-bfb9-597163ad349e")
+		)
+		(pin "15"
+			(uuid "e407e0b6-e271-41ca-8553-c8caa72bfe91")
+		)
+		(pin "5"
+			(uuid "1c41c518-0425-4bec-9492-2f755a3e61a4")
+		)
+		(pin "11"
+			(uuid "10af7e20-87a3-4353-a752-3973c1b92b2a")
+		)
+		(pin "3"
+			(uuid "4a9e860a-2652-4d1b-a4c3-c56d53e07655")
+		)
+		(pin "12"
+			(uuid "dab2f49c-7011-48f5-aa60-e45a9b87aad7")
+		)
+		(instances
+			(project "PCB de Sensores V2"
+				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -2227,182 +2361,6 @@
 			(project "PCB de Sensores V2"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 105.41 24.13 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7ac2b19a-2880-41f0-9a46-123b4fc77dec")
-		(property "Reference" "#PWR015"
-			(at 109.22 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 101.346 24.1299 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 105.41 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 105.41 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 105.41 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f7d294b2-8216-42b6-b5ab-759b4e136956")
-		)
-		(instances
-			(project "PCB de Sensores V2"
-				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
-					(reference "#PWR015")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x08_Odd_Even")
-		(at 135.89 33.02 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8b91d4d2-e85d-41a2-a1db-6341662cf453")
-		(property "Reference" "J1"
-			(at 137.16 20.828 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conexion Sensores"
-			(at 137.414 22.352 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Horizontal"
-			(at 135.89 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 135.89 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 135.89 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "13"
-			(uuid "b8d7208f-d212-4c4f-b08e-60f882b0fe46")
-		)
-		(pin "9"
-			(uuid "3e92c5f8-5f3a-4df5-9a41-64c5c8f5cd44")
-		)
-		(pin "2"
-			(uuid "2a3ae923-74f9-4ca8-a8d1-fdc0178a5235")
-		)
-		(pin "8"
-			(uuid "44abc4e2-5837-4c13-ae2f-7a0b6b65071c")
-		)
-		(pin "6"
-			(uuid "ba0d4d6d-9166-4a68-b882-baf8dea6bf48")
-		)
-		(pin "7"
-			(uuid "a463d3d6-85d6-47df-87a0-0e9d67f1c8b0")
-		)
-		(pin "16"
-			(uuid "6f6ca536-2fcc-4d57-91b9-e2e0ab24c3fe")
-		)
-		(pin "4"
-			(uuid "6bd729fa-5f48-4fad-9893-cf16399f8550")
-		)
-		(pin "1"
-			(uuid "55a5fa1b-8107-49ae-8a3d-4fc7f8144b02")
-		)
-		(pin "10"
-			(uuid "52188e98-6824-450c-9e06-d7a4d7f71423")
-		)
-		(pin "14"
-			(uuid "df432bd5-c039-4899-b160-1b901b5c3e7b")
-		)
-		(pin "15"
-			(uuid "35c8c1f2-5fc9-4656-a0c8-8faec280e573")
-		)
-		(pin "5"
-			(uuid "88bc840f-d545-41f2-bbb2-f245c1b2f2c7")
-		)
-		(pin "11"
-			(uuid "4320faa5-2ec7-47c5-aa46-622d09893329")
-		)
-		(pin "3"
-			(uuid "9c4a5b78-dfcd-4e16-b4ef-60b26e587af0")
-		)
-		(pin "12"
-			(uuid "f08dcada-0b65-4893-b309-dd823c12454b")
-		)
-		(instances
-			(project "PCB de Sensores V2"
-				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
-					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -2545,6 +2503,72 @@
 			(project "PCB de Sensores V2"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 130.81 44.45 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a25386e4-6d3d-4b0f-991f-c2de01802bf9")
+		(property "Reference" "#PWR019"
+			(at 134.62 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 127.254 44.4499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 130.81 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 130.81 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 130.81 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "87832403-5060-4ea7-9218-30fc96aa31f4")
+		)
+		(instances
+			(project "PCB de Sensores V2"
+				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -2912,7 +2936,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 			(at 30.48 26.67 0)
 			(effects
 				(font
@@ -2987,7 +3011,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal"
 			(at 55.88 45.72 0)
 			(effects
 				(font
@@ -3030,73 +3054,6 @@
 			(project "PCB de Sensores V2"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "U3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 105.41 29.21 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d6d39031-5576-4dac-a1e6-a8b4d71d9f51")
-		(property "Reference" "#PWR016"
-			(at 99.06 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 101.346 29.2099 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 105.41 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 105.41 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 105.41 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "83f0a249-3229-4203-8e97-8ee6c7985ff4")
-		)
-		(instances
-			(project "PCB de Sensores V2"
-				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
-					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -3164,212 +3121,6 @@
 			(project "PCB de Sensores V2"
 				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
 					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 143.51 43.18 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e0e4a794-5fbb-42ef-935f-a421b733afce")
-		(property "Reference" "#PWR018"
-			(at 149.86 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 148.844 43.18 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 143.51 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 143.51 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 143.51 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6d31d2a2-ef4c-429c-8a23-53d57a9f562e")
-		)
-		(instances
-			(project "PCB de Sensores V2"
-				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
-					(reference "#PWR018")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 130.81 43.18 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "eaba9c6f-82c0-4f9e-a4fc-630faa2afe0b")
-		(property "Reference" "#PWR017"
-			(at 134.62 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 127.254 43.1799 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 130.81 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 130.81 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 130.81 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0f8b1b6c-3b0a-44c0-930d-be27e59844c8")
-		)
-		(instances
-			(project "PCB de Sensores V2"
-				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
-					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 110.49 26.67 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f3d6e1be-c908-4d0f-9b09-da82a4d8d73b")
-		(property "Reference" "C3"
-			(at 113.03 26.6699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "CNY3"
-			(at 102.87 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal"
-			(at 110.49 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 110.49 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 110.49 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b053634b-1458-459d-84b4-6f3d840b261a")
-		)
-		(pin "2"
-			(uuid "218a588c-a046-4f36-aa09-797bdaf52a5f")
-		)
-		(pin "4"
-			(uuid "e3a1872e-7dcb-4728-bcd3-8167edddb551")
-		)
-		(pin "3"
-			(uuid "b5889457-7f28-4bca-8bb0-6579d1a16b29")
-		)
-		(instances
-			(project "PCB de Sensores V2"
-				(path "/66e642c9-0ff7-46e4-a851-2eb93f0599ab"
-					(reference "C3")
 					(unit 1)
 				)
 			)
