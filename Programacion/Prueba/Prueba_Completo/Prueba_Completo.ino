@@ -89,8 +89,8 @@ void setup() {
   //Boton
   pinMode(BTN, INPUT_PULLUP);
 
-  analogWrite(PWM_A, 200);  //Motor Izquierdo
-  analogWrite(PWM_B, 215);  //Motor Derecho
+  analogWrite(PWM_A, 255);  //Motor Izquierdo
+  analogWrite(PWM_B, 255);  //Motor Derecho
 }
 
 void LecturaUltrasonicos();
