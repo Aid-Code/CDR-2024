@@ -1,5 +1,5 @@
 #ifndef CNY_H
-#define CNY_H 
+#define CNY_H
 
 #include "Arduino.h"
 #define CANT_CNY 3
@@ -12,7 +12,7 @@ extern uint8_t* pines_cny_izq;
 
 
 
-bool lecturaCny (uint8_t* pines);
+bool lecturaCny(uint8_t* pines);
 uint8_t linea();
 
 

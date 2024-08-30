@@ -15,17 +15,17 @@ bool lecturaUltrasonico(uint8_t* pines) {
 
   if (distancia < 10 && distancia != 0) {
     // Serial.println("Hay algo");
-    return  true;
+    return true;
   } else {
     // Serial.println("No hay moros en la costa");
     return false;
   }
 }
 
-uint8_t presencia(){
+uint8_t presencia() {
   bool lecturaDer = lecturaUltrasonico(pines_ultrasonico_der);
   bool lecturaCen = lecturaUltrasonico(pines_ultrasonico_cen);
   bool lecturaIzq = lecturaUltrasonico(pines_ultrasonico_izq);
 
-  return lecturaDer * 1 + lecturaCen * 2 + lecturaIzq * 4 ;
+  return lecturaDer * 1 + lecturaCen * 2 + lecturaIzq * 4;
 }

@@ -16,7 +16,7 @@ extern uint8_t* pines_ultrasonico_der;
 extern uint8_t* pines_ultrasonico_cen;
 extern uint8_t* pines_ultrasonico_izq;
 
-bool lecturaUltrasonico (uint8_t* pines);
+bool lecturaUltrasonico(uint8_t* pines);
 uint8_t presencia();
 
 #endif

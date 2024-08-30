@@ -39,4 +39,3 @@ void derecha(int pwmD, int pwmI, int tipo);
 void izquierda(int pwmD, int pwmI, int tipo);
 
 #endif
-
