@@ -89,8 +89,8 @@ void setup() {
   //Boton
   pinMode(BTN, INPUT_PULLUP);
 
-  analogWrite(PWM_A, 200);  //Motor Izquierdo
-  analogWrite(PWM_B, 215);  //Motor Derecho
+  analogWrite(PWM_A, 255);  //Motor Izquierdo
+  analogWrite(PWM_B, 255);  //Motor Derecho
 }
 
 void LecturaUltrasonicos();
@@ -111,7 +111,7 @@ void loop() {
     analogWrite(PWM_A, 255);  //Motor Izquierdo
     analogWrite(PWM_B, 235);
     Atras();
-    delay(500);
+    delay(300);
     Izquierda();
     delay(450);
     analogWrite(PWM_A, 200);  //Motor Izquierdo
@@ -123,7 +123,7 @@ void loop() {
     analogWrite(PWM_A, 255);  //Motor Izquierdo
     analogWrite(PWM_B, 235);
     Atras();
-    delay(500);
+    delay(300);
     Derecha();
     delay(450);
     analogWrite(PWM_A, 200);  //Motor Izquierdo
@@ -195,7 +195,7 @@ void LecturaUltrasonicos() {
   delayMicroseconds(10);
   digitalWrite(TRIG_MED, LOW);
 
-  tiempo_ult_med = pulseIn(ECHO_MED, HIGH, 5000);
+  tiempo_ult_med = pulseIn(ECHO_MED, HIGH, 10000);
 
   distancia_ult_med = tiempo_ult_med / 59;
 
@@ -211,7 +211,7 @@ void LecturaUltrasonicos() {
   delayMicroseconds(10);
   digitalWrite(TRIG_IZQ, LOW);
 
-  tiempo_ult_izq = pulseIn(ECHO_IZQ, HIGH);
+  tiempo_ult_izq = pulseIn(ECHO_IZQ, HIGH, 10000);
 
   distancia_ult_izq = tiempo_ult_izq / 59;
 }
@@ -272,3 +272,4 @@ void Izquierda() {
   digitalWrite(M1_A, HIGH);
   digitalWrite(M2_A, LOW);
 }
+
