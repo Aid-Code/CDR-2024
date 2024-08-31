@@ -5,18 +5,19 @@
 
 #define CANT_ULTRASONICOS 3
 
-#define ECHO_DER 12  //3
-#define TRIG_DER 13  //3
-#define ECHO_IZQ 11  //1
-#define TRIG_IZQ 10  //1
-#define ECHO_MED 9   //2
-#define TRIG_MED 8   //
+#define ECHO_DER 12
+#define TRIG_DER 13
+#define ECHO_IZQ 11
+#define TRIG_IZQ 10
+#define ECHO_MED 9
+#define TRIG_MED 8
 
-extern uint8_t* pines_ultrasonico_der;
-extern uint8_t* pines_ultrasonico_cen;
-extern uint8_t* pines_ultrasonico_izq;
+extern uint8_t pines_ultrasonico_der[2];
+extern uint8_t pines_ultrasonico_cen[2];
+extern uint8_t pines_ultrasonico_izq[2];
 
-bool lecturaUltrasonico(uint8_t* pines);
+uint32_t lecturaUltrasonico(uint8_t* pines);
+void gestionarMotores(uint32_t distanciaDer, uint32_t distanciaCen, uint32_t distanciaIzq);
 uint8_t presencia();
 
 #endif

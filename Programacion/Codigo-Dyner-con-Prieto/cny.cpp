@@ -1,5 +1,8 @@
 #include "cny.h"
 
+uint8_t pines_cny_der[] = {CNY_DER};
+uint8_t pines_cny_izq[] = {CNY_IZQ};
+
 uint16_t der_blanco = 285;
 uint16_t der_negro = 805;
 
@@ -10,7 +13,6 @@ uint16_t izq_negro = 735;
 
 uint16_t izq_promedio = (izq_blanco + izq_negro) / 2;
 
-
 bool lecturaCny(uint8_t pines, uint32_t umbral) {
   int suma = 0;
   int lectura = 0;
@@ -20,17 +22,11 @@ bool lecturaCny(uint8_t pines, uint32_t umbral) {
   }
   int resultado = suma / 10;
 
-  if (resultado < umbral) {
-    // Serial.println("Blanco");
-    return true;
-  } else {
-    // Serial.println("Negro");
-    return false;
-  }
+  return resultado < umbral;
 }
 
 uint8_t linea() {
-  int lecturaDer = lecturaCny(CNY_DER, der_promedio);
-  int lecturaIzq = lecturaCny(CNY_IZQ, izq_promedio);
-  return lecturaDer * 1 + lecturaIzq * 2;
+  bool lecturaDer = lecturaCny(CNY_DER, der_promedio);
+  bool lecturaIzq = lecturaCny(CNY_IZQ, izq_promedio);
+  return (lecturaDer ? 1 : 0) + (lecturaIzq ? 2 : 0);
 }
