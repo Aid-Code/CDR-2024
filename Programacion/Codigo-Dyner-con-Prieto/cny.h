@@ -7,10 +7,13 @@
 #define CNY_IZQ A1
 #define CNY_DER A0
 
-extern uint8_t pines_cny_der[];
-extern uint8_t pines_cny_izq[];
+extern uint8_t* pines_cny_der;
+extern uint8_t* pines_cny_izq;
 
-bool lecturaCny(uint8_t pines, uint32_t umbral);
+
+
+bool lecturaCny(uint8_t* pines);
 uint8_t linea();
+
 
 #endif
