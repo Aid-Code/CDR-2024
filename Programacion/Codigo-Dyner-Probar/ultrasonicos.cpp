@@ -46,7 +46,7 @@ uint8_t presencia() {
   
   // Acción para el sensor derecho
   if (distanciaDer > 0 && distanciaDer <= 10) {
-    derecha(PWM_ADELANTE, PWM_ADELANTE, SOBRE_PROPIO_EJE); //Me hace mal la redaccion pero parece estar bien jajsdjajs
+    derecha(PWM_ADELANTE, PWM_ADELANTE, SOBRE_PROPIO_EJE); 
   } else if (distanciaDer > 11 && distanciaDer <= 20) {
     derecha(PWM_ADELANTE, PWM_ADELANTE, CON_UNA_RUEDA);
   } else if (distanciaDer > 21 && distanciaDer <= 30) {

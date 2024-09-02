@@ -49,7 +49,7 @@ uint8_t linea() {
 
   if (lecturacnyIzq) {
     atras(PWM_ADELANTE, PWM_ADELANTE);
-    delay(300);  // Retrocede por 3 segundos
+    delay(300);  // Retrocede por 0.3 segundos
     derecha(PWM_ADELANTE, PWM_ADELANTE, SOBRE_PROPIO_EJE);
     delay(450);  // Gira 450 grados
   }
