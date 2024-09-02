@@ -22,9 +22,9 @@ void seleccionarEstrategia() {
 
 void mostrarEstrategia(uint8_t estrategia) {
   digitalWrite(LED_1, estrategia & 0x01);  // Primer bit
-  digitalWrite(LED_2, estrategia & 0x02);  // Segundo bit
+  digitalWrite(LED_4, estrategia & 0x02);  // Segundo bit
   digitalWrite(LED_3, estrategia & 0x04);  // Tercer bit
-  digitalWrite(LED_4, estrategia & 0x08);  // Cuarto bit
+  digitalWrite(LED_2, estrategia & 0x08);  // Cuarto bit
 }
 
 void iniciarRobot() {
