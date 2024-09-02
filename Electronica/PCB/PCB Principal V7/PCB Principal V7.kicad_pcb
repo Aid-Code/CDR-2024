@@ -157,18 +157,18 @@
 		(descr "CuK miniature slide switch, OS series, SPDT, https://www.ckswitches.com/media/1428/os.pdf")
 		(tags "switch SPDT")
 		(property "Reference" "SW1"
-			(at 3.99 -2.99 360)
+			(at 3.755 -3.515 0)
 			(layer "F.SilkS")
 			(uuid "ddc1c5ac-2089-4033-814b-796e90b1b34d")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "Value" "On/Off Motores"
-			(at 2 3 360)
+			(at 2 3 0)
 			(layer "F.Fab")
 			(uuid "19abac87-e004-4c73-a69c-f63260ff2e67")
 			(effects
@@ -489,7 +489,7 @@
 			(uuid "566de593-a380-4c40-aecf-1c733b0b3476")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 3.99 -2.99 360)
+			(at 3.99 -2.99 0)
 			(layer "F.Fab")
 			(uuid "a2503364-2100-443e-b643-bf034f87e5f1")
 			(effects
@@ -548,12 +548,12 @@
 		(descr "Through hole angled pin header, 2x05, 2.54mm pitch, 6mm pin length, double rows")
 		(tags "Through hole angled pin header THT 2x05 2.54mm double row")
 		(property "Reference" "Housing Botones"
-			(at 13.91 4.835 0)
+			(at 14.23 7.305 0)
 			(layer "F.SilkS")
 			(uuid "f75f117e-3508-4f1e-a5df-10e8115c4046")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
@@ -1653,12 +1653,12 @@
 		(descr "LED, diameter 5.0mm z-position of LED center 3.0mm, 2 pins")
 		(tags "LED diameter 5.0mm z-position of LED center 3.0mm 2 pins")
 		(property "Reference" "D4"
-			(at 1.35 3.3 0)
+			(at -3.37 0.03 0)
 			(layer "F.SilkS")
 			(uuid "6adc9322-f57b-40e1-a54c-b038ed29cb55")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
@@ -2121,12 +2121,12 @@
 		(descr "AMASS female XT60, through hole, vertical, https://www.tme.eu/Document/2d152ced3b7a446066e6c419d84bb460/XT60%20SPEC.pdf")
 		(tags "XT60 female vertical")
 		(property "Reference" "XT60 1"
-			(at 3.8 5.45 180)
+			(at 3.84 5.83 0)
 			(layer "F.SilkS")
 			(uuid "5c9d89e1-bced-4664-8183-1eabb603d4c9")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
@@ -2419,12 +2419,12 @@
 		(descr "AMASS female XT60, through hole, vertical, https://www.tme.eu/Document/2d152ced3b7a446066e6c419d84bb460/XT60%20SPEC.pdf")
 		(tags "XT60 female vertical")
 		(property "Reference" "XT60 2"
-			(at 4.304 5.45 180)
+			(at 4.364 5.86 180)
 			(layer "F.SilkS")
 			(uuid "a498ec40-4269-40e1-9638-44a2cdf42e8d")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
@@ -2717,12 +2717,12 @@
 		(descr "simple 2-pin terminal block, pitch 5.08mm, revamped version of bornier2")
 		(tags "terminal block bornier2")
 		(property "Reference" "J3"
-			(at 2.54 -5.08 0)
+			(at 2.78 -5.16 180)
 			(layer "F.SilkS")
 			(uuid "110b7ee7-658d-4e72-9da4-a51758d928e2")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
@@ -2973,12 +2973,12 @@
 		(descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=7.62mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 7.62mm 0.167W length 3.6mm diameter 1.6mm")
 		(property "Reference" "R2"
-			(at 4.035 -1.625 0)
+			(at 4.075 -2.325 0)
 			(layer "F.SilkS")
 			(uuid "f0cf1352-e6ba-469b-be87-ed4b053164f0")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
@@ -3326,12 +3326,12 @@
 		(descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=7.62mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 7.62mm 0.167W length 3.6mm diameter 1.6mm")
 		(property "Reference" "R1"
-			(at 3.79 -1.825 0)
+			(at 3.745 -2.955 0)
 			(layer "F.SilkS")
 			(uuid "8c390196-ae40-463d-96f8-058bab98020e")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
@@ -3606,7 +3606,7 @@
 			(uuid "e0dc6b04-cd7a-4486-a24d-8f2637552989")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
@@ -3965,12 +3965,12 @@
 		(descr "LED, diameter 5.0mm z-position of LED center 3.0mm, 2 pins")
 		(tags "LED diameter 5.0mm z-position of LED center 3.0mm 2 pins")
 		(property "Reference" "D3"
-			(at 1.2 3.3 0)
+			(at 6.12 0 0)
 			(layer "F.SilkS")
 			(uuid "b23a0306-44aa-4aaa-94ac-ac626357e593")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
@@ -4433,12 +4433,12 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, , length*diameter=5.2*2.7mm^2, , http://www.diodes.com/_files/packages/DO-41%20(Plastic).pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D1"
-			(at 5.13 2.36 0)
+			(at 13.41 0.02 0)
 			(layer "F.SilkS")
 			(uuid "529a70eb-0a3d-4852-92c8-0f1e827a12f7")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
@@ -4745,7 +4745,7 @@
 			(uuid "86ca409e-f7d6-49d1-9a97-4d3353322476")
 		)
 		(fp_text user "K"
-			(at 0 -2.1 0)
+			(at -2.42 -0.04 0)
 			(layer "F.SilkS")
 			(uuid "16539145-bff7-4682-81b1-8ea7d0235f33")
 			(effects
@@ -4817,13 +4817,13 @@
 		(at 186.39 78.55)
 		(descr "Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf")
 		(tags "Arduino Nano")
-		(property "Reference" "A1"
-			(at 7.62 -5.08 0)
+		(property "Reference" "NANO"
+			(at 19.86 41.31 0)
 			(layer "F.SilkS")
 			(uuid "2c070dd5-c4a1-4df8-a560-abc0914b25ee")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
@@ -5562,12 +5562,12 @@
 		(descr "simple 2-pin terminal block, pitch 5.08mm, revamped version of bornier2")
 		(tags "terminal block bornier2")
 		(property "Reference" "J2"
-			(at 2.4 5.15 180)
+			(at 2.4 5.15 0)
 			(layer "F.SilkS")
 			(uuid "bab505f8-2b80-4597-9887-f9c83d73a9f0")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
@@ -5817,12 +5817,12 @@
 		(uuid "de69b8bd-c685-436d-a2b9-71c54a919ebb")
 		(at 104.25 82.5 90)
 		(property "Reference" "LM1"
-			(at -0.05 -0.1 0)
+			(at 0.17 -24.56 0)
 			(layer "F.SilkS")
 			(uuid "cd45330e-7c62-430d-b1cd-3cac7b79d38f")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
@@ -6038,12 +6038,12 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, , length*diameter=5.2*2.7mm^2, , http://www.diodes.com/_files/packages/DO-41%20(Plastic).pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D2"
-			(at 5.08 2.5 0)
+			(at 13.26 -0.02 0)
 			(layer "F.SilkS")
 			(uuid "cb2918a0-ebb1-4720-8721-adafa20858cf")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
@@ -6350,7 +6350,7 @@
 			(uuid "0db2afa9-669c-48d2-8572-b5ae17c543ad")
 		)
 		(fp_text user "K"
-			(at 0 -2.1 0)
+			(at -2.57 -0.11 0)
 			(layer "F.SilkS")
 			(uuid "4427686a-c928-4c66-a181-4c7cd255de36")
 			(effects
@@ -6423,12 +6423,12 @@
 		(descr "Through hole angled pin header, 2x08, 2.54mm pitch, 6mm pin length, double rows")
 		(tags "Through hole angled pin header THT 2x08 2.54mm double row")
 		(property "Reference" "Housing Sensores"
-			(at -11.41 -8.835 180)
+			(at -11.68 -8.795 180)
 			(layer "F.SilkS")
 			(uuid "66a0f2af-95e2-467b-8fed-daabc480239c")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
@@ -8015,12 +8015,12 @@
 		(at 194.51 68.35)
 		(descr "<b>Dual In Line Package</b>")
 		(property "Reference" "74HC595"
-			(at 0 0 0)
+			(at 11.57 0.29 90)
 			(layer "F.SilkS")
 			(uuid "fbd80b5d-8e8d-46d4-8356-47b032cb0644")
 			(effects
 				(font
-					(size 0.70009 0.70009)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
@@ -8302,13 +8302,13 @@
 		(at 129.71 76.085 -90)
 		(descr "Arduino UNO R3, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf")
 		(tags "Arduino UNO R3")
-		(property "Reference" "A2"
-			(at -22.743 -19.854 180)
+		(property "Reference" "Monster Shield"
+			(at -29.565 -19.66 180)
 			(layer "F.SilkS")
 			(uuid "73a6971e-ed1f-4cbe-a86b-68a602fa6468")
 			(effects
 				(font
-					(size 1 1)
+					(size 1.5 1.5)
 					(thickness 0.15)
 				)
 			)
