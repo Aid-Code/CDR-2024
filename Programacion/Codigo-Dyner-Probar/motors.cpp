@@ -1,8 +1,7 @@
-// CHIKEN LITTLE - DYNER - AIDEN - CHERNIAK - CDR '24 
+// CHIKEN LITTLE - DYNER - AIDEN - CHERNIAK - CDR '24
 #include "motors.h"
 
-void setupMotores()
-{
+void setupMotores() {
   pinMode(MotorIzq_A, OUTPUT);
   pinMode(MotorIzq_B, OUTPUT);
   pinMode(PWM_Izq, OUTPUT);
@@ -75,8 +74,6 @@ void izquierda(int pwmD, int pwmI, int tipo) {
       setDir(ADELANTE, pines_motorIzq);
       setPwm(PWM_Der, pwmD);
       setPwm(PWM_Izq, pwmI);
-
-
       break;
 
     case CON_UNA_RUEDA:

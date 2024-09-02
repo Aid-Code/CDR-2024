@@ -5,10 +5,10 @@
 #include "Arduino.h"
 
 
-#define BTN_1
-#define BTN_2
+#define BTN_1 A4
+#define BTN_2 A5
 
-#define LED_1
+#define LED_1 A3
 #define LED_2
 #define LED_3
 #define LED_4

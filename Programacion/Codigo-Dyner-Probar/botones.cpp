@@ -1,4 +1,4 @@
-// CHIKEN LITTLE - DYNER - AIDEN - CHERNIAK - CDR '24 
+// CHIKEN LITTLE - DYNER - AIDEN - CHERNIAK - CDR '24
 #include "botones.h"
 
 uint8_t estrategia = 0;
