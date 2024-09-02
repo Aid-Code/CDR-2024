@@ -41,7 +41,7 @@ uint8_t linea() {
   int lecturacnyIzq = lecturaCny(CNY_IZQ, izq_promedio);
 
   if (lecturacnyDer) {
-    atras(PWM_ADELANTE, PWM_ADELANTE);
+    atras(PWM_ADELANTE, PWM_ADELANTE); // Aca y en el resto de pwm no falta la diferencia de 20? (Ya vi ese define de diferencia en el otro archivo)
     delay(300);  // Retrocede por 0.3 segundos
     izquierda(PWM_ADELANTE, PWM_ADELANTE, SOBRE_PROPIO_EJE);
     delay(450);  // Gira 450 grados

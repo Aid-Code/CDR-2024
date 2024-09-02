@@ -15,12 +15,12 @@ void setupBotonesYLeds() {
 void seleccionarEstrategia() {
   if (digitalRead(BTN_1) == LOW) {
     delay(10);
-    estrategia = (estrategia + 1) % 16;
+    estrategia = (estrategia + 1) % 16; // Por que se divide por 16?
     mostrarEstrategia(estrategia);
   }
 }
 
-void mostrarEstrategia(uint8_t estrategia) {
+void mostrarEstrategia(uint8_t estrategia) { // No entendí esta parte
   digitalWrite(LED_1, estrategia & 0x01);  // Primer bit
   digitalWrite(LED_4, estrategia & 0x02);  // Segundo bit
   digitalWrite(LED_3, estrategia & 0x04);  // Tercer bit

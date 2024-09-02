@@ -10,7 +10,7 @@ uint32_t distanciaDer;
 uint32_t distanciaIzq;
 uint32_t distanciaCen;
 
-void setupUltrasonicos() {
+void setupUltrasonicos() { //Falta setear los otros dos ultrasonicos si es que los vamos a usar, sino los agregamos despues
   pinMode(ECHO_DER, INPUT);
   pinMode(TRIG_DER, OUTPUT);
 
@@ -46,7 +46,7 @@ uint8_t presencia() {
   
   // Acción para el sensor derecho
   if (distanciaDer > 0 && distanciaDer <= 10) {
-    derecha(PWM_ADELANTE, PWM_ADELANTE, SOBRE_PROPIO_EJE);
+    derecha(PWM_ADELANTE, PWM_ADELANTE, SOBRE_PROPIO_EJE); //Me hace mal la redaccion pero parece estar bien jajsdjajs
   } else if (distanciaDer > 11 && distanciaDer <= 20) {
     derecha(PWM_ADELANTE, PWM_ADELANTE, CON_UNA_RUEDA);
   } else if (distanciaDer > 21 && distanciaDer <= 30) {
