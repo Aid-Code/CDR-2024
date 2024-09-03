@@ -21,7 +21,7 @@ void setupUltrasonicos() { //Falta setear los otros dos ultrasonicos si es que l
   pinMode(TRIG_MED, OUTPUT);
 }
 
-bool lecturaUltrasonico(uint8_t* pines) {
+uint8_t lecturaUltrasonico(uint8_t* pines) {
   digitalWrite(pines[1], HIGH);
   delayMicroseconds(10);
   digitalWrite(pines[1], LOW);
@@ -40,27 +40,9 @@ bool lecturaUltrasonico(uint8_t* pines) {
 }
 
 uint8_t presencia() {
-  bool lecturaDer = lecturaUltrasonico(pines_ultrasonico_der);
-  bool lecturaCen = lecturaUltrasonico(pines_ultrasonico_cen);
-  bool lecturaIzq = lecturaUltrasonico(pines_ultrasonico_izq);
+  uint8_t lecturaDer = lecturaUltrasonico(pines_ultrasonico_der);
+  uint8_t lecturaCen = lecturaUltrasonico(pines_ultrasonico_cen);
+  uint8_t lecturaIzq = lecturaUltrasonico(pines_ultrasonico_izq);
   
-  // Acción para el sensor derecho
-  if (distanciaDer > 0 && distanciaDer <= 10) {
-    derecha(PWM_ADELANTE, PWM_ADELANTE, SOBRE_PROPIO_EJE); 
-  } else if (distanciaDer > 11 && distanciaDer <= 20) {
-    derecha(PWM_ADELANTE, PWM_ADELANTE, CON_UNA_RUEDA);
-  } else if (distanciaDer > 21 && distanciaDer <= 30) {
-    derecha(PWM_ADELANTE, PWM_ADELANTE, GIRO_ABIERTO);
-  }
-
-  // Acción para el sensor izquierdo
-  if (distanciaIzq > 0 && distanciaIzq <= 10) {
-    izquierda(PWM_ADELANTE, PWM_ADELANTE, SOBRE_PROPIO_EJE);
-  } else if (distanciaIzq > 11 && distanciaIzq <= 20) {
-    izquierda(PWM_ADELANTE, PWM_ADELANTE, CON_UNA_RUEDA);
-  } else if (distanciaIzq > 21 && distanciaIzq <= 30) {
-    izquierda(PWM_ADELANTE, PWM_ADELANTE, GIRO_ABIERTO);
-  }
-
-  return (distanciaDer > 0) * 1 + (distanciaCen > 0) * 2 + (distanciaIzq > 0) * 4;
+  return (lecturaDer) * 1 + (lecturaCen) * 4 + (lecturaIzq) * 8;
 }
