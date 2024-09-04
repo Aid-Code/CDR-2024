@@ -1206,6 +1206,28 @@
 	)
 	(global_label "pin"
 		(shape input)
+		(at 26.67 46.99 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a43cf022-16c7-4311-a94e-846b774e5849")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 32.558 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "pin"
+		(shape input)
 		(at 40.64 30.48 180)
 		(fields_autoplaced yes)
 		(effects
