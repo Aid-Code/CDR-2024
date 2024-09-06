@@ -13,6 +13,13 @@
 #define LED_4
 
 
+extern uint8_t* pinesLed;
+extern uint8_t* pinesBtn;
+
+bool leerBtn(uint8_t pin);
+void setLed(uint8_t pin, bool state);
+void indicateState(uint8_t* pinesLed, );
+
 
 void setupBotonesYLeds();
 

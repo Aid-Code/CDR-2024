@@ -39,7 +39,7 @@ void setPwm(uint8_t Pin, uint8_t Valor) {
   analogWrite(Pin, Valor);
 }
 
-void adelante(int pw3mD, int pwmI) {
+void adelante(int pwmD, int pwmI) {
   setDir(ADELANTE, pines_motorDer);
   setDir(ADELANTE, pines_motorIzq);
   setPwm(PWM_Der, pwmD);
