@@ -18,5 +18,5 @@ extern uint8_t* pines_ultrasonico_izq;
 
 bool lecturaUltrasonico(uint8_t* pines);
 uint8_t presencia();
-
+void setupUltrasonicos();
 #endif

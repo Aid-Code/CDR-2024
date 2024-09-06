@@ -100,6 +100,8 @@ void DetectarLinea();
 void Atras();
 void Izquierda();
 void Derecha();
+
+
 void loop() {
   LecturaUltrasonicos();
   ExistenciaUlt();
