@@ -18,13 +18,14 @@
 #define LED_4 A0*/
 
 // Motor Izquierdo
-#define M1_B 7
+
+#define M1_B 3
 #define M1_A 4
 #define PWM_A 6
 
 // Motor Derecho
 #define M2_B 2
-#define M2_A 3
+#define M2_A 7
 #define PWM_B 5
 
 // Ultrasonicos
@@ -89,8 +90,8 @@ void setup() {
   //Boton
   pinMode(BTN, INPUT_PULLUP);
 
-  analogWrite(PWM_A, 255);  //Motor Izquierdo
-  analogWrite(PWM_B, 255);  //Motor Derecho
+  analogWrite(PWM_A, 220);  //Motor Izquierdo
+  analogWrite(PWM_B, 240);  //Motor Derecho
 }
 
 void LecturaUltrasonicos();
@@ -100,39 +101,41 @@ void DetectarLinea();
 void Atras();
 void Izquierda();
 void Derecha();
+
+
 void loop() {
   LecturaUltrasonicos();
   ExistenciaUlt();
   LecturaCNY();
   DetectarLinea();
 
-  if (flag_cny_izq) {
+  /*if (flag_cny_izq) {
     // Serial.println("Atras");
-    analogWrite(PWM_A, 255);  //Motor Izquierdo
-    analogWrite(PWM_B, 235);
+    //analogWrite(PWM_A, 255);  //Motor Izquierdo
+    //analogWrite(PWM_B, 235);
     Atras();
-    delay(300);
+    delay(600);
     Izquierda();
     delay(450);
-    analogWrite(PWM_A, 200);  //Motor Izquierdo
-    analogWrite(PWM_B, 185);
+    //analogWrite(PWM_A, 200);  //Motor Izquierdo
+    //analogWrite(PWM_B, 185);
     // Serial.println("Derecha");
 
   } else if (flag_cny_der) {
     // Serial.println("Atras");
-    analogWrite(PWM_A, 255);  //Motor Izquierdo
-    analogWrite(PWM_B, 235);
+    //analogWrite(PWM_A, 255);  //Motor Izquierdo
+    //analogWrite(PWM_B, 235);
     Atras();
-    delay(300);
+    delay(600);
     Derecha();
     delay(450);
-    analogWrite(PWM_A, 200);  //Motor Izquierdo
-    analogWrite(PWM_B, 185);
+    //analogWrite(PWM_A, 200);  //Motor Izquierdo
+    //analogWrite(PWM_B, 185);
     // Serial.println("Izquierda");
   } else {
     // Serial.println("Adelante");
     Adelante();
-  }
+  }*/
 
   if (flag_ult_med) {
     // Serial.println("Medio");

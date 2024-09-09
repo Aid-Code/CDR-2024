@@ -1,8 +1,20 @@
 #include "motors.h"
 
+void setupMotores() {
+  pinMode(MotorIzq_A, OUTPUT);
+  pinMode(MotorIzq_B, OUTPUT);
+  pinMode(PWM_Izq, OUTPUT);
+
+  pinMode(MotorDer_A, OUTPUT);
+  pinMode(MotorDer_B, OUTPUT);
+  pinMode(PWM_Der, OUTPUT);
+}
+
 
 uint8_t* pines_motorDer = (MotorDer_A, MotorDer_B);
 uint8_t* pines_motorIzq = (MotorIzq_A, MotorIzq_B);
+uint8_t  pwmD = PWM_Der;
+uint8_t  pwmI = PWM_Izq;
 
 void setDir(uint8_t Dir, uint8_t* Pines) {
   switch (Dir) {
@@ -63,8 +75,6 @@ void izquierda(int pwmD, int pwmI, int tipo) {
       setDir(ADELANTE, pines_motorIzq);
       setPwm(PWM_Der, pwmD);
       setPwm(PWM_Izq, pwmI);
-
-
       break;
 
     case CON_UNA_RUEDA:

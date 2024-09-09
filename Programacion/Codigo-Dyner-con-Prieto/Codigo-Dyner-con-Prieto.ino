@@ -5,7 +5,12 @@
 
 
 void setup() {
+  setupMotores();
+  setupUltrasonicos();
+  setupCny();
+  setupBotonesYLeds();
 }
+
 
 void loop() {
 

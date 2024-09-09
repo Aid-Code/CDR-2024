@@ -1,5 +1,8 @@
 #include "cny.h"
-
+void setupCny() {
+  pinMode(CNY_DER, INPUT);
+  pinMode(CNY_IZQ, INPUT);
+}
 uint16_t der_blanco = 285;
 uint16_t der_negro = 805;
 
@@ -10,6 +13,9 @@ uint16_t izq_negro = 735;
 
 uint16_t izq_promedio = (izq_blanco + izq_negro) / 2;
 
+
+uint8_t pines_cny_der = CNY_DER;
+uint8_t pines_cny_izq = CNY_IZQ;
 
 bool lecturaCny(uint8_t pines, uint32_t umbral) {
   int suma = 0;
@@ -30,7 +36,7 @@ bool lecturaCny(uint8_t pines, uint32_t umbral) {
 }
 
 uint8_t linea() {
-  int lecturacnyDer = lecturaCny(CNY_DER, der_promedio);
-  int lecturacnyIzq = lecturaCny(CNY_IZQ, izq_promedio);
+  bool lecturacnyDer = lecturaCny(pines_cny_der, der_promedio);
+  bool lecturacnyIzq = lecturaCny(pines_cny_izq, izq_promedio);
   return lecturacnyDer * 1 + lecturacnyIzq * 2;
 }
