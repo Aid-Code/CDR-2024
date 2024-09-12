@@ -12,6 +12,10 @@
 #define LED_3
 #define LED_4
 
+#define DATA 11
+#define LATCH 12
+#define CLOCK 13
+
 
 extern uint8_t* pinesLed;
 extern uint8_t* pinesBtn;

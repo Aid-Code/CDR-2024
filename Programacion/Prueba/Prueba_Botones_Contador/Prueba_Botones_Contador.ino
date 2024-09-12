@@ -1,9 +1,9 @@
-#define BTN_1 3    // Pin del botón 1
+#define BTN_1 5    // Pin del botón 1
 #define LED_4 4    // LED conectado directamente al Arduino (pin 4)
 
-#define DATA 8     // Pin DS del 74HC595
-#define LATCH 9    // Pin ST_CP (Latch) del 74HC595
-#define CLOCK 10   // Pin SH_CP (Clock) del 74HC595
+#define DATA 11     
+#define LATCH 12    
+#define CLOCK 13   
 
 int contador = 0;     // Inicializa el contador en 0
 int estadoAnterior = HIGH;  // Estado previo del botón
@@ -52,7 +52,7 @@ void mostrarBinario(int valor) {
 
   // LED en Q7 (valor binario 0001)
   if (valor & 0b0001) {
-    datosShiftRegister |= 0b10000000;  // LED 1
+    datosShiftRegister |= 0b01000000;   // LED 1
   }
 
   // LED en Q0 (valor binario 0010)
@@ -62,7 +62,7 @@ void mostrarBinario(int valor) {
 
   // LED en Q6 (valor binario 0100)
   if (valor & 0b0010) {
-    datosShiftRegister |= 0b01000000;  // LED 3
+    datosShiftRegister |= 0b10000000; // LED 3
   }
 
   // LED conectado directamente al pin 4 (LED_4)
@@ -71,7 +71,7 @@ void mostrarBinario(int valor) {
 
   // Enviar los datos al shift register
   digitalWrite(LATCH, LOW);
-  shiftOut(DATA, CLOCK, LSBFIRST, datosShiftRegister);
+  shiftOut(DATA, CLOCK, MSBFIRST, datosShiftRegister);
   digitalWrite(LATCH, HIGH);
 
   // Mostrar el estado de los LEDs en binario en el monitor serial
