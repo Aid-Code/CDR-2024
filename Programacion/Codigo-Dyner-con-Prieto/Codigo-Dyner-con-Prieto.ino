@@ -4,7 +4,8 @@
 #include "botones.h"
 
 
-void setup() {
+void setup() 
+{
   setupMotores();
   setupUltrasonicos();
   setupCny();
@@ -12,6 +13,7 @@ void setup() {
 }
 
 
-void loop() {
-
+void loop() 
+{
+  
 }

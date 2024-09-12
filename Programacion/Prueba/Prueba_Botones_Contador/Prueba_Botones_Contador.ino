@@ -52,17 +52,17 @@ void mostrarBinario(int valor) {
 
   // LED en Q7 (valor binario 0001)
   if (valor & 0b0001) {
-    datosShiftRegister |= 0b01000000;   // LED 1
+    datosShiftRegister |= 0b00000001; //LED 1
   }
 
   // LED en Q0 (valor binario 0010)
-  if (valor & 0b0100) {
-    datosShiftRegister |= 0b00000001;  // LED 2
+  if (valor & 0b0010) {
+    datosShiftRegister |= 0b10000000;   //LED 2
   }
 
   // LED en Q6 (valor binario 0100)
-  if (valor & 0b0010) {
-    datosShiftRegister |= 0b10000000; // LED 3
+  if (valor & 0b0100) {
+    datosShiftRegister |= 0b00000010; // LED 3
   }
 
   // LED conectado directamente al pin 4 (LED_4)
@@ -71,7 +71,7 @@ void mostrarBinario(int valor) {
 
   // Enviar los datos al shift register
   digitalWrite(LATCH, LOW);
-  shiftOut(DATA, CLOCK, MSBFIRST, datosShiftRegister);
+  shiftOut(DATA, CLOCK, LSBFIRST, datosShiftRegister);
   digitalWrite(LATCH, HIGH);
 
   // Mostrar el estado de los LEDs en binario en el monitor serial
