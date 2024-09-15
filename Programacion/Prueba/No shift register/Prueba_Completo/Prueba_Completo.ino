@@ -1,30 +1,24 @@
 // Sensores
-#define CNY_IZQ A6
-#define CNY_DER A7
-#define ECHO_IZQ 8
-#define ECHO_DER 9
-#define ECHO_MED 10
-
-#define TRIG_IZQ 0b00000100
-#define TRIG_MED 0b01000000
-#define TRIG_DER 0b00100000
-
-#define TRIG_L 0b00000000
+#define CNY_IZQ A1
+#define CNY_DER A0
+#define ECHO_DER 12  //3
+#define TRIG_DER 13  //3
+#define ECHO_IZQ 11  //1
+#define TRIG_IZQ 10  //1
+#define ECHO_MED 9   //2
+#define TRIG_MED 8   //
 
 // Botones y Leds
-#define BTN_1 A4
-#define BTN_2 A5
-/*#define LED_1 
-#define LED_2 
-#define LED_3 */ 
-#define LED_4 A3
-
-//Shift Register
-#define DATA 11     
-#define LATCH 12    
-#define CLOCK 13 
+#define BTN A4
+/*#define BTN_1 A6
+#define BTN_2 A7
+#define LED_1 A4
+#define LED_2 A3
+#define LED_3 13
+#define LED_4 A0*/
 
 // Motor Izquierdo
+
 #define M1_B 3
 #define M1_A 4
 #define PWM_A 6
@@ -86,12 +80,15 @@ void setup() {
   pinMode(M2_B, OUTPUT);
 
   //Sensores
+  pinMode(TRIG_DER, OUTPUT);
   pinMode(ECHO_DER, INPUT_PULLUP);
+  pinMode(TRIG_MED, OUTPUT);
   pinMode(ECHO_MED, INPUT_PULLUP);
+  pinMode(TRIG_IZQ, OUTPUT);
   pinMode(ECHO_IZQ, INPUT_PULLUP);
 
   //Boton
-  pinMode(BTN_1, INPUT_PULLUP);
+  pinMode(BTN, INPUT_PULLUP);
 
   analogWrite(PWM_A, 220);  //Motor Izquierdo
   analogWrite(PWM_B, 240);  //Motor Derecho
@@ -140,8 +137,7 @@ void loop() {
     Adelante();
   }*/
 
-  if (flag_ult_med) 
-  {
+  if (flag_ult_med) {
     // Serial.println("Medio");
     Adelante();
 
@@ -156,8 +152,7 @@ void loop() {
 }
 
 void LecturaCNY() {
-  for (int i = 0; i < 10; i++) 
-  {
+  for (int i = 0; i < 10; i++) {
     lectura_cny_izq = analogRead(CNY_IZQ);
     suma_cny_izq = suma_cny_izq + lectura_cny_izq;
   }
@@ -174,8 +169,7 @@ void LecturaCNY() {
   suma_cny_der = 0;
 }
 
-void DetectarLinea() 
-{
+void DetectarLinea() {
   if (cny_izquierdo < izq_promedio) {
     // Serial.println("Blanco");
     flag_cny_izq = true;
@@ -197,54 +191,41 @@ void DetectarLinea()
   }
 }
 
-void LecturaUltrasonicos() 
-{
-  digitalWrite(LATCH, LOW);
-  shiftOut(DATA, CLOCK, LSBFIRST, TRIG_MED);
-  digitalWrite(LATCH, HIGH);
-  delay(10);
-  digitalWrite(LATCH, LOW);
-  shiftOut(DATA, CLOCK, LSBFIRST, TRIG_L);
-  digitalWrite(LATCH, HIGH);
+void LecturaUltrasonicos() {
+
+
+  digitalWrite(TRIG_MED, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG_MED, LOW);
 
   tiempo_ult_med = pulseIn(ECHO_MED, HIGH, 10000);
 
   distancia_ult_med = tiempo_ult_med / 59;
 
- digitalWrite(LATCH, LOW);
-  shiftOut(DATA, CLOCK, LSBFIRST, TRIG_DER);
-  digitalWrite(LATCH, HIGH);
-  delay(10);
-  digitalWrite(LATCH, LOW);
-  shiftOut(DATA, CLOCK, LSBFIRST, TRIG_L);
-  digitalWrite(LATCH, HIGH);
+  digitalWrite(TRIG_DER, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG_DER, LOW);
 
   tiempo_ult_der = pulseIn(ECHO_DER, HIGH, 10000);
 
   distancia_ult_der = tiempo_ult_der / 59;
 
-  digitalWrite(LATCH, LOW);
-  shiftOut(DATA, CLOCK, LSBFIRST, TRIG_IZQ);
-  digitalWrite(LATCH, HIGH);
-  delay(10);
-  digitalWrite(LATCH, LOW);
-  shiftOut(DATA, CLOCK, LSBFIRST, TRIG_L);
-  digitalWrite(LATCH, HIGH);
+  digitalWrite(TRIG_IZQ, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG_IZQ, LOW);
 
   tiempo_ult_izq = pulseIn(ECHO_IZQ, HIGH, 10000);
 
   distancia_ult_izq = tiempo_ult_izq / 59;
 }
 
-void ExistenciaUlt() 
-{
+void ExistenciaUlt() {
   Serial.print(distancia_ult_der);
   Serial.print('\t');
   Serial.print(distancia_ult_med);
   Serial.print('\t');
   Serial.print(distancia_ult_izq);
   Serial.println();
-
   if (distancia_ult_med < 10 && distancia_ult_med != 0) {
     // Serial.println("Hay algo");
     flag_ult_med = true;
@@ -266,35 +247,32 @@ void ExistenciaUlt()
   }
 }
 
-void Adelante() 
-{
+void Adelante() {
+
   digitalWrite(M1_B, HIGH);
   digitalWrite(M2_B, LOW);
   digitalWrite(M1_A, LOW);
   digitalWrite(M2_A, HIGH);
 }
 
-void Atras() 
-{
+void Atras() {
   digitalWrite(M1_B, LOW);
   digitalWrite(M2_B, HIGH);
   digitalWrite(M1_A, HIGH);
   digitalWrite(M2_A, LOW);
 }
 
-void Derecha() 
-{
-  digitalWrite(M1_B, LOW);
+void Derecha() {
+  digitalWrite(M1_B, HIGH);
   digitalWrite(M2_B, HIGH);
   digitalWrite(M1_A, LOW);
-  digitalWrite(M2_A, HIGH);
+  digitalWrite(M2_A, LOW);
 }
 
-void Izquierda() 
-{
-  digitalWrite(M1_B, HIGH);
-  digitalWrite(M2_B, LOW);
-  digitalWrite(M1_A, HIGH);
-  digitalWrite(M2_A, LOW);
+void Izquierda() {
+  digitalWrite(M1_B, LOW); // Izquierda adelante
+  digitalWrite(M2_B, LOW); // Derecha atras
+  digitalWrite(M1_A, HIGH);// Izquierda atras
+  digitalWrite(M2_A, HIGH); // Derecha adelante
 }
 

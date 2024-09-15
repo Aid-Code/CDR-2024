@@ -1,5 +1,9 @@
-#define BTN_1 5    // Pin del botón 1
-#define LED_4 4    // LED conectado directamente al Arduino (pin 4)
+#define BTN_1 A4    // Pin del botón 1
+#define LED_4 A3    // LED conectado directamente al Arduino (pin 4)
+
+#define LED_1 0b00000001
+#define LED_2 0b10000000
+#define LED_3 0b00000010
 
 #define DATA 11     
 #define LATCH 12    
@@ -52,17 +56,17 @@ void mostrarBinario(int valor) {
 
   // LED en Q7 (valor binario 0001)
   if (valor & 0b0001) {
-    datosShiftRegister |= 0b00000001; //LED 1
+    datosShiftRegister |= LED_1; //LED 1
   }
 
   // LED en Q0 (valor binario 0010)
   if (valor & 0b0010) {
-    datosShiftRegister |= 0b10000000;   //LED 2
+    datosShiftRegister |= LED_2;   //LED 2
   }
 
   // LED en Q6 (valor binario 0100)
   if (valor & 0b0100) {
-    datosShiftRegister |= 0b00000010; // LED 3
+    datosShiftRegister |= LED_3; // LED 3
   }
 
   // LED conectado directamente al pin 4 (LED_4)

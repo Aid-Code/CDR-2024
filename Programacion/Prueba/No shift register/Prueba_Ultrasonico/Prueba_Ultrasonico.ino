@@ -1,6 +1,6 @@
 
-#define TRIG_DER 8
-#define ECHO_DER 7
+#define TRIG_DER 9
+#define ECHO_DER 10
 
 long tiempo;
 long distancia;
@@ -11,7 +11,6 @@ void Distancia(void);
 void setup()
 {
   Serial.begin(9600);
-  
 
   pinMode(TRIG_DER, OUTPUT);
   pinMode(ECHO_DER, INPUT);
@@ -20,7 +19,6 @@ void setup()
 void loop()
 {
  Distancia();
-
 }
 
 void Existencia()
