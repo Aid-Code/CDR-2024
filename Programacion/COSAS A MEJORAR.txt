@@ -1,0 +1,10 @@
+- Diseño de llantas bien pensado que se incruste la goma (Las primeras que quisimos hacer pero bien hechas)
+- Tema conector T de la batería de abajo (QUE NO SE DESENCHUFE)
+- Se podrá mejorar que no se caiga del tatami incluso con mucho PWM?
+- Rediseñar la placa principal (no poner shift register volteado..) 
+	- Se podrá achicar mas?
+	- Correr un poco XT60 para que no se choque con las borneras del monster
+	- Espejar conector de placa de sensores (para que no quede todo cruzado el cable)
+	- Menos puentes, mejor.
+- Reacomodar interruptor general (ES MUY INCOMODO DONDE ESTA)
+- Terminar base (HACERLA BIEN)
