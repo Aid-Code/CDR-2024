@@ -1,0 +1,23 @@
+- Diseño de llantas bien pensado que se incruste la goma (Las primeras que quisimos hacer pero bien hechas)
+- Tema conector T de la batería de abajo (QUE NO SE DESENCHUFE)
+- Se podrá mejorar que no se caiga del tatami incluso con mucho PWM?
+- Rediseñar la placa principal (no poner shift register volteado..) 
+	- Se podrá achicar mas?
+	- Correr un poco XT60 para que no se choque con las borneras del monster
+	- Espejar conector de placa de sensores (para que no quede todo cruzado el cable)
+	- Menos puentes, mejor.
+- Reacomodar interruptor general (ES MUY INCOMODO DONDE ESTA)
+- Terminar base (HACERLA BIEN)
+- 5 sensores ultrasonicos para mejorar el rango de vision (que no este tan ciego)
+- Agregar espacio para plomo en el cuerpo de los ultrasonicos
+- Agregar tuercas insertoS
+
+
+Como nos fue?
+	Nos fue mucho mejor que en otras competencias, esta es la primera ves que realmente la pelea y no solo da vueltas, tirando factos le gano a crespin
+Que funciono?
+	Fucionó todo como debería haber funcionado.
+Que no funiono?
+	No es que no funciono, pero deberíamos haber subido el rango de los ultrasonicos
+Pudimos arreglarlo?
+	Después de perder en fase de grupos nos pusimos a probar distintos rangos en los ultrasonicos y funciono mejor
