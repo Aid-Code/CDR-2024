@@ -1,5 +1,5 @@
-#define CNY_IZQ A1
-#define CNY_DER A1
+#define CNY_IZQ A0
+#define CNY_DER A0
 
 // CNY Izquierdo
 
