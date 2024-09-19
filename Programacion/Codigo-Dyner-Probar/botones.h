@@ -16,7 +16,6 @@
 extern uint8_t estrategia;  
 
 void setupBotonesYLeds();
-
 void seleccionarEstrategia();
 void mostrarEstrategia(uint8_t estrategia);
 void iniciarRobot();
