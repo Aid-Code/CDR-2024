@@ -4640,84 +4640,6 @@
 			)
 		)
 	)
-	(footprint ""
-		(layer "F.Cu")
-		(uuid "a76a8bca-96cd-44a0-8ffa-213682035543")
-		(at 98.25 43.95)
-		(property "Reference" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.SilkS")
-			(uuid "7e716ae3-d460-440b-ba7f-0c68d53c247a")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Value" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(uuid "dc364a18-4235-4638-ab38-cf9236b5a4fc")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "c2a47475-e930-42ea-bf5a-f12206aef876")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "bdf37df2-ad3b-4399-b975-0d00c4d5c3d9")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "c998c9e5-c56a-4161-bfe0-1eaa98abe739")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(pad "2" thru_hole circle
-			(at 0 0 180)
-			(size 5 5)
-			(drill 3)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(pinfunction "IOREF")
-			(pintype "output")
-			(uuid "26f603b9-1da9-4cb9-9d71-1c5d55f7d035")
-		)
-	)
 	(footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
 		(layer "F.Cu")
 		(uuid "a7b5c0a2-71c6-43d9-8cb0-80a15a1f67e1")
@@ -8991,13 +8913,13 @@
 		(layer "Edge.Cuts")
 		(uuid "d0e58bca-ffa0-4d2b-b808-1ad8544f7cd3")
 	)
-	(gr_text "CDR \n2024"
-		(at 221.25 117.65 0)
+	(gr_text "CDR"
+		(at 224 116 0)
 		(layer "B.Cu")
 		(uuid "2220774b-0d52-441c-9f70-d3895e3ef659")
 		(effects
 			(font
-				(size 3 3)
+				(size 5 5)
 				(thickness 0.4)
 			)
 			(justify left bottom mirror)
@@ -9097,6 +9019,39 @@
 				(thickness 0.15)
 			)
 		)
+	)
+	(dimension
+		(type aligned)
+		(layer "F.SilkS")
+		(uuid "ef4eace6-b02a-4405-b60e-b0112ac5c4b0")
+		(pts
+			(xy 228.05 122.05) (xy 228.05 43.6)
+		)
+		(height 8.95)
+		(gr_text "78,4500 mm"
+			(at 235.9 82.825 90)
+			(layer "F.SilkS")
+			(uuid "ef4eace6-b02a-4405-b60e-b0112ac5c4b0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
 	)
 	(segment
 		(start 185.21 93.79)
