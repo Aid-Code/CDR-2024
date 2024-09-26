@@ -25,8 +25,8 @@ enum estados_antirrebote
   LIBERACION
 }
 
-int strat = INIT;
-//int stratAnt;
+estados_strat = INIT;
+int stratAnt;
 int contador = 0;
 int antirrebote;
 
@@ -149,25 +149,25 @@ void mostrarBinario(int valor)
 
 void Antirrebote()
 {
-  switch(antirrebote)
+  switch(estados_antirrebote)
   {
     case ESPERA:
       if (lectura_BTN2 == LOW)
       {
         flag_BTN2 = false;
         millisAnt = millis;
-        antirrebote = CONFIRMACION;
+        estados_antirrebote = CONFIRMACION;
       }
     break;
 
     case CONFIRMACION:
       if (lectura_BTN2 == HIGH && millis - millisAnt >= 15)
       {
-        antirrebote = ESPERA;
+        estados_antirrebote = ESPERA;
       }
       else if (lectura_BTN2 == LOW && millis - millisAnt >= 15)
       {
-        antirrebote = LIBERACION;
+        estados_antirrebote = LIBERACION;
       }
     break;
 
@@ -175,7 +175,7 @@ void Antirrebote()
       if (lectura_BTN2 == HIGH)
       {
         flag_BTN2 = true;
-        antirrebote = ESPERA;
+        estados_antirrebote = ESPERA;
       }
     break;
   }
