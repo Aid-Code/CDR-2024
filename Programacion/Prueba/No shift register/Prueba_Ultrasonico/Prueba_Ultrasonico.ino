@@ -1,6 +1,6 @@
 
-#define TRIG_DER 9
-#define ECHO_DER 10
+#define TRIG_DER 7
+#define ECHO_DER 8
 
 long tiempo;
 long distancia;
@@ -68,7 +68,7 @@ void Distancia()
   delay(10);
   digitalWrite(TRIG_DER, LOW);
   
-  tiempo = pulseIn(ECHO_DER, HIGH);
+  tiempo = pulseIn(ECHO_DER, HIGH, 10000);
   
   distancia = tiempo / 59;
   
