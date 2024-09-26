@@ -1,4 +1,4 @@
-// Sensores
+//Sensores
 #define CNY_IZQ A6
 #define CNY_DER A7
 
@@ -16,7 +16,7 @@
 
 #define TRIG_L 0b00000000
 
-// Botones y Leds
+//Botones y Leds
 #define BTN_1 A4
 #define BTN_2 A5
 
@@ -30,7 +30,7 @@
 #define LATCH 12    
 #define CLOCK 13 
 
-// Motor Izquierdo
+//Motor Izquierdo
 #define AIN_2 3
 #define AIN_1 4
 #define PWM_A 6
@@ -40,7 +40,7 @@
 #define BIN_1 7
 #define PWM_B 5
 
-// Ultrasonicos
+//Ultrasonicos
 
 long tiempo_ult_der = 0;
 long tiempo_ult_med = 0;
@@ -54,14 +54,14 @@ bool flag_ult_der = false;
 bool flag_ult_med = false;
 bool flag_ult_izq = false;
 
-// CNY Izquierdo
+//CNY Izquierdo
 
 uint32_t lectura_cny_izq = 0;
 uint32_t cny_izquierdo = 0;
 uint32_t suma_cny_izq = 0;
 
-uint32_t izq_blanco = 28;
-uint32_t izq_negro = 735;
+uint32_t izq_blanco = 195;
+uint32_t izq_negro = 800;
 
 uint32_t izq_promedio = (izq_blanco + izq_negro) / 2;
 
@@ -71,8 +71,8 @@ uint32_t lectura_cny_der = 0;
 uint32_t cny_derecho = 0;
 uint32_t suma_cny_der = 0;
 
-uint32_t der_blanco = 285;
-uint32_t der_negro = 805;
+uint32_t der_blanco = 45;
+uint32_t der_negro = 725;
 
 uint32_t der_promedio = (der_blanco + der_negro) / 2;
 
@@ -83,6 +83,41 @@ bool flag_cny_both = false;
 int auxiliar = 0;
 int milis = 0;
 int milisAnt = 0;
+
+//Botones
+
+int lectura_BTN1 = 0;
+int lectura_BTN2 = 0;
+
+bool flag_BTN1 = false;
+bool flag_BTN2 = false;
+
+//Maquina seteadora
+
+enum strats
+{
+  INIT,
+  STRAT_1,
+  STRAT_2,
+  STRAT_3,
+  STRAT_4
+}
+
+int strat = INIT;
+int strat_Ant;
+int contador = 0;
+
+//Antirrebotes 
+
+enum estados_antirrebote
+{
+  ESPERA,
+  CONFIRMACION,
+  LIBERACION
+}
+
+int antirrebote_1;
+int antirrebote_2;
 
 void LecturaUltrasonicos();
 void ExistenciaUlt();
@@ -129,8 +164,11 @@ void setup()
 void loop() 
 {
   milis = millis();
+  
+  lectura_BTN1 = digitalRead(BTN_1);
+  lectura_BTN2 = digitalRead(BTN_2);
 
-  if (digitalRead(BTN_1) == LOW)
+  if (flag_BTN1)
   {
     auxiliar = 1;
     milisAnt = milis;
@@ -158,7 +196,7 @@ void loop()
       Atras();
       delay(600);
       Izquierda();
-      delay(200);
+      delay(100);
       analogWrite(PWM_A, 100);
       analogWrite(PWM_B, 100);
       // Serial.println("Derecha");
@@ -170,7 +208,7 @@ void loop()
       Atras();
       delay(600);
       Derecha();
-      delay(200);
+      delay(100);
       analogWrite(PWM_A, 100);  //Motor Izquierdo
       analogWrite(PWM_B, 100);
       // Serial.println("Izquierda");
@@ -233,6 +271,166 @@ void loop()
       analogWrite(PWM_B, 100);
     }
   } 
+}
+
+void MaquinaSeteadora()
+{
+  switch(strat)
+  {
+    case INIT:
+      if (flag_BTN2)
+      {
+        stratAnt = STRAT_4;
+        mostrarBinario(STRAT_1);
+        strat = STRAT_1;
+      }
+    break;
+
+    case STRAT_1:
+      if(stratAnt == INIT && flag_BTN2)
+      {
+        stratAnt = strat - 1;
+        mostrarBinario(STRAT_2);
+        strat = STRAT_2;
+      }
+    break;
+
+    case STRAT_2:
+      if(stratAnt == STRAT_1 && flag_BTN2)
+      {
+        stratAnt = strat - 1;
+        mostrarBinario(STRAT_3);
+        strat = STRAT_3;
+      }
+    break;
+
+    case STRAT_3:
+      if(stratAnt == STRAT_2 && flag_BTN2)
+      {
+        stratAnt = strat - 1;
+        mostrarBinario(STRAT_4);
+        strat = STRAT_4;
+      }
+    break;
+
+    case STRAT_4:
+      if(stratAnt == STRAT_3 && flag_BTN2)
+      {
+        stratAnt = strat - 1;
+        mostrarBinario(STRAT_1);
+        strat = INIT;
+      }
+    break;
+  }
+}
+
+void mostrarBinario(int valor) {
+
+  // LEDs conectados al shift register (Q0, Q6, y Q7)
+  uint8_t datosShiftRegister = 0b00000000;
+
+  // LED en Q7 (valor binario 0001)
+  if (valor & 0b0001) {
+    datosShiftRegister |= LED_1; //LED 1
+  }
+
+  // LED en Q0 (valor binario 0010)
+  if (valor & 0b0010) {
+    datosShiftRegister |= LED_2;   //LED 2
+  }
+
+  // LED en Q6 (valor binario 0100)
+  if (valor & 0b0100) {
+    datosShiftRegister |= LED_3; // LED 3
+  }
+
+  // LED conectado directamente al pin 4 (LED_4)
+  uint8_t estadoLED4 = (valor & 0b1000) ? HIGH : LOW;
+  digitalWrite(LED_4, estadoLED4);
+
+  // Enviar los datos al shift register
+  digitalWrite(LATCH, LOW);
+  shiftOut(DATA, CLOCK, LSBFIRST, datosShiftRegister);
+  digitalWrite(LATCH, HIGH);
+
+  // Mostrar el estado de los LEDs en binario en el monitor serial
+  Serial.print("Estado de los LEDs: ");
+  Serial.print(estadoLED4 ? "1" : "0");       // LED 4 (pin 4)
+  Serial.print((valor & 0b0100) ? "1" : "0");  // Q6 (LED 3)
+  Serial.print((valor & 0b0010) ? "1" : "0");  // Q0 (LED 2)
+  Serial.print((valor & 0b0001) ? "1" : "0");  // Q7 (LED 1)
+  
+  
+ 
+  Serial.println();  // Nueva línea
+}
+
+void AntirreboteBTN1()
+{
+  switch(antirrebote_1)
+  {
+    case ESPERA:
+      if (lectura_BTN1 == LOW)
+      {
+        flag_BTN1 = false;
+        millisAnt = millis;
+        antirrebote_1 = CONFIRMACION;
+      }
+    break;
+
+    case CONFIRMACION:
+      if (lectura_BTN1 == HIGH && millis - millisAnt >= 15)
+      {
+        antirrebote_1 = ESPERA;
+      }
+      else if (lectura_BTN1 == LOW && millis - millisAnt >= 15)
+      {
+        antirrebote_1 = LIBERACION;
+      }
+    break;
+
+    case LIBERACION:
+      if (lectura_BTN1 == HIGH)
+      {
+        flag_BTN1 = true;
+        antirrebote_1 = ESPERA;
+      }
+    break;
+  }
+}
+
+void AntirreboteBTN2()
+{
+  switch(antirrebote_2)
+  {
+    case ESPERA:
+      if (lectura_BTN2 == LOW)
+      {
+        flag_BTN2 = false;
+        millisAnt = millis;
+        antirrebote_2 = CONFIRMACION;
+      }
+    break;
+
+    case CONFIRMACION:
+      if (lectura_BTN2 == HIGH && millis - millisAnt >= 15)
+      {
+        antirrebote_2 = ESPERA;
+      }
+      else if (lectura_BTN2 == LOW && millis - millisAnt >= 15)
+      {
+        antirrebote_2 = LIBERACION;
+      }
+    break;
+
+    case LIBERACION:
+      if (lectura_BTN2 == HIGH)
+      {
+        flag_BTN2 = true;
+        antirrebote_2 = ESPERA;
+      }
+    break;
+  }
 }
 
 void LecturaCNY() {
@@ -325,7 +523,7 @@ void ExistenciaUlt()
   Serial.print(distancia_ult_der);
   Serial.println();
   
-  if (distancia_ult_med < 40 && distancia_ult_med != 0) {
+  if (distancia_ult_med < 60 && distancia_ult_med != 0) {
     // Serial.println("Hay algo");
     flag_ult_med = true;
   } else {
@@ -333,13 +531,13 @@ void ExistenciaUlt()
     flag_ult_med = false;
   }
 
-  if (distancia_ult_der < 40 && distancia_ult_der != 0) {
+  if (distancia_ult_der < 60 && distancia_ult_der != 0) {
     flag_ult_der = true;
   } else {
     flag_ult_der = false;
   }
 
-  if (distancia_ult_izq < 40 && distancia_ult_izq != 0) {
+  if (distancia_ult_izq < 60 && distancia_ult_izq != 0) {
     flag_ult_izq = true;
   } else 
   {
