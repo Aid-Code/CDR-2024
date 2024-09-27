@@ -1,6 +1,5 @@
 #define CUENTAS_RESET 5
-
-uint8_t pines_dbnc[3] = {10,3,7};
+#define BTN A4
 
 bool estado_previo[3];
 uint8_t contador[3] = {0,0,0};
