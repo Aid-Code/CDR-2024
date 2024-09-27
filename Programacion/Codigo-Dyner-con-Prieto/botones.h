@@ -7,7 +7,7 @@
 #define BTN_1 A4
 #define BTN_2 A5
 
-#define BIT_LED_1 0b01000000
+#define BIT_LED_1 0b01000000 // basura
 #define BIT_LED_2 0b00000001
 #define BIT_LED_3 0b10000000
 #define LED_4 A3
