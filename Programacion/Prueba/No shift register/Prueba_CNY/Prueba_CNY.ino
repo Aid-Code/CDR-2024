@@ -1,5 +1,5 @@
-#define CNY_IZQ A0
-#define CNY_DER A0
+#define CNY_IZQ A6
+#define CNY_DER A7
 
 // CNY Izquierdo
 
@@ -51,12 +51,9 @@ void loop()
   suma_cny_izq = 0;
   suma_cny_der = 0;
 
-  Serial.println(cny_derecho);
-  delay(500);
+  Serial.println(cny_izquierdo);
 
-  Serial.println(cny_derecho);
-
-  if (cny_izquierdo > izq_promedio)
+  /*if (cny_izquierdo > izq_promedio)
   {
     Serial.println("Negro");
   }
@@ -72,5 +69,5 @@ void loop()
   else if (cny_derecho < der_promedio)
   {
     Serial.println("Blanco");
-  }
+  }*/
 }

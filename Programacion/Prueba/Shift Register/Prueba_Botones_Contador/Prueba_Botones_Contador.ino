@@ -27,6 +27,8 @@ void setup() {
 }
 
 void loop() {
+
+  
   int estadoBoton = digitalRead(BTN_1);  // Lee el estado del botón
 
   // Si se presiona el botón y el estado cambia
