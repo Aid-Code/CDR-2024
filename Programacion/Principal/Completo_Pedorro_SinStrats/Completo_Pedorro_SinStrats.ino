@@ -49,6 +49,10 @@
 #define PWM_B 5
 
 
+#define PWM_CHILL 50
+#define PWM_FULL 250
+
+
 // Ultrasonicos
 
 
@@ -75,8 +79,8 @@ uint32_t cny_izquierdo = 0;
 uint32_t suma_cny_izq = 0;
 
 
-uint32_t izq_blanco = 195;
-uint32_t izq_negro = 800;
+uint32_t izq_blanco = 185;
+uint32_t izq_negro = 825;
 
 
 uint32_t izq_promedio = (izq_blanco + izq_negro) / 2;
@@ -90,8 +94,8 @@ uint32_t cny_derecho = 0;
 uint32_t suma_cny_der = 0;
 
 
-uint32_t der_blanco = 45;
-uint32_t der_negro = 725;
+uint32_t der_blanco = 60;
+uint32_t der_negro = 715;
 
 
 uint32_t der_promedio = (der_blanco + der_negro) / 2;
@@ -153,8 +157,8 @@ void setup()
   pinMode(LED_4, OUTPUT);
 
 
-  analogWrite(PWM_A, 100);  //Motor Izquierdo
-  analogWrite(PWM_B, 100);  //Motor Derecho
+  analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
+  analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho
 }
 
 
@@ -189,38 +193,40 @@ void loop()
 
     if (flag_cny_izq) {
       // Serial.println("Atras");
-      analogWrite(PWM_A, 250);  //Motor Izquierdo
-      analogWrite(PWM_B, 250);
+      analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+      analogWrite(PWM_B, PWM_FULL);
       Atras();
-      delay(600);
+      delay(500);
       Izquierda();
       delay(200);
-      analogWrite(PWM_A, 100);
-      analogWrite(PWM_B, 100);
+      analogWrite(PWM_A, PWM_CHILL);
+      analogWrite(PWM_B, PWM_CHILL);
       // Serial.println("Derecha");
 
 
     } else if (flag_cny_der) {
       // Serial.println("Atras");
-      analogWrite(PWM_A, 250);  //Motor Izquierdo
-      analogWrite(PWM_B, 250);
+      analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+      analogWrite(PWM_B, PWM_FULL);
       Atras();
-      delay(600);
+      delay(500);
       Derecha();
-      delay(200);
-      analogWrite(PWM_A, 100);  //Motor Izquierdo
-      analogWrite(PWM_B, 100);
+      delay(150);
+      analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
+      analogWrite(PWM_B, PWM_CHILL);
       // Serial.println("Izquierda");
     } else {
       // Serial.println("Adelante");
+      analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
+      analogWrite(PWM_B, PWM_CHILL);
       Adelante();
     }
 
 
     if (flag_ult_med)
     {
-      analogWrite(PWM_A, 255);
-      analogWrite(PWM_B, 255);
+      analogWrite(PWM_A, PWM_FULL);
+      analogWrite(PWM_B, PWM_FULL);
 
 
       //Serial.println("Medio");
@@ -236,43 +242,43 @@ void loop()
     }
     else if (flag_ult_der)
     {
-      analogWrite(PWM_A, 255);
-      analogWrite(PWM_B, 255);
+      analogWrite(PWM_A, PWM_FULL);
+      analogWrite(PWM_B, PWM_FULL);
 
 
       //Serial.println("Derecha");
       Derecha();
-      digitalWrite(LATCH, LOW);
+      /*digitalWrite(LATCH, LOW);
       shiftOut(DATA, CLOCK, LSBFIRST, LED_1);
       digitalWrite(LATCH, HIGH);
       delay(10);
       digitalWrite(LATCH, LOW);
       shiftOut(DATA, CLOCK, LSBFIRST, TRIG_L);
       digitalWrite(LATCH, HIGH);
-      digitalWrite(LED_4, LOW);
+      digitalWrite(LED_4, LOW);*/
 
 
     } else if (flag_ult_izq)
     {
-      analogWrite(PWM_A, 255);
-      analogWrite(PWM_B, 255);
+      analogWrite(PWM_A, PWM_FULL);
+      analogWrite(PWM_B, PWM_FULL);
 
 
       //Serial.println("Izquierda");
       Izquierda();
-      digitalWrite(LATCH, LOW);
+      /*digitalWrite(LATCH, LOW);
       shiftOut(DATA, CLOCK, LSBFIRST, LED_3);
       digitalWrite(LATCH, HIGH);
       delay(10);
       digitalWrite(LATCH, LOW);
       shiftOut(DATA, CLOCK, LSBFIRST, TRIG_L);
       digitalWrite(LATCH, HIGH);
-      digitalWrite(LED_4, LOW);
+      digitalWrite(LED_4, LOW);*/
     }
     else
     {
-      analogWrite(PWM_A, 100);
-      analogWrite(PWM_B, 100);
+      analogWrite(PWM_A, PWM_CHILL);
+      analogWrite(PWM_B, PWM_CHILL);
     }
   }
 }
