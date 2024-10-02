@@ -390,7 +390,7 @@ void ExistenciaUlt()
   Serial.print(distancia_ult_der);
   Serial.println();
  
-  if (distancia_ult_med < 80 && distancia_ult_med != 0) {
+  if (distancia_ult_med < 60 && distancia_ult_med != 0) {
     // Serial.println("Hay algo");
     flag_ult_med = true;
   } else {
@@ -399,14 +399,14 @@ void ExistenciaUlt()
   }
 
 
-  if (distancia_ult_der < 80 && distancia_ult_der != 0) {
+  if (distancia_ult_der < 60 && distancia_ult_der != 0) {
     flag_ult_der = true;
   } else {
     flag_ult_der = false;
   }
 
 
-  if (distancia_ult_izq < 80 && distancia_ult_izq != 0) {
+  if (distancia_ult_izq < 60 && distancia_ult_izq != 0) {
     flag_ult_izq = true;
   } else
   {
