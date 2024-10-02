@@ -48,10 +48,12 @@
 #define BIN_1 7
 #define PWM_B 5
 
+// Valores
 
 #define PWM_CHILL 50
 #define PWM_FULL 250
 
+#define RANGO_ULT 60
 
 // Ultrasonicos
 
@@ -107,8 +109,8 @@ bool flag_cny_both = false;
 
 
 int auxiliar = 0;
-int milis = 0;
-int milisAnt = 0;
+int millisActual = 0;
+int millisAnt = 0;
 
 
 void LecturaUltrasonicos();
@@ -164,19 +166,19 @@ void setup()
 
 void loop()
 {
-  milis = millis();
+  millisActual = millis();
 
 
   if (digitalRead(BTN_1) == LOW)
   {
     auxiliar = 1;
-    milisAnt = milis;
+    millisAnt = millisActual;
     Serial.println("Apretado");
    
   }
 
 
-  if (auxiliar == 1 && milis - milisAnt >= 5000)
+  if (auxiliar == 1 && millisActual - millisAnt >= 5000)
   {
     digitalWrite(LED_4, HIGH);
     digitalWrite(LATCH, LOW);
@@ -390,7 +392,7 @@ void ExistenciaUlt()
   Serial.print(distancia_ult_der);
   Serial.println();
  
-  if (distancia_ult_med < 60 && distancia_ult_med != 0) {
+  if (distancia_ult_med < RANGO_ULT && distancia_ult_med != 0) {
     // Serial.println("Hay algo");
     flag_ult_med = true;
   } else {
@@ -399,14 +401,14 @@ void ExistenciaUlt()
   }
 
 
-  if (distancia_ult_der < 60 && distancia_ult_der != 0) {
+  if (distancia_ult_der < RANGO_ULT && distancia_ult_der != 0) {
     flag_ult_der = true;
   } else {
     flag_ult_der = false;
   }
 
 
-  if (distancia_ult_izq < 60 && distancia_ult_izq != 0) {
+  if (distancia_ult_izq < RANGO_ULT && distancia_ult_izq != 0) {
     flag_ult_izq = true;
   } else
   {
