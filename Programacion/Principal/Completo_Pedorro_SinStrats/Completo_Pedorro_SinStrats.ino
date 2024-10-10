@@ -50,7 +50,7 @@
 
 // Valores
 
-#define PWM_CHILL 50
+#define PWM_CHILL 70
 #define PWM_FULL 250
 
 #define RANGO_ULT 60
@@ -81,8 +81,8 @@ uint32_t cny_izquierdo = 0;
 uint32_t suma_cny_izq = 0;
 
 
-uint32_t izq_blanco = 185;
-uint32_t izq_negro = 825;
+uint32_t izq_blanco = 460;
+uint32_t izq_negro = 840;
 
 
 uint32_t izq_promedio = (izq_blanco + izq_negro) / 2;
@@ -96,8 +96,8 @@ uint32_t cny_derecho = 0;
 uint32_t suma_cny_der = 0;
 
 
-uint32_t der_blanco = 60;
-uint32_t der_negro = 715;
+uint32_t der_blanco = 525;
+uint32_t der_negro = 820;
 
 
 uint32_t der_promedio = (der_blanco + der_negro) / 2;
