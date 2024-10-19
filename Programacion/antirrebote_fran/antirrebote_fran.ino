@@ -1,8 +1,10 @@
 #define CUENTAS_RESET 5
-#define BTN A4
+#define BTN_1 A4
+#define BTN_2 A4
 
 bool estado_previo[3];
 uint8_t contador[3] = {0,0,0};
+uint8_t pines_dbnc[2] = {BTN_1, BTN_2};
 
 bool flag_evento[3] = {false,false,false};
 bool flag_tipo[3] = {false,false,false};

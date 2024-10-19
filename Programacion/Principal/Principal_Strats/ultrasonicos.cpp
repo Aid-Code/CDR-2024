@@ -24,16 +24,30 @@ uint8_t lecturaUltrasonico(uint8_t* pines) {
 
   uint32_t distancia = tiempo / 59;
 
-  if (distancia < 10 && distancia != 0) {
+  if (distancia < 10 && distancia != 0) 
+  {
     // Serial.println("Hay algo");
-    return true;
-  } else {
+    //return true;
+
+    return 1; // Tiene sentido???
+  } 
+  else if (distancia > 10 && distancia < 40)
+  {
+    return 2;
+  }
+  else if (distancia > 40 && distancia <= 80)
+  {
+    return 3;
+  }
+  else 
+  {
     // Serial.println("No hay moros en la costa");
     return false;
   }
 }
 
-uint8_t presencia() {
+uint8_t presencia() 
+{
   uint8_t lecturaDer = lecturaUltrasonico(pines_ultrasonico_der);
   uint8_t lecturaCen = lecturaUltrasonico(pines_ultrasonico_cen);
   uint8_t lecturaIzq = lecturaUltrasonico(pines_ultrasonico_izq);

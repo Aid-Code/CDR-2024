@@ -13,7 +13,7 @@
 #define TRIG_MED 8   //
 
 #define SENSOR_CEN ((sensores << 2) >> 6)
-#define SENSOR_DER ((sensores >> 6)
+#define SENSOR_DER ((sensores >> 6))
 #define SENSOR_IZQ ((sensores << 4) >> 6) 
 
 extern uint8_t* pines_ultrasonico_der;

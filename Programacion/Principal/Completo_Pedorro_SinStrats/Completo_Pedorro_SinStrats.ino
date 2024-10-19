@@ -50,10 +50,10 @@
 
 // Valores
 
-#define PWM_CHILL 70
-#define PWM_FULL 250
+#define PWM_CHILL 50
+#define PWM_FULL 50
 
-#define RANGO_ULT 60
+#define RANGO_ULT 10
 
 // Ultrasonicos
 
@@ -81,7 +81,7 @@ uint32_t cny_izquierdo = 0;
 uint32_t suma_cny_izq = 0;
 
 
-uint32_t izq_blanco = 460;
+uint32_t izq_blanco = 635;
 uint32_t izq_negro = 840;
 
 
@@ -96,8 +96,8 @@ uint32_t cny_derecho = 0;
 uint32_t suma_cny_der = 0;
 
 
-uint32_t der_blanco = 525;
-uint32_t der_negro = 820;
+uint32_t der_blanco = 385;
+uint32_t der_negro = 780;
 
 
 uint32_t der_promedio = (der_blanco + der_negro) / 2;
@@ -189,8 +189,8 @@ void loop()
 
     LecturaUltrasonicos();
     ExistenciaUlt();
-    LecturaCNY();
-    DetectarLinea();
+    //LecturaCNY();
+    //DetectarLinea();
 
 
     if (flag_cny_izq) {
@@ -328,9 +328,9 @@ void DetectarLinea()
 
 
   if (cny_izquierdo < izq_promedio && cny_derecho < der_promedio) {
-    flag_cny_both = true;
-  } else {
     flag_cny_both = false;
+  } else {
+    flag_cny_both = true;
   }
 }
 
