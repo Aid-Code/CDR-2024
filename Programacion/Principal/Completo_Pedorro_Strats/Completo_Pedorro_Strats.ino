@@ -48,13 +48,13 @@
 #define BIN_1 7
 #define PWM_B 5
 
+
 // Valores
 
-#define PWM_CHILL 50
-#define PWM_FULL 80
+#define PWM_CHILL 100
+#define PWM_FULL 255
 
-#define RANGO_ULT 20
-
+#define RANGO_ULT 50
 #define CUENTAS_RESET 5
 
 // CNY Izquierdo
@@ -63,8 +63,8 @@ uint32_t lectura_cny_izq = 0;
 uint32_t cny_izquierdo = 0;
 uint32_t suma_cny_izq = 0;
 
-uint32_t izq_blanco = 635;
-uint32_t izq_negro = 840;
+uint32_t izq_blanco = 278;
+uint32_t izq_negro = 808;
 
 uint32_t izq_promedio = (izq_blanco + izq_negro) / 2;
 
@@ -75,8 +75,8 @@ uint32_t lectura_cny_der = 0;
 uint32_t cny_derecho = 0;
 uint32_t suma_cny_der = 0;
 
-uint32_t der_blanco = 385;
-uint32_t der_negro = 780;
+uint32_t der_blanco = 330;
+uint32_t der_negro = 809;
 
 uint32_t der_promedio = (der_blanco + der_negro) / 2;
 
@@ -109,6 +109,7 @@ uint16_t step_millis = 0;
 
 
 bool is_moving;
+bool ole = false;
 
 
 // Debounce
@@ -215,6 +216,8 @@ void no_caerse()
     analogWrite(PWM_B, PWM_CHILL);
     // Serial.println("Izquierda");
   }
+  else
+  {}
 }
 
 void maquina_seteadora(int strat)
@@ -245,6 +248,201 @@ void maquina_seteadora(int strat)
       Serial.println("torero");
       torero();
       break;
+  }
+}
+
+void crespin()
+{
+  if (flag_ult_med)
+  {
+    analogWrite(PWM_A, PWM_FULL);
+    analogWrite(PWM_B, PWM_FULL);
+    Adelante();
+  }
+  else if (flag_ult_der)
+  {
+    analogWrite(PWM_A, PWM_FULL);
+    analogWrite(PWM_B, PWM_FULL);
+    Derecha();
+  }
+  else if (flag_ult_izq)
+  {
+    analogWrite(PWM_A, PWM_FULL);
+    analogWrite(PWM_B, PWM_FULL);
+    Izquierda();
+  }
+  else if (!flag_ult_med)
+  {
+    analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
+    analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho
+    Adelante();
+  }
+}
+
+void torero()
+{
+  if (!flag_ult_med && !ole)
+  {
+    if (distancia_ult_der > 10 && distancia_ult_der <= 50)
+    {
+      analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+      analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
+      Adelante();
+      delay(500);
+
+      analogWrite(PWM_A, 250);  //Motor Izquierdo
+      analogWrite(PWM_B, 20);  //Motor Derecho
+      Adelante();
+      delay(600);
+
+      ole = true;
+    }
+    else if (distancia_ult_izq > 10 && distancia_ult_izq <= 20)
+    {
+      analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+      analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
+      Adelante();
+      delay(200);
+
+      analogWrite(PWM_A, 20);  //Motor Izquierdo
+      analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
+      Adelante();
+      delay(600);
+
+      ole = true;
+    }
+  }
+  else if (flag_ult_med && ole)
+  {
+    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
+    Adelante();
+  }
+  else if (flag_ult_der && ole)
+  {
+    analogWrite(PWM_A, 250);  //Motor Izquierdo
+    analogWrite(PWM_B, 100);  //Motor Derecho
+    Derecha();
+  }
+  else if (flag_ult_izq && ole)
+  {
+    analogWrite(PWM_A, 250);  //Motor Izquierdo
+    analogWrite(PWM_B, 100);  //Motor Derecho
+    Izquierda();
+  }
+}
+
+void radar()
+{
+  if (!flag_ult_med)
+  {
+    if (distancia_ult_der > 20 && distancia_ult_der <= 30)
+    {
+      analogWrite(PWM_A, 70);  //Motor Izquierdo
+      analogWrite(PWM_B, 70);  //Motor Derecho
+      Derecha();
+    }
+    else if (distancia_ult_der > 10 && distancia_ult_der <= 20)
+    {
+      analogWrite(PWM_A, 80);  //Motor Izquierdo
+      analogWrite(PWM_B, 80);  //Motor Derecho
+      Derecha();
+    }
+    else if (distancia_ult_der < 10 && distancia_ult_der != 0)
+    {
+      analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+      analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
+      Derecha();
+    }
+    else if (distancia_ult_izq > 20 && distancia_ult_izq <= 30)
+    {
+      analogWrite(PWM_A, 70);  //Motor Izquierdo
+      analogWrite(PWM_B, 70);  //Motor Derecho
+      Izquierda();
+    }
+    else if (distancia_ult_izq > 10 && distancia_ult_izq <= 20)
+    {
+      analogWrite(PWM_A, 80);  //Motor Izquierdo
+      analogWrite(PWM_B, 80);  //Motor Derecho
+      Izquierda();
+    }
+    else if (distancia_ult_izq < 10 && distancia_ult_izq != 0)
+    {
+      analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+      analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
+      Izquierda();
+    }
+    else 
+    {
+      analogWrite(PWM_A, 100);  //Motor Izquierdo
+      analogWrite(PWM_B, 30);  //Motor Derecho
+      Adelante();
+    }
+  }
+  else if (flag_ult_med)
+  {
+    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
+    Adelante();
+  }
+}
+
+void bartolito()
+{
+  if (!flag_ult_med)
+  {
+    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
+    Derecha();
+  }
+  else if (flag_ult_med)
+  {
+    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
+    Adelante();
+  }
+}
+
+void pasitos()
+{
+  if (!flag_ult_med && !flag_ult_der && !flag_ult_izq)
+  {
+    if (is_moving && actual_millis - step_millis >= 100)
+    {
+      Parado();
+      stop_millis = actual_millis;
+      is_moving = false;
+    }
+    else if (!is_moving && actual_millis - stop_millis >= 1000)
+    {
+      Adelante();
+      analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
+      analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho
+      step_millis = actual_millis;
+      is_moving = true;
+    }
+  }
+  else if (distancia_ult_med <= 40)
+  {
+    Adelante();
+    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
+  }
+  
+  
+  if (flag_ult_izq)
+  {
+    //falta comprobar distancia
+    Izquierda();
+    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
+  }
+  else if (flag_ult_der)
+  {
+    //falta comprobar distancia
+    Derecha();
+    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
   }
 }
 
@@ -292,7 +490,8 @@ void funcion_debounce(void)
   }
 }
 
-void mostrarBinario(int valor) {
+void mostrarBinario(int valor) 
+{
 
   // LEDs conectados al shift register (Q0, Q6, y Q7)
   uint8_t datosShiftRegister = 0b00000000;
@@ -331,192 +530,6 @@ void mostrarBinario(int valor) {
   
  
   Serial.println();  // Nueva línea*/
-}
-
-void crespin()
-{
-  if (flag_ult_med)
-  {
-    analogWrite(PWM_A, 255);
-    analogWrite(PWM_B, 255);
-    Adelante();
-  }
-  else if (flag_ult_der)
-  {
-    Derecha();
-  }
-  else if (flag_ult_izq)
-  {
-    Izquierda;
-  }
-}
-
-void torero()
-{
-  bool ole;
-  ole = false;
-
-  if (!flag_ult_med && !ole)
-  {
-    if (distancia_ult_der > 10 && distancia_ult_der <= 20)
-    {
-      analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-      analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-      Adelante();
-      delay(500);
-
-      analogWrite(PWM_A, 250);  //Motor Izquierdo
-      analogWrite(PWM_B, 20);  //Motor Derecho
-      Adelante();
-      delay(600);
-
-      ole = true;
-    }
-    else if (distancia_ult_izq > 10 && distancia_ult_izq <= 20)
-    {
-      analogWrite(PWM_A, 200);  //Motor Izquierdo
-      analogWrite(PWM_B, 200);  //Motor Derecho
-      Adelante();
-      delay(200);
-
-      analogWrite(PWM_A, 250);  //Motor Izquierdo
-      analogWrite(PWM_B, 20);  //Motor Derecho
-      Adelante();
-      delay(600);
-
-      ole = true;
-    }
-  }
-  else if (flag_ult_med && ole)
-  {
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-    Adelante();
-  }
-  else if (flag_ult_der && ole)
-  {
-    analogWrite(PWM_A, 250);  //Motor Izquierdo
-    analogWrite(PWM_B, 100);  //Motor Derecho
-    Derecha();
-  }
-  else if (flag_ult_izq && ole)
-  {
-    analogWrite(PWM_A, 250);  //Motor Izquierdo
-    analogWrite(PWM_B, 100);  //Motor Derecho
-    Izquierda();
-  }
-}
-
-void radar()
-{
-  if (!flag_ult_med)
-  {
-    if (distancia_ult_der > 20 && distancia_ult_der <= 30)
-    {
-      analogWrite(PWM_A, 50);  //Motor Izquierdo
-      analogWrite(PWM_B, 50);  //Motor Derecho
-      Derecha();
-    }
-    else if (distancia_ult_der > 10 && distancia_ult_der <= 20)
-    {
-      analogWrite(PWM_A, 60);  //Motor Izquierdo
-      analogWrite(PWM_B, 60);  //Motor Derecho
-      Derecha();
-    }
-    else if (distancia_ult_der < 10 && distancia_ult_der != 0)
-    {
-      analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-      analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-      Derecha();
-    }
-    else if (distancia_ult_izq > 20 && distancia_ult_izq <= 30)
-    {
-      analogWrite(PWM_A, 50);  //Motor Izquierdo
-      analogWrite(PWM_B, 50);  //Motor Derecho
-      Izquierda();
-    }
-    else if (distancia_ult_izq > 10 && distancia_ult_izq <= 20)
-    {
-      analogWrite(PWM_A, 60);  //Motor Izquierdo
-      analogWrite(PWM_B, 60);  //Motor Derecho
-      Izquierda();
-    }
-    else if (distancia_ult_izq < 10 && distancia_ult_izq != 0)
-    {
-      analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-      analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-      Izquierda();
-    }
-    else 
-    {
-      Parado();
-    }
-  }
-  else if (distancia_ult_med <= 20)
-  {
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-    Adelante();
-  }
-}
-
-void bartolito()
-{
-  if (!flag_ult_med)
-  {
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-    Derecha();
-  }
-  else if (flag_ult_med)
-  {
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-    Adelante();
-  }
-}
-
-void pasitos()
-{
-  if (!flag_ult_med)
-  {
-    if (is_moving && actual_millis - step_millis >= 300)
-    {
-      Parado();
-      stop_millis = actual_millis;
-      is_moving = false;
-    }
-    else if (!is_moving && actual_millis - stop_millis >= 1000)
-    {
-      Adelante();
-      analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
-      analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho
-      step_millis = actual_millis;
-      is_moving = true;
-    }
-  }
-  else if (flag_ult_med)
-  {
-    Adelante();
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-  }
-  
-  
-  if (flag_ult_izq)
-  {
-    //falta comprobar distancia
-    Izquierda();
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-  }
-  else if (flag_ult_der)
-  {
-    //falta comprobar distancia
-    Derecha();
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-  }
 }
 
 void LecturaUltrasonicos()
@@ -592,9 +605,11 @@ void ExistenciaUlt()
   }
 
 
-  if (distancia_ult_izq < RANGO_ULT && distancia_ult_izq != 0) {
+  if (distancia_ult_izq < RANGO_ULT && distancia_ult_izq != 0) 
+  {
     flag_ult_izq = true;
-  } else
+  } 
+  else
   {
     flag_ult_izq = false;
   }
