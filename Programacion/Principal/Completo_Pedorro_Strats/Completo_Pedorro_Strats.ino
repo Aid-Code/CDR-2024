@@ -2,13 +2,11 @@
 #define CNY_IZQ A6
 #define CNY_DER A7
 
-
 #define ECHO_1 8
 #define ECHO_2 9 // Izquierda
 #define ECHO_3 10 // Medio<
 #define ECHO_4 A1 // Derecha
 #define ECHO_5 A2
-
 
 #define TRIG_1 0b00000100
 #define TRIG_2 0b01000000 // Izquierda
@@ -16,67 +14,58 @@
 #define TRIG_4 0b00001000 // Derecha
 #define TRIG_5 0b00010000
 
-
 #define TRIG_L 0b00000000
-
 
 // Botones y Leds
 #define BTN_1 A4
 #define BTN_2 A5
-
 
 #define LED_1 0b00000001
 #define LED_2 0b10000000
 #define LED_3 0b00000010
 #define LED_4 A3
 
-
 //Shift Register
 #define DATA 11    
 #define LATCH 12    
 #define CLOCK 13
-
 
 // Motor Izquierdo
 #define AIN_2 3
 #define AIN_1 4
 #define PWM_A 6
 
-
 // Motor Derecho
 #define BIN_2 2
 #define BIN_1 7
 #define PWM_B 5
 
-
 // Valores
-
-#define PWM_CHILL 100
+#define PWM_CHILL 80
 #define PWM_FULL 255
 
-#define RANGO_ULT 50
+#define RANGO_ULT 40
 #define CUENTAS_RESET 5
 
-// CNY Izquierdo
+#define GIRO_RADAR 400
 
+// CNY Izquierdo
 uint32_t lectura_cny_izq = 0;
 uint32_t cny_izquierdo = 0;
 uint32_t suma_cny_izq = 0;
 
-uint32_t izq_blanco = 278;
-uint32_t izq_negro = 808;
+uint32_t izq_blanco = 250;
+uint32_t izq_negro = 825;
 
 uint32_t izq_promedio = (izq_blanco + izq_negro) / 2;
 
-
 //CNY Derecho
-
 uint32_t lectura_cny_der = 0;
 uint32_t cny_derecho = 0;
 uint32_t suma_cny_der = 0;
 
-uint32_t der_blanco = 330;
-uint32_t der_negro = 809;
+uint32_t der_blanco = 315;
+uint32_t der_negro = 790;
 
 uint32_t der_promedio = (der_blanco + der_negro) / 2;
 
@@ -84,9 +73,7 @@ bool flag_cny_der = false;
 bool flag_cny_izq = false;
 bool flag_cny_both = false;
 
-
 // Ultrasonicos
-
 long tiempo_ult_der = 0;
 long tiempo_ult_med = 0;
 long tiempo_ult_izq = 0;
@@ -99,17 +86,20 @@ bool flag_ult_der = false;
 bool flag_ult_med = false;
 bool flag_ult_izq = false;
 
-
 // Millis
-
 uint16_t actual_millis = 0;
 uint16_t prev_millis = 0;
+
 uint16_t stop_millis = 0;
 uint16_t step_millis = 0;
-
+uint16_t radar_millis = 0;
 
 bool is_moving;
 bool ole = false;
+bool turning_right = false;
+bool turning_left = false;
+
+uint8_t flag_radar = 0;
 
 
 // Debounce
@@ -137,54 +127,57 @@ void setup()
   pinMode(PWM_A, OUTPUT);
   pinMode(PWM_B, OUTPUT);
 
-
   pinMode(AIN_1, OUTPUT);
   pinMode(BIN_1, OUTPUT);
   pinMode(AIN_2, OUTPUT);
   pinMode(BIN_2, OUTPUT);
-
 
   //Sensores
   pinMode(ECHO_4, INPUT);
   pinMode(ECHO_3, INPUT);
   pinMode(ECHO_2, INPUT);
 
-
   pinMode(DATA, OUTPUT);
   pinMode(LATCH, OUTPUT);
   pinMode(CLOCK, OUTPUT);
-
 
   //Boton y led
   pinMode(BTN_1, INPUT_PULLUP);
   pinMode(BTN_2, INPUT_PULLUP);
   pinMode(LED_4, OUTPUT);
 
-
   analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
   analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho
+
+  Serial.println("Serial begin");
+
+  prev_millis = millis();
 }
 
 void loop() 
 {
-  actual_millis = millis();
-
-  if (iniciar && actual_millis - prev_millis >= 5000)
+  if(millis() - prev_dbnc_millis >= 1)
   {
-    LecturaUltrasonicos();
-    ExistenciaUlt();
-    LecturaCNY();
-    DetectarLinea(); 
-    
-    no_caerse();
-    maquina_seteadora(counter);
-  }
-
-  if(actual_millis - prev_dbnc_millis >= 1)
-  {
-    prev_dbnc_millis = actual_millis;
+    prev_dbnc_millis = millis();
 
     funcion_debounce();
+  }
+  
+  if (iniciar && millis() - prev_millis >= 5000)
+  {
+    //LecturaUltrasonicos();
+    //ExistenciaUlt();
+    LecturaCNY();
+    DetectarLinea(); 
+    no_caerse();
+
+    maquina_seteadora(counter);
+
+    LecturaCNY();
+    DetectarLinea(); 
+    no_caerse();
+    //LecturaUltrasonicos();
+    //ExistenciaUlt();
   }
 }
 
@@ -196,9 +189,9 @@ void no_caerse()
     analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
     analogWrite(PWM_B, PWM_FULL);
     Atras();
-    delay(500);
-    Izquierda();
-    delay(200);
+    delay(400);
+    Derecha();
+    delay(80);
     analogWrite(PWM_A, PWM_CHILL);
     analogWrite(PWM_B, PWM_CHILL);
     // Serial.println("Derecha");
@@ -209,15 +202,26 @@ void no_caerse()
     analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
     analogWrite(PWM_B, PWM_FULL);
     Atras();
-    delay(500);
-    Derecha();
-    delay(150);
+    delay(400);
+    Izquierda();
+    delay(80);
     analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
     analogWrite(PWM_B, PWM_CHILL);
     // Serial.println("Izquierda");
   }
-  else
-  {}
+  /*else if (flag_cny_both)
+  {
+    // Serial.println("Atras");
+    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+    analogWrite(PWM_B, PWM_FULL);
+    Atras();
+    delay(600);
+    Izquierda();
+    delay(100);
+    analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
+    analogWrite(PWM_B, PWM_CHILL);
+    // Serial.println("Izquierda");
+  }*/
 }
 
 void maquina_seteadora(int strat)
@@ -334,49 +338,70 @@ void torero()
 
 void radar()
 {
-  if (!flag_ult_med)
+  if (!flag_ult_med && !flag_ult_der && !flag_ult_izq)
   {
-    if (distancia_ult_der > 20 && distancia_ult_der <= 30)
+    analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
+    analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho
+
+    if (flag_radar == 0)
     {
-      analogWrite(PWM_A, 70);  //Motor Izquierdo
-      analogWrite(PWM_B, 70);  //Motor Derecho
       Derecha();
+
+      if ((millis() - radar_millis) >= GIRO_RADAR)
+      {
+        flag_radar = 1;
+        radar_millis = millis();
+      }
     }
-    else if (distancia_ult_der > 10 && distancia_ult_der <= 20)
+    else if (flag_radar == 1)
     {
-      analogWrite(PWM_A, 80);  //Motor Izquierdo
-      analogWrite(PWM_B, 80);  //Motor Derecho
+      Izquierda();
+
+      if ((millis() - radar_millis) >= GIRO_RADAR)
+      {
+        flag_radar = 2;
+        radar_millis = millis();
+      }
+    }
+    else if (flag_radar == 2)
+    {
+      Parado();
+
+      if ((millis() - radar_millis) >= GIRO_RADAR)
+      {
+        flag_radar = 3;
+        radar_millis = millis();
+      }
+    }
+    else if (flag_radar == 3)
+    {
+      Izquierda();
+
+      if ((millis() - radar_millis) >= GIRO_RADAR)
+      {
+        flag_radar = 4;
+        radar_millis = millis();
+      }
+    }
+    else if (flag_radar == 4)
+    {
       Derecha();
+
+      if ((millis() - radar_millis) >= GIRO_RADAR)
+      {
+        flag_radar = 5;
+        radar_millis = millis();
+      }
     }
-    else if (distancia_ult_der < 10 && distancia_ult_der != 0)
+    else if (flag_radar == 5)
     {
-      analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-      analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-      Derecha();
-    }
-    else if (distancia_ult_izq > 20 && distancia_ult_izq <= 30)
-    {
-      analogWrite(PWM_A, 70);  //Motor Izquierdo
-      analogWrite(PWM_B, 70);  //Motor Derecho
-      Izquierda();
-    }
-    else if (distancia_ult_izq > 10 && distancia_ult_izq <= 20)
-    {
-      analogWrite(PWM_A, 80);  //Motor Izquierdo
-      analogWrite(PWM_B, 80);  //Motor Derecho
-      Izquierda();
-    }
-    else if (distancia_ult_izq < 10 && distancia_ult_izq != 0)
-    {
-      analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-      analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-      Izquierda();
-    }
-    else 
-    {
-      analogWrite(PWM_A, 100);  //Motor Izquierdo
-      analogWrite(PWM_B, 30);  //Motor Derecho
-      Adelante();
+      Parado();
+
+      if ((millis() - radar_millis) >= GIRO_RADAR)
+      {
+        flag_radar = 0;
+        radar_millis = millis();
+      }
     }
   }
   else if (flag_ult_med)
@@ -384,6 +409,18 @@ void radar()
     analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
     analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
     Adelante();
+  }
+  else if (flag_ult_der)
+  {
+    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
+    Derecha();
+  }
+  else if (flag_ult_izq)
+  {
+    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
+    Izquierda();
   }
 }
 
@@ -407,18 +444,18 @@ void pasitos()
 {
   if (!flag_ult_med && !flag_ult_der && !flag_ult_izq)
   {
-    if (is_moving && actual_millis - step_millis >= 100)
+    if (is_moving && millis() - step_millis >= 100)
     {
       Parado();
-      stop_millis = actual_millis;
+      stop_millis = millis();
       is_moving = false;
     }
-    else if (!is_moving && actual_millis - stop_millis >= 1000)
+    else if (!is_moving && millis() - stop_millis >= 1000)
     {
       Adelante();
       analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
       analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho
-      step_millis = actual_millis;
+      step_millis = millis();
       is_moving = true;
     }
   }
@@ -465,6 +502,8 @@ void funcion_debounce(void)
 
         if(contador[i] == 0)
         {
+          Serial.println(contador[1]);
+
           flag_evento[i] = true;
           flag_tipo[i] = estado_actual;
           
@@ -482,7 +521,7 @@ void funcion_debounce(void)
           if (contador[1] == 0)
           {
             iniciar = true;
-            prev_millis = actual_millis;
+            prev_millis = millis();
           }
         }
       }
@@ -589,18 +628,24 @@ void ExistenciaUlt()
   Serial.print(distancia_ult_der);
   Serial.println();*/
  
-  if (distancia_ult_med < RANGO_ULT && distancia_ult_med != 0) {
-    // Serial.println("Hay algo");
+  if (distancia_ult_med < RANGO_ULT && distancia_ult_med != 0) 
+  {
+    //Serial.println("Hay algo");
     flag_ult_med = true;
-  } else {
-    // Serial.println("No hay moros en la costa");
+  } 
+  else 
+  {
+    //Serial.println("No hay moros en la costa");
     flag_ult_med = false;
   }
 
 
-  if (distancia_ult_der < RANGO_ULT && distancia_ult_der != 0) {
+  if (distancia_ult_der < RANGO_ULT && distancia_ult_der != 0) 
+  {
     flag_ult_der = true;
-  } else {
+  } 
+  else 
+  {
     flag_ult_der = false;
   }
 
@@ -634,6 +679,11 @@ void LecturaCNY()
   cny_izquierdo = suma_cny_izq / 10;
   cny_derecho = suma_cny_der / 10;
 
+  Serial.println(cny_derecho);
+  Serial.print('\t');
+  Serial.println(cny_izquierdo);
+  Serial.println();
+
 
   suma_cny_izq = 0;
   suma_cny_der = 0;
@@ -642,25 +692,34 @@ void LecturaCNY()
 
 void DetectarLinea()
 {
-  if (cny_izquierdo < izq_promedio) {
+  if (lectura_cny_izq < izq_promedio) 
+  {
     // Serial.println("Blanco");
     flag_cny_izq = true;
-  } else {
+  } 
+  else 
+  {
     // Serial.println("Negro");
     flag_cny_izq = false;
   }
 
 
-  if (cny_derecho < der_promedio) {
+  if (lectura_cny_der < der_promedio) 
+  {
     flag_cny_der = true;
-  } else {
+  } 
+  else 
+  {
     flag_cny_der = false;
   }
 
 
-  if (cny_izquierdo < izq_promedio && cny_derecho < der_promedio) {
+  if (cny_izquierdo < izq_promedio && cny_derecho < der_promedio) 
+  {
     flag_cny_both = false;
-  } else {
+  } 
+  else 
+  {
     flag_cny_both = true;
   }
 }

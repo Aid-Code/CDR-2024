@@ -50,14 +50,14 @@ void loop()
 void Existencia()
 {
   digitalWrite(LATCH, LOW);
-  shiftOut(DATA, CLOCK, LSBFIRST, TRIG_2);
+  shiftOut(DATA, CLOCK, LSBFIRST, TRIG_3);
   digitalWrite(LATCH, HIGH);
   delay(10);
   digitalWrite(LATCH, LOW);
   shiftOut(DATA, CLOCK, LSBFIRST, TRIG_L);
   digitalWrite(LATCH, HIGH);
   
-  tiempo = pulseIn(ECHO_2, HIGH, 10000);
+  tiempo = pulseIn(ECHO_3, HIGH, 10000);
   
   distancia = tiempo / 59;
 
