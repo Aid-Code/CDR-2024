@@ -45,12 +45,9 @@
 // Valores
 #define PWM_CHILL 50
 #define PWM_FULL 70
-
-#define RANGO_ULT 40
+#define RANGO_ULT 30
 #define CUENTAS_RESET 5
-
 #define GIRO_TICTAC 400
-
 #define CANT_ESTRATEGIAS 6
 
 // CNY Izquierdo
@@ -98,6 +95,7 @@ uint16_t stop_millis = 0;
 uint16_t step_millis = 0;
 uint16_t tictac_millis = 0;
 uint16_t radar_millis = 0;
+uint16_t arranque_millis = 0;
 
 // Auxiliares
 
@@ -182,9 +180,15 @@ void setup()
   analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
   analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho
 
-  Serial.println("Serial begin");
+  Serial.println("Setear direccion");
 
+  actual_millis = millis();
   prev_millis = millis();
+  step_millis = millis();
+  stop_millis = millis();
+  radar_millis = millis();
+  tictac_millis = millis();
+  arranque_millis = millis();
 }
 
 void loop() 
@@ -207,7 +211,6 @@ void loop()
     if (!flag_arranque)
     {
       direcciones(counter_direccion);
-      delay(200);
       flag_arranque = true;
     }
     
@@ -272,7 +275,7 @@ void direcciones (int direccion)
       break;
 
     case 2:
-      //Serial.println("Derecha");
+      Serial.println("Derecha");
       Derecha();
       break;
 
@@ -322,7 +325,7 @@ void maquina_seteadora (int strat)
       break;
 
     case 6:
-      //Serial.println("radar");
+      Serial.println("radar");
       radar();
       break;
 
