@@ -41,13 +41,15 @@
 #define PWM_B 5
 
 // Valores
-#define PWM_CHILL 80
-#define PWM_FULL 255
+#define PWM_CHILL 50
+#define PWM_FULL 70
 
 #define RANGO_ULT 40
 #define CUENTAS_RESET 5
 
-#define GIRO_RADAR 400
+#define GIRO_TICTAC 400
+
+#define CANT_ESTRATEGIAS 6
 
 // CNY Izquierdo
 uint32_t lectura_cny_izq = 0;
@@ -92,14 +94,16 @@ uint16_t prev_millis = 0;
 
 uint16_t stop_millis = 0;
 uint16_t step_millis = 0;
+uint16_t tictac_millis = 0;
 uint16_t radar_millis = 0;
 
-bool is_moving;
-bool ole = false;
-bool turning_right = false;
-bool turning_left = false;
+// Auxiliares
 
-uint8_t flag_radar = 0;
+bool is_moving = false;
+bool ole = false;
+bool flag_arranque = false;
+
+uint8_t flag_tictac = 0;
 
 
 // Debounce
@@ -115,13 +119,16 @@ bool iniciar = false;
 
 auto prev_dbnc_millis = millis();
 
-int counter = 0;
+// Counters
+
+uint8_t counter_direccion = 0;
+uint8_t counter_strat = 0;
+uint8_t counter_setear = 0;
 
 
 void setup()
 {
   Serial.begin(9600);
-
 
   //Motores
   pinMode(PWM_A, OUTPUT);
@@ -141,7 +148,7 @@ void setup()
   pinMode(LATCH, OUTPUT);
   pinMode(CLOCK, OUTPUT);
 
-  //Boton y led
+  //Placa botones
   pinMode(BTN_1, INPUT_PULLUP);
   pinMode(BTN_2, INPUT_PULLUP);
   pinMode(LED_4, OUTPUT);
@@ -165,19 +172,24 @@ void loop()
   
   if (iniciar && millis() - prev_millis >= 5000)
   {
-    //LecturaUltrasonicos();
-    //ExistenciaUlt();
+    LecturaUltrasonicos();
+    ExistenciaUlt();
     LecturaCNY();
     DetectarLinea(); 
-    no_caerse();
+    //no_caerse();
 
-    maquina_seteadora(counter);
+    if (!flag_arranque)
+    {
+      direcciones(counter_direccion);
+      delay(200);
+      flag_arranque = true;
+    }
+    
+    maquina_seteadora(counter_strat);
 
     LecturaCNY();
     DetectarLinea(); 
-    no_caerse();
-    //LecturaUltrasonicos();
-    //ExistenciaUlt();
+    //no_caerse();
   }
 }
 
@@ -224,7 +236,37 @@ void no_caerse()
   }
 }
 
-void maquina_seteadora(int strat)
+void direcciones (int direccion)
+{
+  switch (direccion)
+  {
+    case 1:
+      Serial.println("Izquierda");
+      Izquierda();
+      break;
+
+    case 2:
+      //Serial.println("Derecha");
+      Derecha();
+      break;
+
+    case 3:
+      Serial.println("Adelante");
+      Adelante();
+      break;
+
+    case 4:
+      Serial.println("Atras");
+      Atras();
+      break;
+
+    default:
+      Derecha();
+      break;
+  }
+}
+
+void maquina_seteadora (int strat)
 {
   switch (strat)
   {
@@ -239,8 +281,8 @@ void maquina_seteadora(int strat)
       break;
 
     case 3:
-      Serial.println("radar");
-      radar();
+      Serial.println("tic-tac");
+      tic_tac();
       break;
 
     case 4:
@@ -251,6 +293,15 @@ void maquina_seteadora(int strat)
     case 5:
       Serial.println("torero");
       torero();
+      break;
+
+    case 6:
+      //Serial.println("radar");
+      radar();
+      break;
+
+    default:
+      crespin();
       break;
   }
 }
@@ -336,71 +387,71 @@ void torero()
   }
 }
 
-void radar()
+void tic_tac()
 {
   if (!flag_ult_med && !flag_ult_der && !flag_ult_izq)
   {
     analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
     analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho
 
-    if (flag_radar == 0)
+    if (flag_tictac == 0)
     {
       Derecha();
 
-      if ((millis() - radar_millis) >= GIRO_RADAR)
+      if ((millis() - tictac_millis) >= GIRO_TICTAC)
       {
-        flag_radar = 1;
-        radar_millis = millis();
+        flag_tictac = 1;
+        tictac_millis = millis();
       }
     }
-    else if (flag_radar == 1)
+    else if (flag_tictac == 1)
     {
       Izquierda();
 
-      if ((millis() - radar_millis) >= GIRO_RADAR)
+      if ((millis() - tictac_millis) >= GIRO_TICTAC)
       {
-        flag_radar = 2;
-        radar_millis = millis();
+        flag_tictac = 2;
+        tictac_millis = millis();
       }
     }
-    else if (flag_radar == 2)
+    else if (flag_tictac == 2)
     {
       Parado();
 
-      if ((millis() - radar_millis) >= GIRO_RADAR)
+      if ((millis() - tictac_millis) >= GIRO_TICTAC)
       {
-        flag_radar = 3;
-        radar_millis = millis();
+        flag_tictac = 3;
+        tictac_millis = millis();
       }
     }
-    else if (flag_radar == 3)
+    else if (flag_tictac == 3)
     {
       Izquierda();
 
-      if ((millis() - radar_millis) >= GIRO_RADAR)
+      if ((millis() - tictac_millis) >= GIRO_TICTAC)
       {
-        flag_radar = 4;
-        radar_millis = millis();
+        flag_tictac = 4;
+        tictac_millis = millis();
       }
     }
-    else if (flag_radar == 4)
+    else if (flag_tictac == 4)
     {
       Derecha();
 
-      if ((millis() - radar_millis) >= GIRO_RADAR)
+      if ((millis() - tictac_millis) >= GIRO_TICTAC)
       {
-        flag_radar = 5;
-        radar_millis = millis();
+        flag_tictac = 5;
+        tictac_millis = millis();
       }
     }
-    else if (flag_radar == 5)
+    else if (flag_tictac == 5)
     {
       Parado();
 
-      if ((millis() - radar_millis) >= GIRO_RADAR)
+      if ((millis() - tictac_millis) >= GIRO_TICTAC)
       {
-        flag_radar = 0;
-        radar_millis = millis();
+        flag_tictac = 0;
+        tictac_millis = millis();
       }
     }
   }
@@ -421,6 +472,40 @@ void radar()
     analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
     analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
     Izquierda();
+  }
+}
+
+void radar()
+{
+  if (distancia_ult_med > 20 || distancia_ult_med == 0)
+  {
+    Serial.println(distancia_ult_med);
+    if (flag_ult_der)
+    {
+      Serial.println("Derecha");
+      analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
+      analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho 
+      Derecha();
+    }
+    else if (flag_ult_izq)
+    {
+      Serial.println("Izquierda");
+      analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
+      analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho 
+      Izquierda();
+    }
+    else 
+    {
+      Serial.println("Parado");
+      Parado();
+    }
+  }
+    else if (distancia_ult_med <= 20 && distancia_ult_med != 0)
+  {
+    Serial.println("Adelante");
+    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
+    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho 
+    Adelante();
   }
 }
 
@@ -502,26 +587,50 @@ void funcion_debounce(void)
 
         if(contador[i] == 0)
         {
-          Serial.println(contador[1]);
+          //Serial.println(contador[1]);
 
           flag_evento[i] = true;
           flag_tipo[i] = estado_actual;
           
           if(contador[0] == 0)
           {
-            counter++;
-            Serial.println(counter);
-            mostrarBinario(counter);
-            if (counter >= 5)
+            if (counter_setear == 0)
             {
-              counter = 0;
+              counter_direccion++;
+              Serial.println(counter_direccion);
+              mostrarBinario(counter_direccion);
+              if (counter_direccion > 4)
+              {
+                counter_direccion = 0;
+              }
+            }
+            else if (counter_setear == 1)
+            {
+              counter_strat++;
+              Serial.println(counter_strat);
+              mostrarBinario(counter_strat);
+              if (counter_strat > CANT_ESTRATEGIAS)
+              {
+                counter_strat = 0;
+              }
             }
           }
 
           if (contador[1] == 0)
           {
-            iniciar = true;
-            prev_millis = millis();
+            counter_setear++;
+
+            if (counter_setear == 1)
+            {
+              mostrarBinario(0);
+              Serial.println("Setear Estrategia");
+            }
+            else if (counter_setear == 2)
+            {
+              Serial.println("Iniciar");
+              iniciar = true;
+              prev_millis = millis();
+            }
           }
         }
       }
@@ -679,10 +788,10 @@ void LecturaCNY()
   cny_izquierdo = suma_cny_izq / 5;
   cny_derecho = suma_cny_der / 5;
 
-  Serial.println(cny_derecho);
+  /*Serial.println(cny_derecho);
   Serial.print('\t');
   Serial.println(cny_izquierdo);
-  Serial.println();
+  Serial.println();*/
 
 
   suma_cny_izq = 0;
