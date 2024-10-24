@@ -209,7 +209,7 @@ void no_caerse()
     analogWrite(PWM_B, PWM_CHILL);
     // Serial.println("Izquierda");
   }
-  /*else if (flag_cny_both)
+  else if (flag_cny_both)
   {
     // Serial.println("Atras");
     analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
@@ -221,7 +221,7 @@ void no_caerse()
     analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
     analogWrite(PWM_B, PWM_CHILL);
     // Serial.println("Izquierda");
-  }*/
+  }
 }
 
 void maquina_seteadora(int strat)
@@ -662,22 +662,22 @@ void ExistenciaUlt()
 
 void LecturaCNY() 
 {
-  for (int i = 0; i < 10; i++)
+  for (int i = 0; i < 5; i++)
   {
     lectura_cny_izq = analogRead(CNY_IZQ);
     suma_cny_izq = suma_cny_izq + lectura_cny_izq;
   }
 
 
-  for (int i = 0; i < 10; i++) 
+  for (int i = 0; i < 5; i++) 
   {
     lectura_cny_der = analogRead(CNY_DER);
     suma_cny_der = suma_cny_der + lectura_cny_der;
   }
 
 
-  cny_izquierdo = suma_cny_izq / 10;
-  cny_derecho = suma_cny_der / 10;
+  cny_izquierdo = suma_cny_izq / 5;
+  cny_derecho = suma_cny_der / 5;
 
   Serial.println(cny_derecho);
   Serial.print('\t');
@@ -714,7 +714,7 @@ void DetectarLinea()
   }
 
 
-  if (cny_izquierdo < izq_promedio && cny_derecho < der_promedio) 
+  if (flag_cny_der && flag_cny_izq) 
   {
     flag_cny_both = false;
   } 
