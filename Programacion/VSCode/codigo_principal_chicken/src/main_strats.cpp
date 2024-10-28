@@ -43,20 +43,28 @@
 #define PWM_B 5
 
 // Valores
-#define PWM_CHILL 50
-#define PWM_FULL 70
-#define RANGO_ULT 30
+#define PWM_CHILL 100
+#define PWM_FULL 255
+#define RANGO_ULT 45
 #define CUENTAS_RESET 5
 #define GIRO_TICTAC 400
 #define CANT_ESTRATEGIAS 6
+
+#define GIRO_IZQ_45 90
+#define GIRO_IZQ_90 140
+#define GIRO_IZQ_180 280
+
+#define GIRO_DER_45 90
+#define GIRO_DER_90 135
+#define GIRO_DER_180 220
 
 // CNY Izquierdo
 uint32_t lectura_cny_izq = 0;
 uint32_t cny_izquierdo = 0;
 uint32_t suma_cny_izq = 0;
 
-uint32_t izq_blanco = 250;
-uint32_t izq_negro = 825;
+uint32_t izq_blanco = 520;
+uint32_t izq_negro = 800;
 
 uint32_t izq_promedio = (izq_blanco + izq_negro) / 2;
 
@@ -65,8 +73,8 @@ uint32_t lectura_cny_der = 0;
 uint32_t cny_derecho = 0;
 uint32_t suma_cny_der = 0;
 
-uint32_t der_blanco = 315;
-uint32_t der_negro = 790;
+uint32_t der_blanco = 380;
+uint32_t der_negro = 780;
 
 uint32_t der_promedio = (der_blanco + der_negro) / 2;
 
@@ -104,6 +112,8 @@ bool ole = false;
 bool flag_arranque = false;
 
 uint8_t flag_tictac = 0;
+uint8_t auxiliar = 0;
+uint16_t tiempo_direccion_arranque = 0;
 
 
 // Debounce
@@ -202,23 +212,39 @@ void loop()
   
   if (iniciar && millis() - prev_millis >= 5000)
   {
-    LecturaUltrasonicos();
+    /*LecturaUltrasonicos();
     ExistenciaUlt();
     LecturaCNY();
     DetectarLinea(); 
-    //no_caerse();
+    no_caerse();*/
 
     if (!flag_arranque)
     {
+      analogWrite(PWM_A, PWM_FULL);
+      analogWrite(PWM_B, PWM_FULL);
+
+      if (auxiliar == 0)
+      {
+        arranque_millis = millis();
+        auxiliar = 1;
+      }
       direcciones(counter_direccion);
-      flag_arranque = true;
+
+      if (millis() - arranque_millis >= tiempo_direccion_arranque)
+      {
+        flag_arranque = true;
+      }
     }
     
-    maquina_seteadora(counter_strat);
+    if (flag_arranque)
+    {
+      //maquina_seteadora(counter_strat);
+      Parado();
+    }
 
-    LecturaCNY();
+    /*LecturaCNY();
     DetectarLinea(); 
-    //no_caerse();
+    no_caerse();*/
   }
 }
 
@@ -231,8 +257,10 @@ void no_caerse()
     analogWrite(PWM_B, PWM_FULL);
     Atras();
     delay(400);
+    Parado();
+    delay(10);
     Derecha();
-    delay(80);
+    delay(100);
     analogWrite(PWM_A, PWM_CHILL);
     analogWrite(PWM_B, PWM_CHILL);
     // Serial.println("Derecha");
@@ -245,7 +273,7 @@ void no_caerse()
     Atras();
     delay(400);
     Izquierda();
-    delay(80);
+    delay(120);
     analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
     analogWrite(PWM_B, PWM_CHILL);
     // Serial.println("Izquierda");
@@ -270,23 +298,39 @@ void direcciones (int direccion)
   switch (direccion)
   {
     case 1:
-      Serial.println("Izquierda");
+      Serial.println("Izquierda 45");
       Izquierda();
+      tiempo_direccion_arranque = GIRO_IZQ_45;
       break;
 
     case 2:
-      Serial.println("Derecha");
-      Derecha();
+      Serial.println("Izquierda 90");
+      Izquierda();
+      tiempo_direccion_arranque = GIRO_IZQ_90;
       break;
 
     case 3:
-      Serial.println("Adelante");
-      Adelante();
+      Serial.println("Izquierda 180");
+      tiempo_direccion_arranque = GIRO_IZQ_180;
+      Izquierda();
       break;
 
     case 4:
-      Serial.println("Atras");
-      Atras();
+      Serial.println("Derecha 45");
+      tiempo_direccion_arranque = GIRO_DER_45;
+      Derecha();
+      break;
+
+    case 5:
+      Serial.println("Derecha 90");
+      tiempo_direccion_arranque = GIRO_DER_90;
+      Derecha();
+      break;
+
+    case 6:
+      Serial.println("Derecha 180");
+      tiempo_direccion_arranque = GIRO_DER_180;
+      Derecha();
       break;
 
     default:
@@ -305,7 +349,7 @@ void maquina_seteadora (int strat)
       break;
 
     case 2:
-      Serial.println("pasitos");
+      //Serial.println("pasitos");
       pasitos();
       break;
 
@@ -628,7 +672,7 @@ void funcion_debounce(void)
               counter_direccion++;
               Serial.println(counter_direccion);
               mostrarBinario(counter_direccion);
-              if (counter_direccion > 4)
+              if (counter_direccion > 6)
               {
                 counter_direccion = 0;
               }
@@ -854,11 +898,11 @@ void DetectarLinea()
 
   if (flag_cny_der && flag_cny_izq) 
   {
-    flag_cny_both = false;
+    flag_cny_both = true;
   } 
   else 
   {
-    flag_cny_both = true;
+    flag_cny_both = false;
   }
 }
 
