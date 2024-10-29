@@ -207,14 +207,19 @@ void loop()
   
   if (iniciar && millis() - prev_millis >= 5000)
   {
-    for (uint8_t i = 0, i < 5, i++)
+    for (uint8_t i = 0; i < 5; i++)
     {
       lecturas_ult[i] = lectura(pines_trig_ultrasonicos[i], pines_echo_ultrasonicos[i]);
       distancias_ult[i] = distancia(pines_trig_ultrasonicos[i], pines_echo_ultrasonicos[i]);
     }
     LecturaCNY();
+    
     DetectarLinea(); 
     no_caerse();
+
+    Serial.println(distancias_ult[3]);
+
+    
 
     if (!flag_arranque)
     {
@@ -236,8 +241,8 @@ void loop()
     
     if (flag_arranque)
     {
-      //maquina_seteadora(counter_strat);
-      Parado();
+      maquina_seteadora(counter_strat);
+      //Parado();
     }
   }
 }
@@ -338,12 +343,12 @@ void maquina_seteadora (int strat)
   switch (strat)
   {
     case 1:
-      Serial.println("crespin");
+      //Serial.println("crespin");
       crespin();
       break;
 
     case 2:
-      //Serial.println("pasitos");
+      Serial.println("pasitos");
       pasitos();
       break;
 
@@ -826,6 +831,8 @@ uint16_t distancia (int trig, int echo)
 
 
   distancia_ult = tiempo_ult / 59;
+
+  return distancia_ult;
 }
 
 void LecturaCNY() 
