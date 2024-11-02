@@ -2,17 +2,17 @@
 #define CNY_IZQ A6
 #define CNY_DER A7
 
-#define ECHO_1 8 // Izquierda
-#define ECHO_2 9 // Izquierda 45
+#define ECHO_1 8 // izquierda
+#define ECHO_2 9 // izquierda 45
 #define ECHO_3 10 // Medio 
-#define ECHO_4 A1 // Derecha 45
-#define ECHO_5 A2 // Derecha
+#define ECHO_4 A1 // derecha 45
+#define ECHO_5 A2 // derecha
 
-#define TRIG_1 0b00000100 // Izquierda
-#define TRIG_2 0b01000000 // Izquierda 45
+#define TRIG_1 0b00000100 // izquierda
+#define TRIG_2 0b01000000 // izquierda 45
 #define TRIG_3 0b00100000 // Medio
-#define TRIG_4 0b00001000 // Derecha 45
-#define TRIG_5 0b00010000 // Derecha
+#define TRIG_4 0b00001000 // derecha 45
+#define TRIG_5 0b00010000 // derecha
 
 #define TRIG_L 0b00000000
 
@@ -141,11 +141,11 @@ uint16_t distancia(int trig, int echo);
 void LecturaCNY();
 void DetectarLinea();
 
-void Adelante();
-void Atras();
-void Izquierda();
-void Derecha();
-void Parado();
+void adelante(int pwm_a, int pwm_b);
+void atras(int pwm_a, int pwm_b);
+void izquierda(int pwm_a, int pwm_b);
+void derecha(int pwm_a, int pwm_b);
+void parado();
 
 void crespin();
 void pasitos();
@@ -210,14 +210,16 @@ void loop()
     for (uint8_t i = 0; i < 5; i++)
     {
       lecturas_ult[i] = lectura(pines_trig_ultrasonicos[i], pines_echo_ultrasonicos[i]);
+    }
+
+    for (uint8_t i = 0; i < 5; i++)
+    {
       distancias_ult[i] = distancia(pines_trig_ultrasonicos[i], pines_echo_ultrasonicos[i]);
     }
-    LecturaCNY();
+    /*LecturaCNY();
     
     DetectarLinea(); 
-    no_caerse();
-
-    Serial.println(distancias_ult[3]);
+    no_caerse();*/
 
     
 
@@ -242,7 +244,7 @@ void loop()
     if (flag_arranque)
     {
       maquina_seteadora(counter_strat);
-      //Parado();
+      //parado();
     }
   }
 }
@@ -251,44 +253,36 @@ void no_caerse()
 {
   if (flag_cny_izq) 
   {
-    // Serial.println("Atras");
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);
-    Atras();
+    // Serial.println("atras");
+    atras(PWM_FULL, PWM_FULL);
     delay(400);
-    Parado();
-    delay(10);
-    Derecha();
+    derecha(PWM_FULL, PWM_FULL);
     delay(100);
     analogWrite(PWM_A, PWM_CHILL);
     analogWrite(PWM_B, PWM_CHILL);
-    // Serial.println("Derecha");
+    // Serial.println("derecha");
   } 
   else if (flag_cny_der) 
   {
-    // Serial.println("Atras");
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);
-    Atras();
+    // Serial.println("atras");
+    atras(PWM_FULL, PWM_FULL);
     delay(400);
-    Izquierda();
+    izquierda(PWM_FULL, PWM_FULL);
     delay(120);
     analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
     analogWrite(PWM_B, PWM_CHILL);
-    // Serial.println("Izquierda");
+    // Serial.println("izquierda");
   }
   else if (flag_cny_both)
   {
-    // Serial.println("Atras");
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);
-    Atras();
+    // Serial.println("atras");
+    atras(PWM_FULL, PWM_FULL);
     delay(600);
-    Izquierda();
+    izquierda(PWM_FULL, PWM_FULL);
     delay(100);
     analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
     analogWrite(PWM_B, PWM_CHILL);
-    // Serial.println("Izquierda");
+    // Serial.println("izquierda");
   }
 }
 
@@ -297,43 +291,43 @@ void direcciones (int direccion)
   switch (direccion)
   {
     case 1:
-      Serial.println("Izquierda 45");
-      Izquierda();
+      Serial.println("izquierda 45");
+      izquierda(PWM_FULL, PWM_FULL);
       tiempo_direccion_arranque = GIRO_IZQ_45;
       break;
 
     case 2:
-      Serial.println("Izquierda 90");
-      Izquierda();
+      Serial.println("izquierda 90");
+      izquierda(PWM_FULL, PWM_FULL);
       tiempo_direccion_arranque = GIRO_IZQ_90;
       break;
 
     case 3:
-      Serial.println("Izquierda 180");
+      Serial.println("izquierda 180");
       tiempo_direccion_arranque = GIRO_IZQ_180;
-      Izquierda();
+      izquierda(PWM_FULL, PWM_FULL);
       break;
 
     case 4:
-      Serial.println("Derecha 45");
+      Serial.println("derecha 45");
       tiempo_direccion_arranque = GIRO_DER_45;
-      Derecha();
+      derecha(PWM_FULL, PWM_FULL);
       break;
 
     case 5:
-      Serial.println("Derecha 90");
+      Serial.println("derecha 90");
       tiempo_direccion_arranque = GIRO_DER_90;
-      Derecha();
+      derecha(PWM_FULL, PWM_FULL);
       break;
 
     case 6:
-      Serial.println("Derecha 180");
+      Serial.println("derecha 180");
       tiempo_direccion_arranque = GIRO_DER_180;
-      Derecha();
+      derecha(PWM_FULL, PWM_FULL);
       break;
 
     default:
-      Derecha();
+      derecha(PWM_FULL, PWM_FULL);
       break;
   }
 }
@@ -380,107 +374,78 @@ void maquina_seteadora (int strat)
 
 void crespin()
 {
-  if (lecturas_ult[3])
+  if (lecturas_ult[2])
   {
-    analogWrite(PWM_A, PWM_FULL);
-    analogWrite(PWM_B, PWM_FULL);
-    Adelante();
-  }
-  else if (lecturas_ult[2])
-  {
-    analogWrite(PWM_A, PWM_CHILL);
-    analogWrite(PWM_B, PWM_CHILL);
-    Derecha();
+    adelante(PWM_FULL, PWM_FULL);
   }
   else if (lecturas_ult[1])
   {
-    analogWrite(PWM_A, PWM_FULL);
-    analogWrite(PWM_B, PWM_FULL);
-    Derecha();
+    derecha(PWM_CHILL, PWM_CHILL);
+  }
+  else if (lecturas_ult[0])
+  {
+    derecha(PWM_FULL, PWM_FULL);
+  }
+  else if (lecturas_ult[3])
+  {
+    izquierda(PWM_CHILL, PWM_CHILL);
   }
   else if (lecturas_ult[4])
   {
-    analogWrite(PWM_A, PWM_CHILL);
-    analogWrite(PWM_B, PWM_CHILL);
-    Izquierda();
+    izquierda(PWM_FULL, PWM_FULL);
   }
-  else if (lecturas_ult[5])
+  else if (!lecturas_ult[2])
   {
-    analogWrite(PWM_A, PWM_FULL);
-    analogWrite(PWM_B, PWM_FULL);
-    Izquierda();
-  }
-  else if (!lecturas_ult[3])
-  {
-    analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho
-    Adelante();
+    adelante(PWM_CHILL, PWM_CHILL);
   }
 }
 
 void torero()
 {
-  if (!lecturas_ult[3] && !ole)
+  if (!lecturas_ult[2] && !ole)
   {
-    if (distancias_ult[5] > 10 && distancias_ult[5] <= 50)
+    if (distancias_ult[4] > 10 && distancias_ult[4] <= 50)
     {
-      analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-      analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-      Adelante();
+      adelante(PWM_FULL, PWM_FULL);
       delay(500);
 
-      analogWrite(PWM_A, 250);  //Motor Izquierdo
-      analogWrite(PWM_B, 20);  //Motor Derecho
-      Adelante();
+      adelante(PWM_FULL, 20);
       delay(600);
 
       ole = true;
     }
-    else if (distancias_ult[1] > 10 && distancias_ult[1] <= 20)
+    else if (distancias_ult[0] > 10 && distancias_ult[0] <= 20)
     {
-      analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-      analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-      Adelante();
+      adelante(PWM_FULL, PWM_FULL);
       delay(200);
 
-      analogWrite(PWM_A, 20);  //Motor Izquierdo
-      analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-      Adelante();
+      adelante(20, PWM_FULL);
       delay(600);
 
       ole = true;
     }
   }
-  else if (distancias_ult[3] && ole)
+  else if (distancias_ult[2] && ole)
   {
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-    Adelante();
+    adelante(PWM_FULL, PWM_FULL);
   }
-  else if (distancias_ult[5] && ole)
+  else if (distancias_ult[4] && ole)
   {
-    analogWrite(PWM_A, 250);  //Motor Izquierdo
-    analogWrite(PWM_B, 100);  //Motor Derecho
-    Derecha();
+    adelante(100, PWM_FULL);
   }
-  else if (distancias_ult[1] && ole)
+  else if (distancias_ult[0] && ole)
   {
-    analogWrite(PWM_A, 250);  //Motor Izquierdo
-    analogWrite(PWM_B, 100);  //Motor Derecho
-    Izquierda();
+    adelante(PWM_FULL, 100);
   }
 }
 
 void tic_tac()
 {
-  if (!distancias_ult[3] && !distancias_ult[1] && !distancias_ult[2] && !distancias_ult[4] && distancias_ult[5])
+  if (!distancias_ult[2] && !distancias_ult[0] && !distancias_ult[1] && !distancias_ult[3] && distancias_ult[4])
   {
-    analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho
-
     if (flag_tictac == 0)
     {
-      Derecha();
+      derecha(PWM_CHILL, PWM_CHILL);
 
       if ((millis() - tictac_millis) >= GIRO_TICTAC)
       {
@@ -490,7 +455,7 @@ void tic_tac()
     }
     else if (flag_tictac == 1)
     {
-      Izquierda();
+      izquierda(PWM_CHILL, PWM_CHILL);
 
       if ((millis() - tictac_millis) >= GIRO_TICTAC)
       {
@@ -500,7 +465,7 @@ void tic_tac()
     }
     else if (flag_tictac == 2)
     {
-      Parado();
+      parado();
 
       if ((millis() - tictac_millis) >= GIRO_TICTAC)
       {
@@ -510,7 +475,7 @@ void tic_tac()
     }
     else if (flag_tictac == 3)
     {
-      Izquierda();
+      izquierda(PWM_CHILL, PWM_CHILL);
 
       if ((millis() - tictac_millis) >= GIRO_TICTAC)
       {
@@ -520,7 +485,7 @@ void tic_tac()
     }
     else if (flag_tictac == 4)
     {
-      Derecha();
+      derecha(PWM_CHILL, PWM_CHILL);
 
       if ((millis() - tictac_millis) >= GIRO_TICTAC)
       {
@@ -530,7 +495,7 @@ void tic_tac()
     }
     else if (flag_tictac == 5)
     {
-      Parado();
+      parado();
 
       if ((millis() - tictac_millis) >= GIRO_TICTAC)
       {
@@ -539,140 +504,101 @@ void tic_tac()
       }
     }
   }
-  else if (lecturas_ult[3])
-  {
-    analogWrite(PWM_A, PWM_FULL);
-    analogWrite(PWM_B, PWM_FULL);
-    Adelante();
-  }
   else if (lecturas_ult[2])
   {
-    analogWrite(PWM_A, PWM_CHILL);
-    analogWrite(PWM_B, PWM_CHILL);
-    Derecha();
+    adelante(PWM_FULL, PWM_FULL);
   }
   else if (lecturas_ult[1])
   {
-    analogWrite(PWM_A, PWM_FULL);
-    analogWrite(PWM_B, PWM_FULL);
-    Derecha();
+    izquierda(PWM_CHILL, PWM_CHILL);
+  }
+  else if (lecturas_ult[0])
+  {
+    izquierda(PWM_FULL, PWM_FULL);
+  }
+  else if (lecturas_ult[3])
+  {
+    derecha(PWM_CHILL, PWM_CHILL);
   }
   else if (lecturas_ult[4])
   {
-    analogWrite(PWM_A, PWM_CHILL);
-    analogWrite(PWM_B, PWM_CHILL);
-    Izquierda();
-  }
-  else if (lecturas_ult[5])
-  {
-    analogWrite(PWM_A, PWM_FULL);
-    analogWrite(PWM_B, PWM_FULL);
-    Izquierda();
+    derecha(PWM_FULL, PWM_FULL);
   }
 }
 
 void radar()
 {
-  if (distancias_ult[3] > 20 || distancias_ult[3] == 0)
+  if (distancias_ult[2] > 20 || distancias_ult[2] == 0)
   {
-    //Serial.println(distancias_ult[3]);
-    if (lecturas_ult[5])
+    if (lecturas_ult[4])
     {
-      //Serial.println("Derecha");
-      analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
-      analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho 
-      Derecha();
+      derecha(PWM_CHILL, PWM_CHILL);
     }
-    else if (lecturas_ult[4])
+    else if (lecturas_ult[3])
     {
-      analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
-      analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho 
-      Derecha();
-    }
-    else if (lecturas_ult[2])
-    {
-      //Serial.println("Izquierda");
-      analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
-      analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho 
-      Izquierda();
+      derecha(PWM_CHILL, PWM_CHILL);
     }
     else if (lecturas_ult[1])
     {
-      analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
-      analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho 
-      Izquierda();
+      izquierda(PWM_CHILL, PWM_CHILL);
+    }
+    else if (lecturas_ult[0])
+    {
+      izquierda(PWM_CHILL, PWM_CHILL);
     }
     else 
     {
-      //Serial.println("Parado");
-      Parado();
+      parado();
     }
   }
-    else if (distancias_ult[3] <= 20 && distancias_ult[3] != 0)
+  else if (distancias_ult[2] <= 20 && distancias_ult[2] != 0)
   {
-    //Serial.println("Adelante");
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho 
-    Adelante();
+    adelante(PWM_FULL, PWM_FULL);
   }
 }
 
 void bartolito()
 {
-  if (!distancias_ult[3])
+  if (!distancias_ult[2])
   {
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-    Derecha();
+    derecha(PWM_FULL, PWM_FULL);
   }
-  else if (distancias_ult[3])
+  else if (distancias_ult[2])
   {
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
-    Adelante();
+    adelante(PWM_FULL, PWM_FULL);
   }
 }
 
 void pasitos()
 {
-  if (!distancias_ult[3] && !distancias_ult[5] && !distancias_ult[1])
+  if (!distancias_ult[2] && !distancias_ult[4] && !distancias_ult[0])
   {
     if (is_moving && millis() - step_millis >= 100)
     {
-      Parado();
+      parado();
       stop_millis = millis();
       is_moving = false;
     }
     else if (!is_moving && millis() - stop_millis >= 1000)
     {
-      Adelante();
-      analogWrite(PWM_A, PWM_CHILL);  //Motor Izquierdo
-      analogWrite(PWM_B, PWM_CHILL);  //Motor Derecho
+      adelante(PWM_CHILL, PWM_CHILL);
       step_millis = millis();
       is_moving = true;
     }
   }
-  else if (distancias_ult[3] <= 40)
+  else if (distancias_ult[2] <= 40)
   {
-    Adelante();
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
+    adelante(PWM_FULL, PWM_FULL);
   }
   
   
-  if (distancias_ult[1])
+  if (distancias_ult[0])
   {
-    //falta comprobar distancia
-    Izquierda();
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
+    izquierda(PWM_FULL, PWM_FULL);
   }
-  else if (distancias_ult[5])
+  else if (distancias_ult[4])
   {
-    //falta comprobar distancia
-    Derecha();
-    analogWrite(PWM_A, PWM_FULL);  //Motor Izquierdo
-    analogWrite(PWM_B, PWM_FULL);  //Motor Derecho
+    derecha(PWM_FULL, PWM_FULL);
   }
 }
 
@@ -900,7 +826,7 @@ void DetectarLinea()
 }
 
 
-void Parado()
+void parado()
 {
   digitalWrite(AIN_1, LOW);
   digitalWrite(AIN_2, LOW);
@@ -910,8 +836,11 @@ void Parado()
 }
 
 
-void Adelante()
+void adelante(int pwm_a, int pwm_b)
 {
+  analogWrite(PWM_A, pwm_a);
+  analogWrite(PWM_B, pwm_b);
+
   digitalWrite(AIN_1, LOW);
   digitalWrite(AIN_2, HIGH);
  
@@ -920,34 +849,40 @@ void Adelante()
 }
 
 
-void Atras()
+void atras(int pwm_a, int pwm_b)
 {
+  analogWrite(PWM_A, pwm_a);
+  analogWrite(PWM_B, pwm_b);
+
   digitalWrite(AIN_1, HIGH);
   digitalWrite(AIN_2, LOW);
 
-
   digitalWrite(BIN_1, LOW);
   digitalWrite(BIN_2, HIGH);
 }
 
 
-void Derecha()
+void derecha(int pwm_a, int pwm_b)
 {
+  analogWrite(PWM_A, pwm_a);
+  analogWrite(PWM_B, pwm_b);
+
   digitalWrite(AIN_1, LOW);
   digitalWrite(AIN_2, HIGH);
 
-
   digitalWrite(BIN_1, LOW);
   digitalWrite(BIN_2, HIGH);
 }
 
 
-void Izquierda()
+void izquierda(int pwm_a, int pwm_b)
 {
-  digitalWrite(AIN_1, HIGH);// Izquierda atras
-  digitalWrite(AIN_2, LOW); // Izquierda adelante
+  analogWrite(PWM_A, pwm_a);
+  analogWrite(PWM_B, pwm_b);
 
+  digitalWrite(AIN_1, HIGH);// izquierda atras
+  digitalWrite(AIN_2, LOW); // izquierda adelante
 
-  digitalWrite(BIN_1, HIGH); // Derecha adelante
-  digitalWrite(BIN_2, LOW); // Derecha atras
+  digitalWrite(BIN_1, HIGH); // derecha adelante
+  digitalWrite(BIN_2, LOW); // derecha atras
 }
