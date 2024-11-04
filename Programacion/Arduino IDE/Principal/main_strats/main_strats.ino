@@ -221,6 +221,27 @@ void loop()
     DetectarLinea(); 
     no_caerse();*/
 
+    if (lecturas_ult[0])
+    {
+      Serial.println("0");
+    }
+    else if (lecturas_ult[1])
+    {
+      Serial.println("1");
+    }
+    else if (lecturas_ult[2])
+    {
+      Serial.println("2");
+    }
+    else if (lecturas_ult[3])
+    {
+      Serial.println("3");
+    }
+    else if (lecturas_ult[4])
+    {
+      Serial.println("4");
+    }
+
     
 
     if (!flag_arranque)
