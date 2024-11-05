@@ -43,7 +43,7 @@
 // Valores
 #define PWM_CHILL 100
 #define PWM_FULL 255
-#define RANGO_ULT 45
+#define RANGO_ULT 30
 #define CUENTAS_RESET 5
 #define GIRO_TICTAC 400
 #define CANT_ESTRATEGIAS 6
@@ -64,8 +64,8 @@ uint32_t lectura_cny_izq = 0;
 uint32_t cny_izquierdo = 0;
 uint32_t suma_cny_izq = 0;
 
-uint32_t izq_blanco = 520;
-uint32_t izq_negro = 800;
+uint32_t izq_blanco = 300;
+uint32_t izq_negro = 812;
 
 uint32_t izq_promedio = (izq_blanco + izq_negro) / 2;
 
@@ -74,8 +74,8 @@ uint32_t lectura_cny_der = 0;
 uint32_t cny_derecho = 0;
 uint32_t suma_cny_der = 0;
 
-uint32_t der_blanco = 380;
-uint32_t der_negro = 780;
+uint32_t der_blanco = 460;
+uint32_t der_negro = 824;
 
 uint32_t der_promedio = (der_blanco + der_negro) / 2;
 
@@ -87,7 +87,7 @@ bool flag_cny_both = false;
 long tiempo_ult = 0;
 long distancia_ult = 0;
 
-uint8_t lecturas_ult[5] = {0,0,0,0,0};
+bool lecturas_ult[5] = {false,false,false,false,false};
 uint16_t distancias_ult[5] = {0,0,0,0,0};
 
 // Millis
@@ -209,40 +209,20 @@ void loop()
   {
     for (uint8_t i = 0; i < 5; i++)
     {
-      lecturas_ult[i] = lectura(pines_trig_ultrasonicos[i], pines_echo_ultrasonicos[i]);
-    }
-
-    for (uint8_t i = 0; i < 5; i++)
-    {
       distancias_ult[i] = distancia(pines_trig_ultrasonicos[i], pines_echo_ultrasonicos[i]);
+      
+      if (distancias_ult[i]  <= 20 && distancias_ult[i] != 0)
+      {
+        lecturas_ult[i] = true;
+      }
+      else
+      {
+        lecturas_ult[i] = false;
+      }
     }
-    /*LecturaCNY();
-    
+    LecturaCNY();
     DetectarLinea(); 
-    no_caerse();*/
-
-    if (lecturas_ult[0])
-    {
-      Serial.println("0");
-    }
-    else if (lecturas_ult[1])
-    {
-      Serial.println("1");
-    }
-    else if (lecturas_ult[2])
-    {
-      Serial.println("2");
-    }
-    else if (lecturas_ult[3])
-    {
-      Serial.println("3");
-    }
-    else if (lecturas_ult[4])
-    {
-      Serial.println("4");
-    }
-
-    
+    no_caerse();
 
     if (!flag_arranque)
     {
@@ -592,33 +572,46 @@ void bartolito()
 
 void pasitos()
 {
-  if (!distancias_ult[2] && !distancias_ult[4] && !distancias_ult[0])
+  if (!lecturas_ult[2] && !lecturas_ult[0] && !lecturas_ult[4])
   {
     if (is_moving && millis() - step_millis >= 100)
     {
+      Serial.println("parado");
       parado();
       stop_millis = millis();
       is_moving = false;
     }
     else if (!is_moving && millis() - stop_millis >= 1000)
     {
+      Serial.println("pasito");
       adelante(PWM_CHILL, PWM_CHILL);
       step_millis = millis();
       is_moving = true;
     }
   }
-  else if (distancias_ult[2] <= 40)
+  else if (distancias_ult[2] <= 40 && distancias_ult[2] != 0)
   {
+    Serial.println("adelante");
     adelante(PWM_FULL, PWM_FULL);
   }
-  
-  
-  if (distancias_ult[0])
+  else if (distancias_ult[0] < 20 && distancias_ult[0] != 0)
   {
+    Serial.println("izquierda");
     izquierda(PWM_FULL, PWM_FULL);
   }
-  else if (distancias_ult[4])
+  /*else if (distancias_ult[1] < 20 && distancias_ult[1] != 0)
   {
+    Serial.println("izquierda45");
+    izquierda(PWM_FULL, PWM_FULL);
+  }
+  else if (distancias_ult[3] < 20 && distancias_ult[3] != 0)
+  {
+    Serial.println("derecha45");
+    derecha(PWM_FULL, PWM_FULL);
+  }*/
+  else if (distancias_ult[4] < 20 && distancias_ult[4] != 0)
+  {
+    Serial.println("derecha");
     derecha(PWM_FULL, PWM_FULL);
   }
 }
@@ -735,7 +728,7 @@ void mostrarBinario(int valor)
   Serial.println();  // Nueva línea*/
 }
 
-bool lectura(int trig, int echo)
+/*bool lectura(int trig, int echo)
 {
   digitalWrite(LATCH, LOW);
   shiftOut(DATA, CLOCK, LSBFIRST, trig);
@@ -761,14 +754,14 @@ bool lectura(int trig, int echo)
     //Serial.println("No hay moros en la costa");
     return false;
   }
-}
+}*/
 
 uint16_t distancia (int trig, int echo)
 {
   digitalWrite(LATCH, LOW);
   shiftOut(DATA, CLOCK, LSBFIRST, trig);
   digitalWrite(LATCH, HIGH);
-  delay(10);
+  delayMicroseconds(10);
   digitalWrite(LATCH, LOW);
   shiftOut(DATA, CLOCK, LSBFIRST, TRIG_L);
   digitalWrite(LATCH, HIGH);

@@ -51,7 +51,7 @@ void loop()
   suma_cny_izq = 0;
   suma_cny_der = 0;
 
-  Serial.println(cny_derecho);
+  Serial.println(cny_izquierdo);
 
   /*if (cny_izquierdo > izq_promedio)
   {
