@@ -20,7 +20,7 @@ void setup() {
   pinMode(PWM_B, OUTPUT);
 
   analogWrite(PWM_A, 255);
-  analogWrite(PWM_B, 255);
+  analogWrite(PWM_B, 255x);
 }
 
 void loop() {
