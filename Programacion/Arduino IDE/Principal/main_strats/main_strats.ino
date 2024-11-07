@@ -211,11 +211,11 @@ void loop()
     {
       distancias_ult[i] = distancia(pines_trig_ultrasonicos[i], pines_echo_ultrasonicos[i]);
       
-      if (distancias_ult[i]  <= 20 && distancias_ult[i] != 0)
+      if (distancias_ult[i]  <= RANGO_ULT && distancias_ult[i] != 0)
       {
         lecturas_ult[i] = true;
       }
-      else
+      else if (distancias_ult[i]  > RANGO_ULT || distancias_ult[i] == 0)
       {
         lecturas_ult[i] = false;
       }
@@ -292,37 +292,37 @@ void direcciones (int direccion)
   switch (direccion)
   {
     case 1:
-      Serial.println("izquierda 45");
+      //Serial.println("izquierda 45");
       izquierda(PWM_FULL, PWM_FULL);
       tiempo_direccion_arranque = GIRO_IZQ_45;
       break;
 
     case 2:
-      Serial.println("izquierda 90");
+      //Serial.println("izquierda 90");
       izquierda(PWM_FULL, PWM_FULL);
       tiempo_direccion_arranque = GIRO_IZQ_90;
       break;
 
     case 3:
-      Serial.println("izquierda 180");
+      //Serial.println("izquierda 180");
       tiempo_direccion_arranque = GIRO_IZQ_180;
       izquierda(PWM_FULL, PWM_FULL);
       break;
 
     case 4:
-      Serial.println("derecha 45");
+      //Serial.println("derecha 45");
       tiempo_direccion_arranque = GIRO_DER_45;
       derecha(PWM_FULL, PWM_FULL);
       break;
 
     case 5:
-      Serial.println("derecha 90");
+      //Serial.println("derecha 90");
       tiempo_direccion_arranque = GIRO_DER_90;
       derecha(PWM_FULL, PWM_FULL);
       break;
 
     case 6:
-      Serial.println("derecha 180");
+      //Serial.println("derecha 180");
       tiempo_direccion_arranque = GIRO_DER_180;
       derecha(PWM_FULL, PWM_FULL);
       break;
@@ -343,27 +343,27 @@ void maquina_seteadora (int strat)
       break;
 
     case 2:
-      Serial.println("pasitos");
+      //Serial.println("pasitos");
       pasitos();
       break;
 
     case 3:
-      Serial.println("tic-tac");
+      //Serial.println("tic-tac");
       tic_tac();
       break;
 
     case 4:
-      Serial.println("bartolito");
+      //Serial.println("bartolito");
       bartolito();
       break;
 
     case 5:
-      Serial.println("torero");
+      //Serial.println("torero");
       torero();
       break;
 
     case 6:
-      Serial.println("radar");
+      //Serial.println("radar");
       radar();
       break;
 
@@ -531,19 +531,11 @@ void radar()
 {
   if (distancias_ult[2] > 20 || distancias_ult[2] == 0)
   {
-    if (lecturas_ult[4])
+    if (lecturas_ult[4] || lecturas_ult[3])
     {
       derecha(PWM_CHILL, PWM_CHILL);
     }
-    else if (lecturas_ult[3])
-    {
-      derecha(PWM_CHILL, PWM_CHILL);
-    }
-    else if (lecturas_ult[1])
-    {
-      izquierda(PWM_CHILL, PWM_CHILL);
-    }
-    else if (lecturas_ult[0])
+    else if (lecturas_ult[1] || lecturas_ult[0])
     {
       izquierda(PWM_CHILL, PWM_CHILL);
     }
@@ -576,14 +568,14 @@ void pasitos()
   {
     if (is_moving && millis() - step_millis >= 100)
     {
-      Serial.println("parado");
+      //Serial.println("parado");
       parado();
       stop_millis = millis();
       is_moving = false;
     }
     else if (!is_moving && millis() - stop_millis >= 1000)
     {
-      Serial.println("pasito");
+      //Serial.println("pasito");
       adelante(PWM_CHILL, PWM_CHILL);
       step_millis = millis();
       is_moving = true;
@@ -591,27 +583,17 @@ void pasitos()
   }
   else if (distancias_ult[2] <= 40 && distancias_ult[2] != 0)
   {
-    Serial.println("adelante");
+    //Serial.println("adelante");
     adelante(PWM_FULL, PWM_FULL);
   }
-  else if (distancias_ult[0] < 20 && distancias_ult[0] != 0)
+  else if (distancias_ult[0] < 20 && distancias_ult[0] != 0 || distancias_ult[1] < 20 && distancias_ult[1] != 0/*lecturas_ult[0] || lecturas_ult[1]*/)
   {
-    Serial.println("izquierda");
+    //Serial.println("izquierda");
     izquierda(PWM_FULL, PWM_FULL);
   }
-  /*else if (distancias_ult[1] < 20 && distancias_ult[1] != 0)
+  else if (distancias_ult[3] < 20 && distancias_ult[3] != 0  || distancias_ult[4] < 20 && distancias_ult[4] != 0/*lecturas_ult[3] || lecturas_ult[4]*/)
   {
-    Serial.println("izquierda45");
-    izquierda(PWM_FULL, PWM_FULL);
-  }
-  else if (distancias_ult[3] < 20 && distancias_ult[3] != 0)
-  {
-    Serial.println("derecha45");
-    derecha(PWM_FULL, PWM_FULL);
-  }*/
-  else if (distancias_ult[4] < 20 && distancias_ult[4] != 0)
-  {
-    Serial.println("derecha");
+    //Serial.println("derecha");
     derecha(PWM_FULL, PWM_FULL);
   }
 }
@@ -645,7 +627,7 @@ void funcion_debounce(void)
             if (counter_setear == 0)
             {
               counter_direccion++;
-              Serial.println(counter_direccion);
+              //Serial.println(counter_direccion);
               mostrarBinario(counter_direccion);
               if (counter_direccion > 6)
               {
@@ -655,7 +637,7 @@ void funcion_debounce(void)
             else if (counter_setear == 1)
             {
               counter_strat++;
-              Serial.println(counter_strat);
+              //Serial.println(counter_strat);
               mostrarBinario(counter_strat);
               if (counter_strat > CANT_ESTRATEGIAS)
               {
@@ -671,11 +653,11 @@ void funcion_debounce(void)
             if (counter_setear == 1)
             {
               mostrarBinario(0);
-              Serial.println("Setear Estrategia");
+              //Serial.println("Setear Estrategia");
             }
             else if (counter_setear == 2)
             {
-              Serial.println("Iniciar");
+              //Serial.println("Iniciar");
               iniciar = true;
               prev_millis = millis();
             }

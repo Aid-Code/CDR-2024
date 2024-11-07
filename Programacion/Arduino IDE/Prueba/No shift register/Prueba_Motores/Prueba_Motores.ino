@@ -12,7 +12,6 @@
 
 void setup() {
   Serial.begin(9600);
-
   pinMode(M1_B, OUTPUT);
   pinMode(M1_A, OUTPUT);
   pinMode(M1_B, OUTPUT);
@@ -20,13 +19,16 @@ void setup() {
   pinMode(PWM_A, OUTPUT);
   pinMode(PWM_B, OUTPUT);
 
-  analogWrite(PWM_A, 100);
-  analogWrite(PWM_B, 100);
+  analogWrite(PWM_A, 255);
+  analogWrite(PWM_B, 255);
 }
 
 void loop() {
 
-  Adelante();
+  digitalWrite(M1_B, HIGH);
+  digitalWrite(M2_B, LOW);
+  digitalWrite(M1_A, LOW);
+  digitalWrite(M2_A, LOW);
 }
 
 void Adelante() {
