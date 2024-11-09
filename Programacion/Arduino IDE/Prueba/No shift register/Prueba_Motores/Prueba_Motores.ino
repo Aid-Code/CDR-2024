@@ -20,15 +20,12 @@ void setup() {
   pinMode(PWM_B, OUTPUT);
 
   analogWrite(PWM_A, 255);
-  analogWrite(PWM_B, 255x);
+  analogWrite(PWM_B, (255-30));
 }
 
-void loop() {
-
-  digitalWrite(M1_B, HIGH);
-  digitalWrite(M2_B, LOW);
-  digitalWrite(M1_A, LOW);
-  digitalWrite(M2_A, LOW);
+void loop() 
+{
+  Adelante();
 }
 
 void Adelante() {
