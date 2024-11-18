@@ -7,8 +7,8 @@ uint32_t lectura_cny_izq = 0;
 uint32_t cny_izquierdo = 0;
 uint32_t suma_cny_izq = 0;
 
-uint32_t izq_blanco = 635;
-uint32_t izq_negro = 840;
+uint32_t izq_blanco = 635; // mayor a 350
+uint32_t izq_negro = 840; //menor a 200
 
 uint32_t izq_promedio = (izq_blanco + izq_negro) /2;
 
@@ -18,8 +18,8 @@ uint32_t lectura_cny_der = 0;
 uint32_t cny_derecho = 0;
 uint32_t suma_cny_der = 0;
 
-uint32_t der_blanco = 385;
-uint32_t der_negro = 780;
+uint32_t der_blanco = 385; //322
+uint32_t der_negro = 780; // 736
 
 uint32_t der_promedio = (der_blanco + der_negro) /2;
 
@@ -51,9 +51,9 @@ void loop()
   suma_cny_izq = 0;
   suma_cny_der = 0;
 
-  Serial.println(cny_derecho);
+ 
 
-  /*if (cny_izquierdo > izq_promedio)
+  if (cny_izquierdo > izq_promedio)
   {
     Serial.println("Negro");
   }
@@ -61,6 +61,7 @@ void loop()
   {
     Serial.println("Blanco");
   }
+  /*
 
   if (cny_derecho > der_promedio)
   {
@@ -69,5 +70,6 @@ void loop()
   else if (cny_derecho < der_promedio)
   {
     Serial.println("Blanco");
-  }*/
+  }
+  */
 }

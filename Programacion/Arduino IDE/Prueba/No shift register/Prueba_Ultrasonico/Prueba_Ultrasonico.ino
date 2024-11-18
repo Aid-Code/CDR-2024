@@ -1,6 +1,6 @@
 
-#define TRIG_DER 7
-#define ECHO_DER 8
+#define TRIG_DER 8
+#define ECHO_DER 7
 
 long tiempo;
 long distancia;
