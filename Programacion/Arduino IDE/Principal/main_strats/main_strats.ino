@@ -91,20 +91,21 @@ bool lecturas_ult[5] = {false,false,false,false,false};
 uint16_t distancias_ult[5] = {0,0,0,0,0};
 
 // Millis
-uint16_t actual_millis = 0;
-uint16_t prev_millis = 0;
+uint32_t actual_millis = 0;
+uint32_t prev_millis = 0;
 
-uint16_t stop_millis = 0;
-uint16_t step_millis = 0;
-uint16_t tictac_millis = 0;
-uint16_t radar_millis = 0;
-uint16_t arranque_millis = 0;
+uint32_t stop_millis = 0;
+uint32_t step_millis = 0;
+uint32_t tictac_millis = 0;
+uint32_t radar_millis = 0;
+uint32_t arranque_millis = 0;
 
 // Auxiliares
 
 bool is_moving = false;
 bool ole = false;
 bool flag_arranque = false;
+int x = 0;
 
 uint8_t flag_tictac = 0;
 uint8_t auxiliar = 0;
@@ -556,18 +557,18 @@ void bartolito()
 
 void pasitos()
 {
-  if (!lecturas_ult[0] && !lecturas_ult[2] && !lecturas_ult[4])
+  if (!lecturas_ult[0] && !lecturas_ult[1] && !lecturas_ult[2] && !lecturas_ult[3] && !lecturas_ult[4])
   {
     if (is_moving && millis() - step_millis >= 100)
     {
-      //Serial.println("parado");
+      Serial.println("parado");
       parado();
       stop_millis = millis();
       is_moving = false;
     }
     else if (!is_moving && millis() - stop_millis >= 1000)
     {
-      //Serial.println("pasito");
+      Serial.println("pasito");
       adelante(PWM_CHILL, (PWM_CHILL-30));
       step_millis = millis();
       is_moving = true;
@@ -575,17 +576,17 @@ void pasitos()
   }
   else if (lecturas_ult[2])
   {
-    //Serial.println("adelante");
+    Serial.println("adelante");
     adelante(PWM_FULL, (PWM_FULL-30));
   }
-  else if (lecturas_ult[0])
+  else if (lecturas_ult[0] || lecturas_ult[1])
   {
-    //Serial.println("izquierda");
+    Serial.println("izquierda");
     izquierda(PWM_FULL, (PWM_FULL-30));
   }
-  else if (lecturas_ult[4])
+  else if (lecturas_ult[3] || lecturas_ult[4])
   {
-    //Serial.println("derecha");
+    Serial.println("derecha");
     derecha(PWM_FULL, (PWM_FULL-30));
   }
 }
