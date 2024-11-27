@@ -43,7 +43,7 @@
 // Valores
 #define PWM_CHILL 100 //100
 #define PWM_FULL 255
-#define RANGO_ULT 40 //CAMBIAR A 40
+#define RANGO_ULT 40
 #define CUENTAS_RESET 5
 #define GIRO_TICTAC 400
 #define CANT_ESTRATEGIAS 6
@@ -91,20 +91,21 @@ bool lecturas_ult[5] = {false,false,false,false,false};
 uint16_t distancias_ult[5] = {0,0,0,0,0};
 
 // Millis
-uint16_t actual_millis = 0;
-uint16_t prev_millis = 0;
+uint32_t actual_millis = 0;
+uint32_t prev_millis = 0;
 
-uint16_t stop_millis = 0;
-uint16_t step_millis = 0;
-uint16_t tictac_millis = 0;
-uint16_t radar_millis = 0;
-uint16_t arranque_millis = 0;
+uint32_t stop_millis = 0;
+uint32_t step_millis = 0;
+uint32_t tictac_millis = 0;
+uint32_t radar_millis = 0;
+uint32_t arranque_millis = 0;
 
 // Auxiliares
 
 bool is_moving = false;
 bool ole = false;
 bool flag_arranque = false;
+int x = 0;
 
 uint8_t flag_tictac = 0;
 uint8_t auxiliar = 0;
@@ -560,41 +561,30 @@ void pasitos()
   {
     if (is_moving && millis() - step_millis >= 100)
     {
-      //Serial.println("parado");
+      Serial.println("parado");
       parado();
       stop_millis = millis();
       is_moving = false;
     }
     else if (!is_moving && millis() - stop_millis >= 1000)
     {
-      //Serial.println("pasito");
+      Serial.println("pasito");
       adelante(PWM_CHILL, (PWM_CHILL-30));
       step_millis = millis();
       is_moving = true;
     }
   }
-
-    else if (lecturas_ult[0])
-  {
-    Serial.println("izquierda");
-    izquierda(PWM_FULL, (PWM_FULL-30));
-  }
-    else if (lecturas_ult[1])
-  {
-    Serial.println("Centro Izquierda");
-    derecha(PWM_FULL, (PWM_FULL-30));
-  }
-    else if (lecturas_ult[2])
+  else if (lecturas_ult[2])
   {
     Serial.println("adelante");
     adelante(PWM_FULL, (PWM_FULL-30));
   }
-    else if (lecturas_ult[3])
+  else if (lecturas_ult[0] || lecturas_ult[1])
   {
-    Serial.println("Centro Derecha");
-    derecha(PWM_FULL, (PWM_FULL-30));
+    Serial.println("izquierda");
+    izquierda(PWM_FULL, (PWM_FULL-30));
   }
-   else if (lecturas_ult[4])
+  else if (lecturas_ult[3] || lecturas_ult[4])
   {
     Serial.println("derecha");
     derecha(PWM_FULL, (PWM_FULL-30));

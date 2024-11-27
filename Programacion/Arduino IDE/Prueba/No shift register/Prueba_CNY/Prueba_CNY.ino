@@ -51,16 +51,18 @@ void loop()
   suma_cny_izq = 0;
   suma_cny_der = 0;
 
+  Serial.println(cny_izquierdo);
+
  
 
-  if (cny_izquierdo > izq_promedio)
+  /*if (cny_izquierdo > izq_promedio)
   {
     Serial.println("Negro");
   }
   else if (cny_izquierdo < izq_promedio)
   {
     Serial.println("Blanco");
-  }
+  }*/
   /*
 
   if (cny_derecho > der_promedio)
