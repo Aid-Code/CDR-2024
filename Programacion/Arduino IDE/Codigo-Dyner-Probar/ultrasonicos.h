@@ -4,7 +4,7 @@
 
 #include "Arduino.h"
 
-#define CANT_ULTRASONICOS 3
+#define CANT_ULTRASONICOS 5
 
 #define ECHO_DER A2  //5
 #define TRIG_DER     //5

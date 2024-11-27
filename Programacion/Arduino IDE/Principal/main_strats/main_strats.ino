@@ -43,7 +43,7 @@
 // Valores
 #define PWM_CHILL 100 //100
 #define PWM_FULL 255
-#define RANGO_ULT 40
+#define RANGO_ULT 40 //CAMBIAR A 40
 #define CUENTAS_RESET 5
 #define GIRO_TICTAC 400
 #define CANT_ESTRATEGIAS 6
@@ -556,7 +556,7 @@ void bartolito()
 
 void pasitos()
 {
-  if (!lecturas_ult[0] && !lecturas_ult[2] && !lecturas_ult[4])
+  if (!lecturas_ult[0] && !lecturas_ult[1] && !lecturas_ult[2] && !lecturas_ult[3] && !lecturas_ult[4])
   {
     if (is_moving && millis() - step_millis >= 100)
     {
@@ -573,19 +573,30 @@ void pasitos()
       is_moving = true;
     }
   }
-  else if (lecturas_ult[2])
+
+    else if (lecturas_ult[0])
   {
-    //Serial.println("adelante");
-    adelante(PWM_FULL, (PWM_FULL-30));
-  }
-  else if (lecturas_ult[0])
-  {
-    //Serial.println("izquierda");
+    Serial.println("izquierda");
     izquierda(PWM_FULL, (PWM_FULL-30));
   }
-  else if (lecturas_ult[4])
+    else if (lecturas_ult[1])
   {
-    //Serial.println("derecha");
+    Serial.println("Centro Izquierda");
+    derecha(PWM_FULL, (PWM_FULL-30));
+  }
+    else if (lecturas_ult[2])
+  {
+    Serial.println("adelante");
+    adelante(PWM_FULL, (PWM_FULL-30));
+  }
+    else if (lecturas_ult[3])
+  {
+    Serial.println("Centro Derecha");
+    derecha(PWM_FULL, (PWM_FULL-30));
+  }
+   else if (lecturas_ult[4])
+  {
+    Serial.println("derecha");
     derecha(PWM_FULL, (PWM_FULL-30));
   }
 }
