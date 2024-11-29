@@ -64,8 +64,8 @@ uint32_t lectura_cny_izq = 0;
 uint32_t cny_izquierdo = 0;
 uint32_t suma_cny_izq = 0;
 
-uint32_t izq_blanco = 640;
-uint32_t izq_negro = 752;
+uint32_t izq_blanco = 270;
+uint32_t izq_negro = 745;
 
 uint32_t izq_promedio = (izq_blanco + izq_negro) / 2;
 
