@@ -52,6 +52,7 @@ void loop()
   suma_cny_der = 0;
 
   Serial.println(cny_izquierdo);
+  delay(200);
 
  
 
