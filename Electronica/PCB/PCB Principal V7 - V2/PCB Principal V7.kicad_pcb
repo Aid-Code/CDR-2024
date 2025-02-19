@@ -247,7 +247,7 @@
 		)
 		(property ki_fp_filters "D*DO?41*")
 		(path "/2ab28eb4-6d9f-4e2b-b6c6-bf79b11b6565")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -543,7 +543,7 @@
 		(at 171.196 73.66)
 		(descr "Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf")
 		(tags "Arduino Nano")
-		(property "Reference" "Nano"
+		(property "Reference" "A1"
 			(at 0.154 -5.08 0)
 			(layer "F.SilkS")
 			(uuid "74672823-8dbe-40f4-8600-b0e31d44b11c")
@@ -606,7 +606,7 @@
 		)
 		(property ki_fp_filters "Arduino*Nano*")
 		(path "/cbb343b0-5dde-4985-a84b-f095a7ef65ba")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -1290,7 +1290,7 @@
 		(at 129.54 105.918 180)
 		(descr "simple 2-pin terminal block, pitch 5.08mm, revamped version of bornier2")
 		(tags "terminal block bornier2")
-		(property "Reference" "Power Monster "
+		(property "Reference" "J2"
 			(at 2.29 5.093 0)
 			(layer "F.SilkS")
 			(uuid "33be7c1f-fe41-40bd-a05d-749a6da59fff")
@@ -1353,7 +1353,7 @@
 		)
 		(property ki_fp_filters "TerminalBlock*:*")
 		(path "/bdbd11cd-ee11-47ae-8109-db54585535c9")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -1610,7 +1610,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/a438e8b5-dd0f-4a1a-be6e-48a1281786c6")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -1822,7 +1822,7 @@
 		(at 142.997 105.253)
 		(descr "LED, diameter 5.0mm z-position of LED center 3.0mm, 2 pins")
 		(tags "LED diameter 5.0mm z-position of LED center 3.0mm 2 pins")
-		(property "Reference" "Motores"
+		(property "Reference" "D4"
 			(at -5.147 5.597 0)
 			(layer "F.SilkS")
 			(uuid "e2b0ed9f-c1e9-489f-af6e-481a8b838a61")
@@ -1885,7 +1885,7 @@
 		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/580f4afe-3420-432e-88e9-5214fc5c14cc")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -2290,7 +2290,7 @@
 		(at 97.314 107.376)
 		(descr "CuK miniature slide switch, OS series, SPDT, right angle, http://www.ckswitches.com/media/1428/os.pdf")
 		(tags "switch SPDT")
-		(property "Reference" "On/Off"
+		(property "Reference" "SW1"
 			(at 5.261 3.774 0)
 			(layer "F.SilkS")
 			(uuid "9c9fc37f-7ca7-429a-bd4d-a56fb77e9e7c")
@@ -2352,7 +2352,7 @@
 			)
 		)
 		(path "/69bf6f6f-fa42-456e-935e-172956d8eb30")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -2643,7 +2643,7 @@
 		)
 		(property ki_fp_filters "D*DO?41*")
 		(path "/6e5b2f93-fb0a-46e5-81d2-ac566a92bfc9")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -2939,7 +2939,7 @@
 		(at 93.726 52.324 180)
 		(descr "simple 2-pin terminal block, pitch 5.08mm, revamped version of bornier2")
 		(tags "terminal block bornier2")
-		(property "Reference" "24V"
+		(property "Reference" "J3"
 			(at 6.501 -4.901 0)
 			(layer "F.SilkS")
 			(uuid "34ab88d8-8f73-4cce-9790-3f361041c8b0")
@@ -3001,7 +3001,7 @@
 			)
 		)
 		(path "/30c689c9-339e-48a2-96c9-009744038682")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -3195,7 +3195,7 @@
 		(at 202.125 95.9075 -90)
 		(descr "5x-dip-switch SPST , Slide, row spacing 7.62 mm (300 mils), body size 9.78x14.88mm (see e.g. https://www.ctscorp.com/wp-content/uploads/206-208.pdf)")
 		(tags "DIP Switch SPST Slide 7.62mm 300mil")
-		(property "Reference" "Dip Switch"
+		(property "Reference" "SW2"
 			(at -2.1325 5.2 180)
 			(layer "F.SilkS")
 			(uuid "0e4bfc0a-7755-48a9-9488-95c227b735f3")
@@ -3258,7 +3258,7 @@
 		)
 		(property ki_fp_filters "SW?DIP?x5*")
 		(path "/f7453a64-4b97-4b30-bc64-ec4fca696aad")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -5151,7 +5151,7 @@
 		(at 109.01 52.578 180)
 		(descr "AMASS female XT60, through hole, vertical, https://www.tme.eu/Document/2d152ced3b7a446066e6c419d84bb460/XT60%20SPEC.pdf")
 		(tags "XT60 female vertical")
-		(property "Reference" "XT60"
+		(property "Reference" "J6"
 			(at -1.215 -5.472 180)
 			(layer "F.SilkS")
 			(uuid "99a90792-5a25-4994-b0fd-3c82b4595856")
@@ -5214,7 +5214,7 @@
 		)
 		(property ki_fp_filters "TerminalBlock*:*")
 		(path "/aad228f7-4c22-4b87-a817-774eba3a4d53")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -5449,7 +5449,7 @@
 		(at 150.876 105.248)
 		(descr "LED, diameter 5.0mm z-position of LED center 3.0mm, 2 pins")
 		(tags "LED diameter 5.0mm z-position of LED center 3.0mm 2 pins")
-		(property "Reference" "On/Off"
+		(property "Reference" "D3"
 			(at 7.349 6.377 0)
 			(layer "F.SilkS")
 			(uuid "ce333347-f8f2-4752-85aa-66384cbf6d82")
@@ -5512,7 +5512,7 @@
 		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/85d8cfba-25be-42d6-aceb-d6a1f21bb919")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -5917,7 +5917,7 @@
 		(at 194.075 106.5)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
-		(property "Reference" "Start"
+		(property "Reference" "SW3"
 			(at -3.95 5.15 0)
 			(layer "F.SilkS")
 			(uuid "767118ec-4978-4ab3-8b98-13fb21edcb1f")
@@ -5929,7 +5929,7 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 3.75 6.7 360)
+			(at 3.75 6.7 0)
 			(layer "F.Fab")
 			(uuid "e25a1faf-caae-4482-867a-535c78644413")
 			(effects
@@ -5979,7 +5979,7 @@
 			)
 		)
 		(path "/8cb3685a-4130-4ce5-9762-2cab1e8ee84e")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -6204,7 +6204,7 @@
 			(uuid "511750ba-8e60-408e-8ddb-ac2336254e4d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 3.25 2.25 360)
+			(at 3.25 2.25 0)
 			(layer "F.Fab")
 			(uuid "5aea9862-594a-4ab5-a13e-484ed71a4d1d")
 			(effects
@@ -6276,7 +6276,7 @@
 		(at 178.4 63.475 90)
 		(descr "Through hole angled pin header, 2x08, 2.54mm pitch, 6mm pin length, double rows")
 		(tags "Through hole angled pin header THT 2x08 2.54mm double row")
-		(property "Reference" "Placa de Sensores"
+		(property "Reference" "J1"
 			(at -2.6 8.675 180)
 			(layer "F.SilkS")
 			(uuid "5a34c1da-1b46-4942-ac9e-e56f49ee4388")
@@ -6339,7 +6339,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_2x??_*")
 		(path "/48cf1b9e-6029-4a85-aff2-1e5e9a758df3")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -7865,7 +7865,7 @@
 		(layer "F.Cu")
 		(uuid "e5ae5bab-4fa3-4bd4-aac9-a6e71328faa9")
 		(at 99.314 87.376 180)
-		(property "Reference" "LM2596"
+		(property "Reference" "LM1"
 			(at 0 2.5 0)
 			(layer "F.SilkS")
 			(uuid "002af865-3159-48fd-af8c-96b67c96cb1b")
@@ -7927,7 +7927,7 @@
 			)
 		)
 		(path "/5f31dcc9-185b-4c04-8903-3891b0fec15a")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr through_hole)
 		(fp_rect
@@ -8149,7 +8149,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/75c26b56-375b-46c8-8d55-c233975f131b")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -8429,7 +8429,7 @@
 		)
 		(property ki_fp_filters "Arduino*UNO*R3*")
 		(path "/dbf90f9d-5312-46d2-ab29-5eda9c2eb881")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -9324,7 +9324,7 @@
 		(at 196.815 85.6 90)
 		(descr "SOIC, 24 Pin (JEDEC MS-013AD, https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/soic_wide-rw/RW_24.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOIC SO")
-		(property "Reference" "74hc4067"
+		(property "Reference" "U2"
 			(at 7.25 0.285 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -9338,7 +9338,7 @@
 			)
 		)
 		(property "Value" "CD74HC4067M"
-			(at 0 -8.65 270)
+			(at 0 -8.65 -90)
 			(layer "B.Fab")
 			(uuid "7a88eaf6-05f2-4967-b5a3-01b3a13d5382")
 			(effects
@@ -9393,7 +9393,7 @@
 		)
 		(property ki_fp_filters "SOIC*W*7.5x15.4mm*P1.27mm*")
 		(path "/cd16f277-954e-43f2-abad-ba26e7169f46")
-		(sheetname "Root")
+		(sheetname "Raíz")
 		(sheetfile "PCB Principal V7.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -9579,7 +9579,7 @@
 			(uuid "2e6ec1c4-69eb-4fe2-83c8-27f7f45b4c7a")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "B.Fab")
 			(uuid "332a15d8-cf13-42dd-b887-47a83bef8d23")
 			(effects
@@ -9966,7 +9966,7 @@
 		)
 	)
 	(gr_text "74HC4067"
-		(at 192.9 79.375 0)
+		(at 210.312 82.042 0)
 		(layer "F.SilkS")
 		(uuid "9bd99931-3929-4145-8bb8-a0ea4aa75832")
 		(effects
@@ -10831,20 +10831,12 @@
 		(uuid "bd0885fb-5fb8-43bf-b65a-3d88a07a2c49")
 	)
 	(segment
-		(start 200.625 78.711782)
-		(end 201.26 79.346782)
+		(start 200.625 76.704634)
+		(end 201.26 77.339634)
 		(width 0.7)
 		(layer "B.Cu")
 		(net 16)
-		(uuid "5ca4c494-83f5-4d8a-ae7d-619e3afdc4f0")
-	)
-	(segment
-		(start 200.625 59.45)
-		(end 200.625 78.711782)
-		(width 0.7)
-		(layer "B.Cu")
-		(net 16)
-		(uuid "6dff53fb-ddb7-4d2e-ace9-c8dc47b100c7")
+		(uuid "00eb10f1-9b14-4903-8230-d06b167edead")
 	)
 	(segment
 		(start 188.56 59.335)
@@ -10852,15 +10844,7 @@
 		(width 0.7)
 		(layer "B.Cu")
 		(net 16)
-		(uuid "7927f498-2878-4ba7-984b-e8fc172a8b8b")
-	)
-	(segment
-		(start 200.51 59.335)
-		(end 200.625 59.45)
-		(width 0.7)
-		(layer "B.Cu")
-		(net 16)
-		(uuid "7bba7975-c5c0-463e-bbed-439d3b931a70")
+		(uuid "26d19bbc-46d4-4590-b9fa-4e11cfcd4829")
 	)
 	(segment
 		(start 188.56 60.935)
@@ -10868,15 +10852,31 @@
 		(width 0.7)
 		(layer "B.Cu")
 		(net 16)
-		(uuid "8ff94290-1514-4e58-a743-7f865eebe1ad")
+		(uuid "52cac80d-f4a5-4534-8220-7924b60c254c")
 	)
 	(segment
-		(start 201.26 79.346782)
+		(start 201.26 77.339634)
 		(end 201.26 80.95)
 		(width 0.7)
 		(layer "B.Cu")
 		(net 16)
-		(uuid "f76109c2-dde4-4678-8c77-92c4960a3051")
+		(uuid "61828ea6-a6d8-40ba-94a9-3d8412ef7512")
+	)
+	(segment
+		(start 200.625 59.45)
+		(end 200.625 76.704634)
+		(width 0.7)
+		(layer "B.Cu")
+		(net 16)
+		(uuid "db23bb74-934c-49aa-8927-9502ef7593ff")
+	)
+	(segment
+		(start 200.51 59.335)
+		(end 200.625 59.45)
+		(width 0.7)
+		(layer "B.Cu")
+		(net 16)
+		(uuid "e660de86-a040-4a80-9d72-dade1f96ef59")
 	)
 	(segment
 		(start 171.196 96.52)
@@ -11191,44 +11191,36 @@
 		(uuid "6ba7c110-2836-4469-b4ce-42a776995f58")
 	)
 	(segment
+		(start 198.72 80.95)
+		(end 198.72 78.959)
+		(width 0.7)
+		(layer "B.Cu")
+		(net 40)
+		(uuid "2d066b1d-1507-4ae0-9f1a-976d397e72c8")
+	)
+	(segment
+		(start 198.72 78.959)
+		(end 197.861 78.1)
+		(width 0.7)
+		(layer "B.Cu")
+		(net 40)
+		(uuid "794ab86d-0a26-46c6-9e70-23755da988f8")
+	)
+	(segment
+		(start 197.861 78.1)
+		(end 191.1 78.1)
+		(width 0.7)
+		(layer "B.Cu")
+		(net 40)
+		(uuid "d01b4f9d-13ab-4140-bf97-0bde04cb087f")
+	)
+	(segment
 		(start 191.1 78.1)
 		(end 191.1 63.475)
 		(width 0.7)
 		(layer "B.Cu")
 		(net 40)
-		(uuid "34faa72f-06da-413f-9a58-f00023b92718")
-	)
-	(segment
-		(start 198.15 79.348052)
-		(end 198.15 78.1)
-		(width 0.7)
-		(layer "B.Cu")
-		(net 40)
-		(uuid "a67d3f58-70e7-4395-938b-e2b80d4145a9")
-	)
-	(segment
-		(start 198.72 80.95)
-		(end 198.72 79.918052)
-		(width 0.7)
-		(layer "B.Cu")
-		(net 40)
-		(uuid "c527c1e8-4d52-4fbc-a761-64183ba50468")
-	)
-	(segment
-		(start 198.15 78.1)
-		(end 191.1 78.1)
-		(width 0.7)
-		(layer "B.Cu")
-		(net 40)
-		(uuid "d9c17688-c7e2-4e0e-b615-32c64fcaed36")
-	)
-	(segment
-		(start 198.72 79.918052)
-		(end 198.15 79.348052)
-		(width 0.7)
-		(layer "B.Cu")
-		(net 40)
-		(uuid "ddc8a57e-ecc7-4c47-9ffd-5cf69c3b77cb")
+		(uuid "e506f59c-980b-43ce-9819-3fba48f2145f")
 	)
 	(segment
 		(start 124.46 109.22)
@@ -11311,20 +11303,28 @@
 		(uuid "f42855a2-ed5a-4ee5-a173-5b4612e02723")
 	)
 	(segment
-		(start 199.99 79.632417)
+		(start 198.595 76.675)
+		(end 199.99 78.07)
+		(width 0.7)
+		(layer "B.Cu")
+		(net 42)
+		(uuid "377f89c2-9aa0-4f29-a829-10f1450d2a66")
+	)
+	(segment
+		(start 193.64 76.675)
+		(end 198.595 76.675)
+		(width 0.7)
+		(layer "B.Cu")
+		(net 42)
+		(uuid "9a90f3bd-67ed-43a9-8e45-158e034a2983")
+	)
+	(segment
+		(start 199.99 78.07)
 		(end 199.99 80.95)
 		(width 0.7)
 		(layer "B.Cu")
 		(net 42)
-		(uuid "0f016ed4-8cf7-43d1-8e7d-484384fd8089")
-	)
-	(segment
-		(start 193.64 76.675)
-		(end 199.35 76.675)
-		(width 0.7)
-		(layer "B.Cu")
-		(net 42)
-		(uuid "1d8ea473-772a-4499-9a88-1265aa467836")
+		(uuid "a1d10b28-fd8e-4dd3-ad6f-94a4467eb6af")
 	)
 	(segment
 		(start 193.64 63.475)
@@ -11332,23 +11332,7 @@
 		(width 0.7)
 		(layer "B.Cu")
 		(net 42)
-		(uuid "2408953f-4d49-4eaf-90b5-18bbd3e2890e")
-	)
-	(segment
-		(start 199.35 76.675)
-		(end 199.35 78.992417)
-		(width 0.7)
-		(layer "B.Cu")
-		(net 42)
-		(uuid "92ebfbbd-51d8-4804-8c24-e5ec32e35b2e")
-	)
-	(segment
-		(start 199.35 78.992417)
-		(end 199.99 79.632417)
-		(width 0.7)
-		(layer "B.Cu")
-		(net 42)
-		(uuid "bf3e2c7e-df2e-4acc-9249-d7f2f8bdf752")
+		(uuid "e41e40b6-cee9-4b17-ad4b-2f89392e3bb3")
 	)
 	(segment
 		(start 93.726 52.324)
@@ -11375,12 +11359,36 @@
 		(uuid "55f12f39-7733-41c9-ab8a-a7320d5a999d")
 	)
 	(segment
+		(start 202.53 76.292)
+		(end 201.8 75.562)
+		(width 0.7)
+		(layer "B.Cu")
+		(net 44)
+		(uuid "183ed5e5-f8ea-440c-a54d-e75be22aa0ed")
+	)
+	(segment
+		(start 201.8 75.562)
+		(end 201.8 58.55)
+		(width 0.7)
+		(layer "B.Cu")
+		(net 44)
+		(uuid "3c3475e8-04da-4b2c-9dea-5b3abe511c70")
+	)
+	(segment
 		(start 201.8 58.55)
 		(end 201.425 58.175)
 		(width 0.7)
 		(layer "B.Cu")
 		(net 44)
-		(uuid "3085b79a-f4cd-4ed2-9abc-50148fe6d695")
+		(uuid "5527c4ac-3064-4cac-9a4d-a39e47867c2c")
+	)
+	(segment
+		(start 202.53 80.95)
+		(end 202.53 76.292)
+		(width 0.7)
+		(layer "B.Cu")
+		(net 44)
+		(uuid "71e9b019-c323-4e14-aaa5-8527584c712e")
 	)
 	(segment
 		(start 186.02 58.175)
@@ -11388,15 +11396,7 @@
 		(width 0.7)
 		(layer "B.Cu")
 		(net 44)
-		(uuid "3348b67b-461b-4121-8791-5a83483ee895")
-	)
-	(segment
-		(start 201.8 78.331147)
-		(end 201.8 58.55)
-		(width 0.7)
-		(layer "B.Cu")
-		(net 44)
-		(uuid "419be089-10f6-4242-b704-ff265c2cd340")
+		(uuid "797c356c-f847-43db-916b-62208c02c1b1")
 	)
 	(segment
 		(start 201.425 58.175)
@@ -11404,23 +11404,7 @@
 		(width 0.7)
 		(layer "B.Cu")
 		(net 44)
-		(uuid "454d7141-c565-4ed0-9c5d-7ac23c244a6e")
-	)
-	(segment
-		(start 202.53 80.95)
-		(end 202.53 79.061147)
-		(width 0.7)
-		(layer "B.Cu")
-		(net 44)
-		(uuid "69ed3264-7864-4b27-9d06-ca0fb2a476c2")
-	)
-	(segment
-		(start 202.53 79.061147)
-		(end 201.8 78.331147)
-		(width 0.7)
-		(layer "B.Cu")
-		(net 44)
-		(uuid "eef9f514-419e-4906-bd95-48f5f84dfe0d")
+		(uuid "c6a49312-4838-4107-b533-48277555a5c1")
 	)
 	(segment
 		(start 188.56 63.475)
