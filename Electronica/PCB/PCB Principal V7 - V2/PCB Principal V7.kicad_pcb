@@ -9903,6 +9903,19 @@
 		(layer "Edge.Cuts")
 		(uuid "5b14d6fa-6a00-4760-ae7a-d9f9b88bc11a")
 	)
+	(gr_text "CHICKEN LITTLE"
+		(at 129.824094 70.475 0)
+		(layer "F.SilkS")
+		(uuid "3718e4fd-5da4-499a-9282-68544949789d")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "Step Down"
 		(at 87.55 73.35 90)
 		(layer "F.SilkS")
@@ -9911,6 +9924,19 @@
 			(font
 				(size 1 1)
 				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "DIJO"
+		(at 139.221714 65.9 0)
+		(layer "F.SilkS")
+		(uuid "6ebc29c9-09d7-4e73-adb2-4a0d548e2286")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
 			)
 			(justify left bottom)
 		)
@@ -9947,6 +9973,19 @@
 			(font
 				(size 1 1)
 				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "SE CAE EL CIELO "
+		(at 131.471714 62.65 0)
+		(layer "F.SilkS")
+		(uuid "f7c8433a-6f48-4159-872a-30f0d65a17d3")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
 			)
 			(justify left bottom)
 		)
