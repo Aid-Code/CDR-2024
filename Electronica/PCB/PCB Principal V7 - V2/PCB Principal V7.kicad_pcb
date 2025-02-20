@@ -1320,6 +1320,17 @@
 				(xyz 0 0 0)
 			)
 		)
+		(model "C:/Users/eitan/OneDrive/Documentos/GitHub/Modelos-3D/Microcontroladores/Arduino/Arduino_NANO_CH340.step"
+			(offset
+				(xyz 7.6 -17.75 8)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 -90)
+			)
+		)
 	)
 	(footprint "TerminalBlock:TerminalBlock_bornier-2_P5.08mm"
 		(layer "F.Cu")
@@ -5517,6 +5528,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5529,6 +5541,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5541,6 +5554,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -9342,7 +9356,7 @@
 		)
 		(model "C:/Users/eitan/OneDrive/Documentos/GitHub/Modelos-3D/Motores/Drivers/Monster shield arduino.step"
 			(offset
-				(xyz 10.95 -24.25 -2)
+				(xyz 10.95 -24.25 -8)
 			)
 			(scale
 				(xyz 1 1 1)
