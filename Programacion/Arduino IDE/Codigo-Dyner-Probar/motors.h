@@ -5,14 +5,14 @@
 #include "Arduino.h"
 
 // Motor Izquierdo
-#define MotorIzq_B 7
-#define MotorIzq_A 4
-#define PWM_Izq 6
+#define MotorIzq_B 
+#define MotorIzq_A 
+#define PWM_Izq 
 
 // Motor Derecho
-#define MotorDer_B 2
-#define MotorDer_A 3
-#define PWM_Der 5
+#define MotorDer_B 
+#define MotorDer_A 
+#define PWM_Der 
 
 //Direcciones
 #define ADELANTE 0

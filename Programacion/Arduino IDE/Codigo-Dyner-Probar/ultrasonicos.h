@@ -6,19 +6,27 @@
 
 #define CANT_ULTRASONICOS 5
 
-#define ECHO_DER A2  //5
-#define TRIG_DER     //5
-#define ECHO_IZQ 8   //1
-#define TRIG_IZQ     //1
-#define ECHO_MED 10  //3
-#define TRIG_MED     //3
+#define ECHO_DER
+#define TRIG_DER
+#define ECHO_MED_DER
+#define TRIG_MED_DER
+#define ECHO_IZQ
+#define TRIG_IZQ 
+#define ECHO_MED_IZQ
+#define TRIG_MED_IZQ 
+#define ECHO_MED
+#define TRIG_MED
 
 extern uint8_t* pines_ultrasonico_der;
+extern uint8_t* pines_ultrasonico_cen_der;
 extern uint8_t* pines_ultrasonico_cen;
+extern uint8_t* pines_ultrasonico_cen_izq;
 extern uint8_t* pines_ultrasonico_izq;
 
 extern uint32_t distanciaDer;
+extern uint32_t distanciaCenDer;
 extern uint32_t distanciaIzq;
+extern uint32_t distanciaCenIzq;
 extern uint32_t distanciaCen;
 
 bool lecturaUltrasonico(uint8_t* pines);

@@ -5,8 +5,8 @@
 #include "Arduino.h"
 #define CANT_CNY 2
 
-#define CNY_IZQ A6
-#define CNY_DER A7
+#define CNY_IZQ 
+#define CNY_DER 
 
 extern uint8_t* pines_cny_der;
 extern uint8_t* pines_cny_izq;

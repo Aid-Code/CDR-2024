@@ -5,19 +5,18 @@
 #include "Arduino.h"
 
 
-#define BTN_1 A4
-#define BTN_2 A5
+#define BTN_1 
+#define BTN_2
+#define BTN_3
+#define BTN_4
+#define BTN_5
+#define BTN_6
 
-#define LED_1 A3
-#define LED_2
-#define LED_3
-#define LED_4
 
 extern uint8_t estrategia;  
 
-void setupBotonesYLeds();
+void setupBotones();
 void seleccionarEstrategia();
-void mostrarEstrategia(uint8_t estrategia);
 void iniciarRobot();
 void ejecutarEstrategia();
 

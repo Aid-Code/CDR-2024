@@ -5,12 +5,17 @@
 uint8_t* pines_ultrasonico_der = (ECHO_DER, TRIG_DER);
 uint8_t* pines_ultrasonico_cen = (ECHO_MED, TRIG_MED);
 uint8_t* pines_ultrasonico_izq = (ECHO_IZQ, TRIG_IZQ);
+uint8_t* pines_ultrasonico_cen_izq = (ECHO_MED_IZQ, TRIG_MED_IZQ);
+uint8_t* pines_ultrasonico_cen_der = (ECHO_MED_DER, TRIG_MED_DER);
 
 uint32_t distanciaDer;
 uint32_t distanciaIzq;
 uint32_t distanciaCen;
+unit32_t distanciaCenDer;
+unit32_t distanciaCenIzq;
 
-void setupUltrasonicos() { //Falta setear los otros dos ultrasonicos si es que los vamos a usar, sino los agregamos despues
+
+void setupUltrasonicos() { 
   pinMode(ECHO_DER, INPUT);
   pinMode(TRIG_DER, OUTPUT);
 
@@ -19,6 +24,13 @@ void setupUltrasonicos() { //Falta setear los otros dos ultrasonicos si es que l
 
   pinMode(ECHO_MED, INPUT);
   pinMode(TRIG_MED, OUTPUT);
+
+  pinMode(ECHO_MED_DER, INPUT);
+  pinMode(TRIG_MED_DER, OUTPUT);
+
+  pinMode(ECHO_MED_IZQ, INPUT);
+  pinMode(TRIG_MED_IZQ, OUTPUT);
+ 
 }
 
 uint8_t lecturaUltrasonico(uint8_t* pines) {
